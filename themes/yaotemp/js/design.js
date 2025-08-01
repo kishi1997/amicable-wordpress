@@ -181,3 +181,13 @@ function handleMenu() {
 
 $(window).resize(handleMenu);
 handleMenu();
+
+// headerの高さを計測して、bodyのpading-topにその値を追加
+function adjustBodyPadding() {
+  const body = document.body;
+  const headerHeight = document.querySelector("header").offsetHeight;
+  body.style.paddingTop = headerHeight + "px";
+}
+
+window.addEventListener("resize", adjustBodyPadding);
+window.addEventListener("load", adjustBodyPadding);
