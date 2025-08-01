@@ -9,3 +9,578 @@
 	例：ページごとにIDで囲う、class名を出来るだけユニークなもので設定する
 
 =====================*/
+
+$base-text:  #0A366F;
+$font-eng: "Chakra Petch", sans-serif;
+
+//breakpoint設定
+/************************************************************/
+$breakpoint-header: 1340px; //header-menu用
+$breakpoint-lg: 1280px; //large_pc
+$breakpoint-md: 1080px; //medium_tab
+$breakpoint-sm: 768px; //small_sp
+$breakpoint-slider: 568px; //slider_sp
+$breakpoint-xs: 480px; //sp
+
+// $break-point以下の時に@contentを適用
+@mixin max-screen($break-point) {
+    @media screen and (max-width: $break-point) {
+        @content;
+    }
+}
+
+// $break-point以上の時に@contentを適用
+@mixin min-screen($break-point) {
+    @media screen and (min-width: $break-point) {
+        @content;
+    }
+}
+
+// $break-point-min以上、$break-point-max以下の時に@contentを適用
+@mixin screen($break-point-min, $break-point-max) {
+    @media screen and (min-width: $break-point-min) and (max-width: $break-point-max) {
+        @content;
+    }
+}
+// レイアウト
+.l-container {
+    max-width: 1200px;
+    padding: 0 4%;
+    margin-inline: auto;
+}
+
+body {
+    font-optical-sizing: auto;
+    font-style: normal;
+    padding-top: 0;
+    line-height: 1.4;
+    letter-spacing: 0.05em;
+    font-size: 1.4rem;
+    overflow-x: hidden;
+    background-color: rgba(248, 248, 248, 1);
+	color: $base-text;
+}
+// ヘッダー
+.header {
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    padding: 18px 2.77vw;
+    z-index: 2000;
+    width: 100%;
+    line-height: 1;
+
+    @include min-screen($breakpoint-lg) {
+        padding: 18px 40px;
+    }
+
+    @include max-screen($breakpoint-sm) {
+        padding: 16px;
+    }
+
+    &-top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        box-shadow: none;
+    }
+
+    // ハンバーガーメニュー
+    .menuNavi {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        border: none;
+        cursor: pointer;
+        z-index: 4000;
+        padding: 0 !important;
+        background-color: transparent;
+        gap: 4px;
+
+        span {
+            color: #575959 !important;
+
+            &:before {
+                font-size: 2.5rem;
+                content: "\e90f";
+            }
+
+            &.icon-close:before {
+                font-size: 2rem;
+                content: "\e90e";
+            }
+        }
+
+        div {
+            font-size: 1.4rem;
+            font-weight: bold;
+        }
+    }
+
+    .header-openNav {
+        z-index: 1;
+        position: fixed;
+        right: 0px;
+        bottom: 0px;
+        transition: all 0.4s;
+        opacity: 0;
+        left: 200%;
+        width: 0;
+        z-index: 3000;
+        background-color: #fff;
+        top: 0;
+
+        @include max-screen($breakpoint-sm) {
+            z-index: 1000;
+        }
+
+        &.is-active {
+            opacity: 1;
+            top: 0;
+            left: 0;
+            width: 100%;
+            overflow-y: scroll;
+        }
+
+        &__container {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            padding: 0;
+            height: 100%;
+            margin-left: auto;
+
+            @include max-screen($breakpoint-sm) {
+                min-height: 100vh;
+                height: auto;
+                flex-direction: column;
+                padding: 80px 12.8vw;
+                justify-content: center;
+            }
+
+            @include max-screen($breakpoint-xs) {
+                padding: 80px 16px;
+            }
+
+            ul li {
+                position: relative;
+
+                a,
+                div {
+                    font-size: 1.5rem;
+                    font-weight: 400;
+                    padding-bottom: 32px;
+                    display: inline-block;
+                    width: 100%;
+                    position: relative;
+					@include max-screen($breakpoint-sm) {
+					font-weight: bold;
+					}
+                }
+
+                .plus-icon {
+                    transform: translateY(-50%);
+                    font-weight: 400;
+                    font-size: 1.4rem;
+                }
+
+                .js-header-menu {
+                    &.is-active {
+                        border-bottom: none;
+                        margin-bottom: 0;
+
+                        +.header-child__menu {
+                            border-bottom: 1px solid #fff;
+                            margin-bottom: 15px;
+                        }
+                    }
+                }
+
+                .header-child__menu {
+                    padding-left: 8px;
+
+                    a {
+                        font-size: 1.4rem;
+                        border: none;
+                        margin: 0;
+                    }
+                }
+            }
+
+            .font-l,
+            .font-l a {
+                font-size: 1.6rem;
+                font-weight: bold;
+                padding-bottom: 16px;
+            }
+
+            .header-openNav__pcRight,
+            .header-openNav__pcLeft {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .header-openNav__pcRight {
+                background-color: rgba(248, 248, 248, 1);
+                padding: 110px 48px;
+				width: 60%;
+
+                @include max-screen($breakpoint-sm) {
+                    background-color: #fff;
+                    padding: 16px;
+                }
+
+                .header-openNav__pcRight__container {
+                    width: 100%;
+                    gap: 80px;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: start;
+
+                    .header-menu__2col {
+                        width: 100%;
+                        display: flex;
+                        justify-content: center;
+
+                        &__alighnRight {
+                            justify-content: flex-end;
+                        }
+
+                        @include max-screen($breakpoint-sm) {
+                            flex-direction: column;
+                            justify-content: start;
+                        }
+
+                        >ul {
+                            width: 50%;
+
+                            @include max-screen($breakpoint-sm) {
+                                width: 100%;
+                            }
+                        }
+
+                        .header-childMenu a {
+                            font-size: 1.1rem;
+							padding-bottom: 12px;
+                        }
+
+                        &__noChildMenu {
+                            >ul:nth-child(1) {
+                                width: 35%;
+								@include max-screen($breakpoint-sm) {
+								width: 100%;
+								}
+                            }
+
+                            >ul:nth-child(2) {
+                                width: max-content;
+								@include max-screen($breakpoint-sm) {
+									width: 100%;
+									}
+                            }
+                        }
+
+                        &__withChildMenu {
+                            gap: 32px;
+
+                            >ul {
+                                width: unset;
+                            }
+
+                            @include max-screen($breakpoint-sm) {
+                                flex-direction: row;
+                                justify-content: space-between;
+                            }
+                        }
+
+                        .header-childMenu {
+                            padding-left: 16px;
+                        }
+                    }
+                }
+
+                @media screen and (max-width: 880px) {
+                    width: 100%;
+                }
+
+                ul li {
+
+                    a,
+                    div {
+                        border-bottom: none;
+
+                        &:before {
+                            content: none;
+                        }
+                    }
+
+                    div {
+                        padding: 0;
+                        margin-bottom: 12px;
+                    }
+
+                    .header-childMenu {
+                        margin-bottom: 16px;
+                    }
+                }
+            }
+
+            .header-openNav__pcLeft {
+				background-image: url("../img/header-left-bg.jpg");
+				background-size: cover;
+				background-position: center;
+                background-color: #fff;
+				width: 40%;
+
+                @include max-screen($breakpoint-sm) {
+                    display: none;
+                }
+
+                img {
+                    width: 178px;
+                    height: auto;
+                }
+            }
+
+            .openNav-cta {
+				border-top: 1px solid #00000033;
+				border-bottom: 1px solid #00000033;
+                padding: 24px 0;
+				>span {
+					font-size: 1.3rem;
+					font-weight: bold;
+				}
+				.header-tel {
+					margin-top: 8px;
+					padding-bottom: 16px;
+					padding-left: 6px;
+					@include max-screen($breakpoint-sm) {
+						display: flex!important;
+						}
+						>img {
+							width: 6.4rem;
+						}
+						>div {
+							display: flex;
+								flex-direction: column;
+								span:nth-child(1) {
+									font-size: 3.2rem;
+								}}
+				}
+				.header-contact {
+					margin-top: 8px;
+					@include max-screen($breakpoint-sm) {
+						display: block !important;
+						}
+					img {
+						width: 100%;
+						max-width: 32.4rem;
+					}
+				}
+            }
+        }
+
+    }
+
+    &-left {
+        width: 100%;
+        max-width: 160px;
+
+        a {
+            display: inline-block;
+        }
+
+        @include max-screen($breakpoint-sm) {
+            z-index: 2000;
+        }
+
+        @include max-screen($breakpoint-xs) {
+            max-width: 125px;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    &-right {
+        display: flex;
+        align-items: center;
+		gap: 2rem;
+    }
+	.header-tel {
+		@include max-screen($breakpoint-sm) {
+            display: none;
+        }
+		display: flex;
+			gap: 6px;
+			align-items: center;
+			>img {
+				max-width: 6.4rem;
+				min-width: 5rem;
+				width: 4.4vw;
+				height: auto;
+			}
+			>div {
+				display: flex;
+					flex-direction: column;
+					span:nth-child(1) {
+						font-family: $font-eng;
+						font-size: clamp(2.4rem, 2.2vw, 3.2rem);
+						font-weight: 500;
+					}
+					span:nth-child(2) {
+						font-size: 1.3rem;
+						line-height: 2;
+						@include max-screen($breakpoint-md) {
+							font-size: 1rem;
+						}
+					}
+			}
+	}
+	.header-contact {
+		@include max-screen($breakpoint-sm) {
+            display: none;
+        }
+		img {
+			max-width: 18.4rem;
+			min-width: 14.4rem;
+			width: 12.7vw;
+			height: auto;
+		}
+	}
+
+    &-menu {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 2.7vw;
+
+        @include max-screen($breakpoint-md) {
+            display: none;
+        }
+
+        @include min-screen($breakpoint-lg) {
+            gap: 40px;
+        }
+
+        li {
+            position: relative;
+
+            &:hover {
+                .pc-header__childMenu {
+                    position: absolute;
+                    top: 100%;
+                    left: 0;
+                    display: block;
+                    opacity: 1;
+                }
+            }
+
+            .pc-header__childMenu {
+                display: none;
+                opacity: 0;
+                padding-top: 12px;
+
+                >ul {
+                    display: flex;
+                    z-index: 10;
+
+                    >div:nth-child(2) {
+                        border-left: 1px solid #c4c4c4;
+                    }
+
+                    li {
+                        background-color: #F8F8F8;
+                        position: relative;
+                        min-width: 100%;
+                        width: max-content;
+                        margin: 0 auto;
+                        float: none;
+                        z-index: 1;
+                        padding: 8px 12px;
+                        text-align: center;
+                        border-bottom: 1px solid #c4c4c4;
+
+                        @include max-screen($breakpoint-sm) {
+                            position: static;
+                        }
+                    }
+
+                    a {
+                        display: block;
+                        color: #000;
+
+                        &:before {
+                            @include max-screen($breakpoint-sm) {
+                                content: "ー";
+                                padding: 0 0.5em;
+                                // color: #aaa;
+                                font-weight: bold;
+                            }
+                        }
+                    }
+                }
+            }
+            p {
+                position: relative;
+                display: inline-block;
+                display: flex;
+                cursor: pointer;
+                -webkit-align-items: center;
+                align-items: center;
+
+                @include max-screen($breakpoint-sm) {
+                    padding: 10px;
+                    border-bottom: 1px solid #fff;
+                    -webkit-justify-content: center;
+                    justify-content: center;
+                    font-weight: bold;
+                    background-color: rgba(89, 101, 98, 1);
+                }
+
+                &:after {
+                    content: "";
+					background-image: url("../img/ico-arrow-bottom.svg");
+					width: 12px;
+					display: inline-block;
+					height: 8px;
+					background-size: cover;
+					background-repeat: no-repeat;
+					position: absolute;
+					top: 65%;
+					right: -4px;
+					transform: translate(100%, -50%);
+                }
+
+                &:hover {
+                    @include max-screen($breakpoint-sm) {
+                        background-color: #222;
+                    }
+                }
+
+                font-size: 1.5rem;
+
+                @include max-screen($breakpoint-header) {
+                    font-size: 1.3rem;
+                }
+            }
+        }
+
+        a {
+            color: rgba(89, 101, 98, 1);
+            font-size: 1.5rem;
+
+            @include max-screen($breakpoint-header) {
+                font-size: 1.3rem;
+            }
+        }
+    }
+}
