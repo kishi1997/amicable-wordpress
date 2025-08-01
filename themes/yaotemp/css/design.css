@@ -520,4 +520,124 @@ body {
   .header-menu a {
     font-size: 1.3rem;
   }
+}
+
+.top-fv-banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background: linear-gradient(to bottom, #FFFFC6 3%, #fff);
+}
+.top-fv-banner .top-fv-banner__inner {
+  display: flex;
+  gap: 1.1rem;
+  justify-content: center;
+  align-items: center;
+}
+.top-fv-banner .top-fv-banner__contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.top-fv-banner .top-fv-banner__text {
+  display: none;
+  font-size: clamp(1.4rem, 1.6vw, 2.4rem);
+}
+.top-fv-banner .top-fv-banner__phone-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+.top-fv-banner .top-fv-banner__phone-icon {
+  width: 45px;
+  height: auto;
+}
+.top-fv-banner .top-fv-banner__phone-number {
+  font-size: 2.2rem;
+  font-weight: bold;
+  font-family: "Chakra Petch", sans-serif;
+}
+.top-fv-banner .top-fv-banner__details {
+  font-size: 0.9rem;
+  text-align: left;
+}
+.top-fv-banner .top-fv-banner__action {
+  display: inline-block;
+  width: 143px;
+  transform: translateY(-10px);
+}
+.top-fv-banner .br-sp {
+  display: none;
+}
+@media screen and (min-width: 640px) {
+  .top-fv-banner {
+    position: absolute;
+    bottom: 0;
+    right: unset;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    width: 90%;
+    border: 4px solid #0A366F;
+    border-radius: 12px;
+  }
+  .top-fv-banner .br-sp {
+    display: block;
+  }
+  .top-fv-banner .top-fv-banner__text {
+    display: inline-block;
+  }
+  .top-fv-banner .top-fv-banner__inner {
+    flex-direction: row;
+    gap: 2.4rem;
+  }
+  .top-fv-banner .top-fv-banner__phone-icon {
+    width: 64px;
+  }
+  .top-fv-banner .top-fv-banner__phone-number {
+    font-size: clamp(2.8rem, 2.9vw, 4.2rem);
+  }
+  .top-fv-banner .top-fv-banner__contact {
+    align-items: flex-start;
+    text-align: left;
+  }
+  .top-fv-banner .top-fv-banner__action {
+    max-width: 480px;
+    min-width: 240px;
+    width: 26vw;
+  }
+  .top-fv-banner .top-fv-banner__person-image {
+    left: 0;
+    bottom: -15px;
+    height: 160px;
+  }
+  .top-fv-banner .top-fv-banner__button {
+    font-size: 2.8rem;
+    padding: 2.2rem 8rem 2.2rem 5rem;
+    white-space: nowrap;
+  }
+  .top-fv-banner .top-fv-banner__button::after {
+    right: 35px;
+  }
+}
+@media screen and (min-width: 1080px) {
+  .top-fv-banner {
+    width: 68%;
+  }
+  .top-fv-banner .top-fv-banner__phone {
+    display: flex;
+    gap: 7px;
+    align-items: center;
+  }
+}
+
+.top .top-fv {
+  position: relative;
+  width: 100%;
+}
+.top .top-fv .top-fv-bg img {
+  width: 100%;
+  height: auto;
 }/*# sourceMappingURL=design.css.map */

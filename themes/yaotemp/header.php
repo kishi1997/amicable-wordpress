@@ -143,4 +143,3 @@
             </div>
         </header>
         <!--/l-header-->
-        <!-- <?php get_sidebar(); ?> -->
