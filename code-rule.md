@@ -9,17 +9,48 @@
 ## 使用フォント
 
 - `functions.php`内でインストール
-- 全体：**Noto Sans JP**
+- 全体：**Noto Sans JP**で指定済み
 - 英語：**Chakra Petch**
-- 電話番号：**Noto Sans JP**
 
-## カラー（変数化して）
+## 変数
 
--text-base: #0A366F
--red: #FF2201
--yellow: #FCED18
--title-light-blue: #6BB6F8
--title-orange: #FC5018
+$base-text:  #0A366F;
+$font-eng: "Chakra Petch", sans-serif;
+$blue:  #0A366F;
+$red: #FF2201;
+$yellow: #FCED18;
+$title-light-blue: #6BB6F8;
+$title-orange: #FC5018;
+
+//breakpoint 設定
+/************\*\*\*\*************\*\*\*\*************\*\*\*\*************/
+$breakpoint-header: 1340px; //header-menu 用
+$breakpoint-lg: 1280px; //large_pc
+$breakpoint-md: 1080px; //medium_tab
+$breakpoint-sm: 768px; //small_sp
+$breakpoint-s: 640px;
+$breakpoint-xs: 480px; //sp
+
+// $break-point以下の時に@contentを適用
+@mixin max-screen($break-point) {
+@media screen and (max-width: $break-point) {
+@content;
+}
+}
+
+// $break-point以上の時に@contentを適用
+@mixin min-screen($break-point) {
+@media screen and (min-width: $break-point) {
+@content;
+}
+}
+
+// $break-point-min以上、$break-point-max 以下の時に@content を適用
+@mixin screen($break-point-min, $break-point-max) {
+@media screen and (min-width: $break-point-min) and (max-width: $break-point-max) {
+@content;
+}
+}
 
 ## コーディングルール
 
@@ -27,10 +58,6 @@
 - 添付画像のデザインに必ず等しいコーディング
 - 各ページへのリンクは共通して `<?php bloginfo('url'); ?>/works/` の形式で/閉じまで記載。
 - text のサイズは rem を使用（1rem=10px で設定済み）
-
-## 変数(必要であれば適宜追加する)
-
-$breakpoint-pc: 992px;
 
 ## ヘッダールール
 
@@ -49,7 +76,7 @@ $breakpoint-pc: 992px;
 ## CSS
 
 - SCSS を利用。
-- クラス名：FLOCSS を利用。
+- クラス名：FLOCSS を利用。（例：'top-fv-banner**inner', 'top-fv-banner**phone-wrapper'）
 - `&-container`等、クラス名を書かずに省略する書き方を禁止。（入れ子構造にはする）
 - 共通パーツ以外はページ名を最初に必ずつける（例：top ページ `.top-skill`）
 - コードは top-skill であれば.top-skill{}の中にすべて記述
