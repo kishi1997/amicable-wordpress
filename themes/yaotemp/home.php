@@ -717,25 +717,43 @@ $(document).ready(function() {
 
 <script>
 $(document).ready(function() {
-    $('.top-blog-archive').slick({
-        autoplay: false,
-        centerMode: true,
-        centerPadding: '0px',
-        slidesToShow: 5,
-        arrows: false,
-        dots: true,
-        infinite: true,
-        responsive: [{
-            breakpoint: 768,
-            settings: {
-                slidesToShow: 1,
-                centerPadding: '0px',
-                dots: true,
-            }
-        }]
-    });
+  $('.top-blog-archive').slick({
+    autoplay: false,
+    centerMode: true,
+    centerPadding: '0',
+    slidesToShow: 5,
+    arrows: false,
+    dots: true,
+    infinite: true,
+    variableWidth: true,
+    responsive: [
+      {
+        breakpoint: 1080,
+        settings: {
+          infinite: true,
+          slidesToScroll: 1,
+          slidesToShow: 3,
+          centerMode: true,
+          variableWidth: true,
+          centerPadding: '0',
+          dots: true,
+        }
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          infinite: true,
+          slidesToShow: 1,
+          centerMode: true,
+          variableWidth: true,
+          centerPadding: '0',
+        }
+      }
+    ]
+  });
 });
 </script>
+
 
 <script>
 $(document).ready(function() {
