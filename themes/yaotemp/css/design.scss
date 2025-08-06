@@ -2553,14 +2553,17 @@ body {
   }
 
   &-archive {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 70px 40px;
+    width: 100%!important;
+    margin: 0 auto 10px!important;
 
-    li {
-      max-width: 326px;
-      width: 100%;
-      margin: 0 10px;
+  .slick-slide {
+    width: 100% !important;
+    max-width:326px;
+    margin: 0 10px;
+
+      img {
+        width: 100%;
+      }
 
       @include max-screen($breakpoint-sm) {
         max-width: 183px;
@@ -2587,10 +2590,12 @@ body {
 
     .dateList {
       margin-bottom: 18px;
+      justify-content: space-between;
 
       &__item {
         color: $blue;
         font-size: 23px;
+        margin-right: 0!important;
 
         @include max-screen($breakpoint-sm) {
           font-size: 1.3rem !important;
@@ -2603,12 +2608,12 @@ body {
       border-radius: 5px;
       background-color: #fff;
       color: $blue;
-      font-size: 16px;
+      font-size: 1.6rem;
       font-weight: 200;
       padding: 5px;
-      max-width: 118px;
       height: auto;
       text-align: center;
+
       @include max-screen($breakpoint-sm) {
         font-size: 0.9rem !important;
       }
@@ -2619,7 +2624,7 @@ body {
     display: block;
     max-width: 436px;
     width: 100%;
-    margin: 60px auto 0;
+    margin: 95px auto 0;
     padding: 30px 10px;
     background: #2182d8;
     background: linear-gradient(274.72deg, #2182d8 -5.7%, #1b65c4 91.29%);
@@ -2663,6 +2668,10 @@ body {
       margin-top: 44px;
       max-width: 262px;
     }
+  }
+
+  .slick-dots {
+    bottom: -65px;
   }
 
   @include max-screen($breakpoint-sm) {
