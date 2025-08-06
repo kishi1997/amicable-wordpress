@@ -188,7 +188,7 @@
                 <li class="top-sekoujirei-list__item">
                     <a href="<?php the_permalink(); ?>">
                         <div class="top-sekoujirei-list__images">
-                            <img src="<?php bloginfo('template_url');?>/img/top-sekoujirei-image1.jpg" alt="NO IMAGE"/>
+                            <img src="<?php bloginfo('template_url');?>/img/top-sekoujirei-image1.jpg" alt="NO IMAGE" />
                             <span class="category-name">カテゴリ名</span>
                         </div>
                         <div class="top-sekoujirei-list__content">
@@ -201,7 +201,7 @@
                 <li class="top-sekoujirei-list__item">
                     <a href="<?php the_permalink(); ?>">
                         <div class="top-sekoujirei-list__images">
-                            <img src="<?php bloginfo('template_url');?>/img/top-sekoujirei-image1.jpg" alt="NO IMAGE"/>
+                            <img src="<?php bloginfo('template_url');?>/img/top-sekoujirei-image1.jpg" alt="NO IMAGE" />
                             <span class="category-name">カテゴリ名</span>
                         </div>
                         <div class="top-sekoujirei-list__content">
@@ -214,7 +214,7 @@
                 <li class="top-sekoujirei-list__item">
                     <a href="<?php the_permalink(); ?>">
                         <div class="top-sekoujirei-list__images">
-                            <img src="<?php bloginfo('template_url');?>/img/top-sekoujirei-image1.jpg" alt="NO IMAGE"/>
+                            <img src="<?php bloginfo('template_url');?>/img/top-sekoujirei-image1.jpg" alt="NO IMAGE" />
                             <span class="category-name">カテゴリ名</span>
                         </div>
                         <div class="top-sekoujirei-list__content">
@@ -227,7 +227,7 @@
                 <li class="top-sekoujirei-list__item">
                     <a href="<?php the_permalink(); ?>">
                         <div class="top-sekoujirei-list__images">
-                            <img src="<?php bloginfo('template_url');?>/img/top-sekoujirei-image1.jpg" alt="NO IMAGE"/>
+                            <img src="<?php bloginfo('template_url');?>/img/top-sekoujirei-image1.jpg" alt="NO IMAGE" />
                             <span class="category-name">カテゴリ名</span>
                         </div>
                         <div class="top-sekoujirei-list__content">
@@ -240,7 +240,7 @@
                 <li class="top-sekoujirei-list__item">
                     <a href="<?php the_permalink(); ?>">
                         <div class="top-sekoujirei-list__images">
-                            <img src="<?php bloginfo('template_url');?>/img/top-sekoujirei-image1.jpg" alt="NO IMAGE"/>
+                            <img src="<?php bloginfo('template_url');?>/img/top-sekoujirei-image1.jpg" alt="NO IMAGE" />
                             <span class="category-name">カテゴリ名</span>
                         </div>
                         <div class="top-sekoujirei-list__content">
@@ -253,7 +253,7 @@
                 <li class="top-sekoujirei-list__item">
                     <a href="<?php the_permalink(); ?>">
                         <div class="top-sekoujirei-list__images">
-                            <img src="<?php bloginfo('template_url');?>/img/top-sekoujirei-image1.jpg" alt="NO IMAGE"/>
+                            <img src="<?php bloginfo('template_url');?>/img/top-sekoujirei-image1.jpg" alt="NO IMAGE" />
                             <span class="category-name">カテゴリ名</span>
                         </div>
                         <div class="top-sekoujirei-list__content">
@@ -269,73 +269,73 @@
     </div>
 </section>
 <section class="top-voices">
-        <div class="top-voices-inner">
-            <div class="top-voices-title__wrapper">
-                <p class="top-voices-eng__title">Voices</p>
-                <h2 class="top-voices-title">
-                    <img src="<?php bloginfo('template_url');?>/img/top-voices-title.svg" alt="サービス紹介">
-                </h2>
-            </div>
-            <!-- お客様の声一覧 -->
-            <ul class="top-voices-list">
-                <li class="top-voices-list__item">
-                    <a href="<?php the_permalink(); ?>">
-                        <div class="top-voices-list__images">
-                            <img src="<?php bloginfo('template_url');?>/img/top-voices-image1.jpg" alt="NO IMAGE"/>
-                        </div>
-                        <div class="top-voices-list__content">
-                            <p class="area-name">〇〇市A様</p>
-                            <p>本文引用本文引用本文引用本文引用本文引用本文引用本文引用本文引用本文引用本文引用</p>
-                        </div>
-                    </a>
-                </li>
-                <li class="top-voices-list__item">
-                    <a href="<?php the_permalink(); ?>">
-                        <div class="top-voices-list__images">
-                            <img src="<?php bloginfo('template_url');?>/img/top-voices-image2.jpg" alt="NO IMAGE"/>
-                        </div>
-                        <div class="top-voices-list__content">
-                            <p class="area-name">〇〇市A様</p>
-                            <p>本文引用本文引用本文引用本文引用本文引用本文引用本文引用本文引用本文引用本文引用</p>
-                        </div>
-                    </a>
-                </li>
-                <li class="top-voices-list__item">
-                    <a href="<?php the_permalink(); ?>">
-                        <div class="top-voices-list__images">
-                            <img src="<?php bloginfo('template_url');?>/img/top-voices-image3.jpg" alt="NO IMAGE"/>
-                        </div>
-                        <div class="top-voices-list__content">
-                            <p class="area-name">〇〇市A様</p>
-                            <p>本文引用本文引用本文引用本文引用本文引用本文引用本文引用本文引用本文引用本文引用</p>
-                        </div>
-                    </a>
-                </li>
-                <li class="top-voices-list__item">
-                    <a href="<?php the_permalink(); ?>">
-                        <div class="top-voices-list__images">
-                            <img src="<?php bloginfo('template_url');?>/img/top-voices-image1.jpg" alt="NO IMAGE"/>
-                        </div>
-                        <div class="top-voices-list__content">
-                            <p class="area-name">〇〇市A様</p>
-                            <p>本文引用本文引用本文引用本文引用本文引用本文引用本文引用本文引用本文引用本文引用</p>
-                        </div>
-                    </a>
-                </li>
-                <li class="top-voices-list__item">
-                    <a href="<?php the_permalink(); ?>">
-                        <div class="top-voices-list__images">
-                            <img src="<?php bloginfo('template_url');?>/img/top-voices-image2.jpg" alt="NO IMAGE"/>
-                        </div>
-                        <div class="top-voices-list__content">
-                            <p class="area-name">〇〇市A様</p>
-                            <p>本文引用本文引用本文引用本文引用本文引用本文引用本文引用本文引用本文引用本文引用</p>
-                        </div>
-                    </a>
-                </li>
-            </ul>
-            <a href="<?php bloginfo('url'); ?>/voices/" class="top-voices-button">もっと見る</a>
+    <div class="top-voices-inner">
+        <div class="top-voices-title__wrapper">
+            <p class="top-voices-eng__title">Voices</p>
+            <h2 class="top-voices-title">
+                <img src="<?php bloginfo('template_url');?>/img/top-voices-title.svg" alt="サービス紹介">
+            </h2>
         </div>
+        <!-- お客様の声一覧 -->
+        <ul class="top-voices-list">
+            <li class="top-voices-list__item">
+                <a href="<?php the_permalink(); ?>">
+                    <div class="top-voices-list__images">
+                        <img src="<?php bloginfo('template_url');?>/img/top-voices-image1.jpg" alt="NO IMAGE" />
+                    </div>
+                    <div class="top-voices-list__content">
+                        <p class="area-name">〇〇市A様</p>
+                        <p>本文引用本文引用本文引用本文引用本文引用本文引用本文引用本文引用本文引用本文引用</p>
+                    </div>
+                </a>
+            </li>
+            <li class="top-voices-list__item">
+                <a href="<?php the_permalink(); ?>">
+                    <div class="top-voices-list__images">
+                        <img src="<?php bloginfo('template_url');?>/img/top-voices-image2.jpg" alt="NO IMAGE" />
+                    </div>
+                    <div class="top-voices-list__content">
+                        <p class="area-name">〇〇市A様</p>
+                        <p>本文引用本文引用本文引用本文引用本文引用本文引用本文引用本文引用本文引用本文引用</p>
+                    </div>
+                </a>
+            </li>
+            <li class="top-voices-list__item">
+                <a href="<?php the_permalink(); ?>">
+                    <div class="top-voices-list__images">
+                        <img src="<?php bloginfo('template_url');?>/img/top-voices-image3.jpg" alt="NO IMAGE" />
+                    </div>
+                    <div class="top-voices-list__content">
+                        <p class="area-name">〇〇市A様</p>
+                        <p>本文引用本文引用本文引用本文引用本文引用本文引用本文引用本文引用本文引用本文引用</p>
+                    </div>
+                </a>
+            </li>
+            <li class="top-voices-list__item">
+                <a href="<?php the_permalink(); ?>">
+                    <div class="top-voices-list__images">
+                        <img src="<?php bloginfo('template_url');?>/img/top-voices-image1.jpg" alt="NO IMAGE" />
+                    </div>
+                    <div class="top-voices-list__content">
+                        <p class="area-name">〇〇市A様</p>
+                        <p>本文引用本文引用本文引用本文引用本文引用本文引用本文引用本文引用本文引用本文引用</p>
+                    </div>
+                </a>
+            </li>
+            <li class="top-voices-list__item">
+                <a href="<?php the_permalink(); ?>">
+                    <div class="top-voices-list__images">
+                        <img src="<?php bloginfo('template_url');?>/img/top-voices-image2.jpg" alt="NO IMAGE" />
+                    </div>
+                    <div class="top-voices-list__content">
+                        <p class="area-name">〇〇市A様</p>
+                        <p>本文引用本文引用本文引用本文引用本文引用本文引用本文引用本文引用本文引用本文引用</p>
+                    </div>
+                </a>
+            </li>
+        </ul>
+        <a href="<?php bloginfo('url'); ?>/voices/" class="top-voices-button">もっと見る</a>
+    </div>
 </section>
 
 <section class="top-support">
@@ -353,7 +353,7 @@
             <div class="top-support__content">
                 <p class="top-support__lead"><span>導入後もずっとお付き合い</span><br><strong>アフターサポート</strong></p>
                 <p class="top-support__text">
-                定期点検から緊急トラブル対応まで、自社一貫体制でフルサポート。導入後1年目は無料点検、2年目以降もリーズナブルなメンテナンスプランをご用意しています。お客様の安心と機器の長寿命化を第一に考え、いつでもお気軽にご相談いただけます。
+                    定期点検から緊急トラブル対応まで、自社一貫体制でフルサポート。導入後1年目は無料点検、2年目以降もリーズナブルなメンテナンスプランをご用意しています。お客様の安心と機器の長寿命化を第一に考え、いつでもお気軽にご相談いただけます。
                 </p>
                 <a href="<?php bloginfo('url'); ?>/" class="top-support-button">アフターサポートについて</a>
             </div>
@@ -453,73 +453,85 @@
 
 
 <section class="top-story">
-  <div class="l-container">
-    <div class="top-story-inner">
-        <div class="top-story-title__wrapper">
-            <p class="top-story-eng__title">Story</p>
-            <h2 class="top-story-title">代表取締役 高野浩 ストーリー紹介</h2>
-        </div>
+    <div class="l-container">
+        <div class="top-story-inner">
+            <div class="top-story-title__wrapper">
+                <p class="top-story-eng__title">Story</p>
+                <h2 class="top-story-title">代表取締役 高野浩 ストーリー紹介</h2>
+            </div>
 
-        <div class="top-story-content__wrapper">
-            <div class="top-story-box">
-                <div class="top-story-box__left">
-                    <picture>
-                        <source media="(max-width: 768px)" srcset="<?php bloginfo('template_url');?>/img/top-story-image1_sp.jpg" />
+            <div class="top-story-content__wrapper">
+                <div class="top-story-box">
+                    <div class="top-story-box__left">
+                        <picture>
+                            <source media="(max-width: 768px)"
+                                srcset="<?php bloginfo('template_url');?>/img/top-story-image1_sp.jpg" />
                             <img src="<?php bloginfo('template_url');?>/img/top-story-image1.jpg" alt="代表取締役 高野浩" />
-                    </picture>
+                        </picture>
+                    </div>
+                    <div class="top-story-box__right">
+                        <div class="top-story-item">
+                            <h3><span class="dot"></span>私たちが「電気代0円の未来」を目指す理由</h3>
+                            <p>はじめまして。有限会社アミカブルサービスの代表取締役、高野浩です。<br />
+                                私たちが目指しているのは、単に太陽光パネルを設置することではありません。<span
+                                    class="blue">その先にある「電気代0円の未来」、そして災害に負けない、誰もが安心して笑顔で暮らせる社会</span>を本気で実現することです。 <br />
+                                なぜ、私たちがそこまで強く願うのか。それは、電気とは全く関係のない場所から始まった、私の人生の歩みに深く関わっています。</p>
+                        </div>
+                        <div class="top-story-item">
+                            <h3><span class="dot"></span>原点はおばあちゃんの笑顔</h3>
+                            <p>私の原点は、茨城県のレンコン農家で過ごした幼少期にあります。物作りが好きだった私は、自分で作ったレンコン料理を大好きなおばあちゃんに食べてもらうことが何よりの喜びでした。あの時の、心から嬉しそうな笑顔。<span
+                                    class="blue">「誰かを笑顔にしたい、喜んでもらいたい」</span>という想いは、この時から私の中に深く刻まれました。</p>
+                        </div>
+                        <div class="top-story-item u-pc">
+                            <h3><span class="dot"></span>回り道と挫折が教えてくれたこと</h3>
+                            <p>その後、飛行機への憧れから航空整備士になりましたが、厳しい現実に直面しました。もっと大きな仕事がしたいと建設業に飛び込み、専門技術を身につけて多くの人に頼られる喜びも知りました。しかし、人生は順風満帆にはいかず、椎間板ヘルニアで長期の入院生活を余儀なくされます。そこで目にしたのは、元気をなくしていく人々の姿でした。この時、私の心に再び火が灯ります。<span
+                                    class="blue">「人を明るくする仕事がしたい！」</span>と。<br />
+                                失意の中、実家で久しぶりにおばあちゃんに料理を振る舞うと、昔と変わらない満面の笑みを見せてくれました。その瞬間、稲妻に打たれたように感じたのです。「これだ！私が本当にやりたかったのは、この笑顔を作ることだ！」と。30歳にして、私は飲食業界へ飛び込むことを決意しました。
+                            </p>
+                        </div>
+                    </div>
                 </div>
-                <div class="top-story-box__right">
-                    <div class="top-story-item">
-                        <h3><span class="dot"></span>私たちが「電気代0円の未来」を目指す理由</h3>
-                        <p>はじめまして。有限会社アミカブルサービスの代表取締役、高野浩です。<br/>
-                        私たちが目指しているのは、単に太陽光パネルを設置することではありません。<span class="blue">その先にある「電気代0円の未来」、そして災害に負けない、誰もが安心して笑顔で暮らせる社会</span>を本気で実現することです。 <br/>
-                        なぜ、私たちがそこまで強く願うのか。それは、電気とは全く関係のない場所から始まった、私の人生の歩みに深く関わっています。</p>
+
+                <div class="top-story-box u-pc">
+                    <div class="top-story-box__left">
+                        <div class="top-story-item">
+                            <h3><span class="dot"></span>アミカブルサービスの誕生と最大の危機</h3>
+                            <p>キッチンカーでお客様の笑顔に触れるうち、「自分のお店を持ちたい」という夢が膨らみます。その資金作りのために設立したのが、この「有限会社アミカブルサービス」です。社名には、地元・茨城県<span
+                                    class="blue">阿見</span>町への恩返し（<span class="blue">アミ</span>）と、平和・友好的という意味の「<span
+                                    class="blue">アミカブル</span>（amicable）」という想いを込めました。<br />
+                                そして「人を明るくする」という原点に立ち返り、太陽光事業へと舵を切った矢先、会社設立13年目に最大の危機が訪れます。私たちが販売した産業用太陽光発電所が、大雨による土砂災害で崩壊してしまったのです。<br />
+                                法的な責任は、私たちにはありませんでした。しかし、目の前には途方に暮れるお客様の姿がありました。その時、私の脳裏に浮かんだのは、あのおばあちゃんの笑顔です。<span
+                                    class="blue">「お客様を笑顔にしたい。この人を助けたい」</span>。その一心で、私たちは会社負担で2,000万円をかけて修復することを決意しました。<br />
+                                売上は立たず、私自身の給料は何ヶ月もゼロ。それでも、信じてついてきてくれる従業員の給料だけは一度も遅らせませんでした。必死で働き続け、3年後、ついに負債を完済することができたのです。
+                            </p>
+                        </div>
+
+                        <div class="top-story-item">
+                            <h3><span class="dot"></span>私たちの約束</h3>
+                            <p>この壮絶な経験は、私たちに3つの大切なことを教えてくれました。</p>
+                            <ol class="promise-list">
+                                <li>1. 本当の責任<span class="blue">とは、お客様のお困り事を最後まで取り除くこと。</span></li>
+                                <li>2. <span class="blue">どんな困難にも</span>諦めずに粘り強く取り組む<span class="blue">ことの大切さ。</span>
+                                </li>
+                                <li>3. <span class="blue">苦しい時も支え合える仲間こそが、何よりの宝物<span class="blue">であること。</span></li>
+                            </ol>
+                            <p>この想いこそが、アミカブルサービスの魂です。<br />
+                                特別な才能があったわけではありません。ただ、信じた道をまっすぐに、お客様のことだけを考えて突き進んできました。<br />
+                                災害も、高騰し続ける電気代も、私たちの暮らしを脅かす不安の種です。私たちは、エネルギーを自給自足できる安心な社会を創り、未来の子どもたちに笑顔の暮らしを繋いでいきたい。<br />
+                                電気のこと、そしてお家のことでお困り事があれば、ぜひ私たちにご相談ください。<br />お客様の笑顔にお会いできる日を、心から楽しみにしています。</p>
+                        </div>
+
+                        <p class="representative-sign">有限会社アミカブルサービス<br>
+                            <strong>代表取締役　高野 浩</strong>
+                        </p>
                     </div>
-                    <div class="top-story-item">
-                        <h3><span class="dot"></span>原点はおばあちゃんの笑顔</h3>
-                        <p>私の原点は、茨城県のレンコン農家で過ごした幼少期にあります。物作りが好きだった私は、自分で作ったレンコン料理を大好きなおばあちゃんに食べてもらうことが何よりの喜びでした。あの時の、心から嬉しそうな笑顔。<span class="blue">「誰かを笑顔にしたい、喜んでもらいたい」</span>という想いは、この時から私の中に深く刻まれました。</p>
-                    </div>
-                    <div class="top-story-item u-pc">
-                        <h3><span class="dot"></span>回り道と挫折が教えてくれたこと</h3>
-                        <p>その後、飛行機への憧れから航空整備士になりましたが、厳しい現実に直面しました。もっと大きな仕事がしたいと建設業に飛び込み、専門技術を身につけて多くの人に頼られる喜びも知りました。しかし、人生は順風満帆にはいかず、椎間板ヘルニアで長期の入院生活を余儀なくされます。そこで目にしたのは、元気をなくしていく人々の姿でした。この時、私の心に再び火が灯ります。<span class="blue">「人を明るくする仕事がしたい！」</span>と。<br/>
-                        失意の中、実家で久しぶりにおばあちゃんに料理を振る舞うと、昔と変わらない満面の笑みを見せてくれました。その瞬間、稲妻に打たれたように感じたのです。「これだ！私が本当にやりたかったのは、この笑顔を作ることだ！」と。30歳にして、私は飲食業界へ飛び込むことを決意しました。</p>
+
+                    <div class="top-story-box__right">
+                        <img src="<?php bloginfo('template_url');?>/img/top-story-image2.jpg" alt="太陽光発電イメージ写真"
+                            class="u-pc">
                     </div>
                 </div>
             </div>
-
-    <div class="top-story-box u-pc">
-      <div class="top-story-box__left">
-        <div class="top-story-item">
-          <h3><span class="dot"></span>アミカブルサービスの誕生と最大の危機</h3>
-          <p>キッチンカーでお客様の笑顔に触れるうち、「自分のお店を持ちたい」という夢が膨らみます。その資金作りのために設立したのが、この「有限会社アミカブルサービス」です。社名には、地元・茨城県<span class="blue">阿見</span>町への恩返し（<span class="blue">アミ</span>）と、平和・友好的という意味の「<span class="blue">アミカブル</span>（amicable）」という想いを込めました。<br />
-          そして「人を明るくする」という原点に立ち返り、太陽光事業へと舵を切った矢先、会社設立13年目に最大の危機が訪れます。私たちが販売した産業用太陽光発電所が、大雨による土砂災害で崩壊してしまったのです。<br />
-          法的な責任は、私たちにはありませんでした。しかし、目の前には途方に暮れるお客様の姿がありました。その時、私の脳裏に浮かんだのは、あのおばあちゃんの笑顔です。<span class="blue">「お客様を笑顔にしたい。この人を助けたい」</span>。その一心で、私たちは会社負担で2,000万円をかけて修復することを決意しました。<br />
-          売上は立たず、私自身の給料は何ヶ月もゼロ。それでも、信じてついてきてくれる従業員の給料だけは一度も遅らせませんでした。必死で働き続け、3年後、ついに負債を完済することができたのです。</p>
-        </div>
-
-        <div class="top-story-item">
-            <h3><span class="dot"></span>私たちの約束</h3>
-            <p>この壮絶な経験は、私たちに3つの大切なことを教えてくれました。</p>
-                <ol class="promise-list">
-                    <li>1. 本当の責任<span class="blue">とは、お客様のお困り事を最後まで取り除くこと。</span></li>
-                    <li>2. <span class="blue">どんな困難にも</span>諦めずに粘り強く取り組む<span class="blue">ことの大切さ。</span></li>
-                    <li>3. <span class="blue">苦しい時も支え合える仲間こそが、何よりの宝物<span class="blue">であること。</span></li>
-                </ol>
-            <p>この想いこそが、アミカブルサービスの魂です。<br/>
-            特別な才能があったわけではありません。ただ、信じた道をまっすぐに、お客様のことだけを考えて突き進んできました。<br/>
-            災害も、高騰し続ける電気代も、私たちの暮らしを脅かす不安の種です。私たちは、エネルギーを自給自足できる安心な社会を創り、未来の子どもたちに笑顔の暮らしを繋いでいきたい。<br/>
-            電気のこと、そしてお家のことでお困り事があれば、ぜひ私たちにご相談ください。<br/>お客様の笑顔にお会いできる日を、心から楽しみにしています。</p>
-        </div>
-
-        <p class="representative-sign">有限会社アミカブルサービス<br>
-        <strong>代表取締役　高野 浩</strong></p>
-      </div>
-
-      <div class="top-story-box__right">
-        <img src="<?php bloginfo('template_url');?>/img/top-story-image2.jpg" alt="太陽光発電イメージ写真" class="u-pc">
-      </div>
-    </div>
-  </div>
 </section>
 
 <section class="top-company">
@@ -534,7 +546,8 @@
             </div>
             <div class="top-company-description">
                 <p>有限会社アミカブルサービスは、地域のお客様に寄り添い続けて20年以上。<br />
-                太陽光発電や蓄電池の最適提案から、施工・アフターサービスまで一貫した自社体制で、高品質かつきめ細かなサポートを提供しています。『安心』『信頼』『地元密着』をモットーに、お客様の快適な暮らしを支えます。</p>
+                    太陽光発電や蓄電池の最適提案から、施工・アフターサービスまで一貫した自社体制で、高品質かつきめ細かなサポートを提供しています。『安心』『信頼』『地元密着』をモットーに、お客様の快適な暮らしを支えます。
+                </p>
             </div>
             <ul class="top-company-cards">
                 <li>
@@ -559,14 +572,16 @@
         </div>
     </div>
     <ul class="top-company-logos">
-            <li><img src="<?php bloginfo('template_url');?>/img/top-company-banner1.png" alt="再生可能エネルギー関連の情報発信基地 一般社団法人 日本PVプランナー協会"></li>
-            <li><img src="<?php bloginfo('template_url');?>/img/top-company-banner2.png" alt="新エネルギー革命会"></li>
-            <li><img src="<?php bloginfo('template_url');?>/img/top-company-banner3.png" alt="一般社団法人 新エネルギーO&M協議会"></li>
-            <li><img src="<?php bloginfo('template_url');?>/img/top-company-banner4.png" alt="JPEA 太陽光発電協会"></li>
-            <li><img src="<?php bloginfo('template_url');?>/img/top-company-banner5.png" alt="次世代型O&M 稼ぐ太陽光メンテ"></li>
-            <li><img src="<?php bloginfo('template_url');?>/img/top-company-banner1.png" alt="再生可能エネルギー関連の情報発信基地 一般社団法人 日本PVプランナー協会"></li>
-            <li><img src="<?php bloginfo('template_url');?>/img/top-company-banner2.png" alt="新エネルギー革命会"></li>
-        </ul>
+        <li><img src="<?php bloginfo('template_url');?>/img/top-company-banner1.png"
+                alt="再生可能エネルギー関連の情報発信基地 一般社団法人 日本PVプランナー協会"></li>
+        <li><img src="<?php bloginfo('template_url');?>/img/top-company-banner2.png" alt="新エネルギー革命会"></li>
+        <li><img src="<?php bloginfo('template_url');?>/img/top-company-banner3.png" alt="一般社団法人 新エネルギーO&M協議会"></li>
+        <li><img src="<?php bloginfo('template_url');?>/img/top-company-banner4.png" alt="JPEA 太陽光発電協会"></li>
+        <li><img src="<?php bloginfo('template_url');?>/img/top-company-banner5.png" alt="次世代型O&M 稼ぐ太陽光メンテ"></li>
+        <li><img src="<?php bloginfo('template_url');?>/img/top-company-banner1.png"
+                alt="再生可能エネルギー関連の情報発信基地 一般社団法人 日本PVプランナー協会"></li>
+        <li><img src="<?php bloginfo('template_url');?>/img/top-company-banner2.png" alt="新エネルギー革命会"></li>
+    </ul>
 </section>
 
 
@@ -585,85 +600,85 @@
         <!-- ブログ一覧 -->
         <ul class="top-blog-archive">
             <li>
-                <div class="eyecatch eyecatch-archive">    
-                    <a href="http://localhost:8080/hello-world/"><img src="http://localhost:8080/wp-content/themes/yaotemp/img/img_no.gif" alt="NO IMAGE"></a>
+                <div class="eyecatch eyecatch-archive">
+                    <a href=""><img src="<?php bloginfo('template_url');?>/img/blog-image.jpg" alt="NO IMAGE"></a>
                 </div>
                 <ul class="dateList dateList-archive">
                     <li>
-                        <p class="category-name">お知らせ</p>
+                        <p class="category-name">お役立ちコラム</p>
                     </li>
                     <time>
-                    <li class="dateList__item">2025.08.04</li>                                
+                        <li class="dateList__item">2025.08.04</li>
                     </time>
                 </ul>
                 <h3 class="heading heading-archive">タイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトル</h3>
             </li>
             <li>
-                <div class="eyecatch eyecatch-archive">    
-                    <a href="http://localhost:8080/hello-world/"><img src="http://localhost:8080/wp-content/themes/yaotemp/img/img_no.gif" alt="NO IMAGE"></a>
+                <div class="eyecatch eyecatch-archive">
+                    <a href=""><img src="<?php bloginfo('template_url');?>/img/blog-image.jpg" alt="NO IMAGE"></a>
                 </div>
                 <ul class="dateList dateList-archive">
                     <li>
-                        <p class="category-name">お知らせ</p>
+                        <p class="category-name">お役立ちコラム</p>
                     </li>
                     <time>
-                    <li class="dateList__item">2025.08.04</li>                                
+                        <li class="dateList__item">2025.08.04</li>
                     </time>
                 </ul>
                 <h3 class="heading heading-archive">タイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトル</h3>
             </li>
             <li>
-                <div class="eyecatch eyecatch-archive">    
-                    <a href="http://localhost:8080/hello-world/"><img src="http://localhost:8080/wp-content/themes/yaotemp/img/img_no.gif" alt="NO IMAGE"></a>
+                <div class="eyecatch eyecatch-archive">
+                    <a href=""><img src="<?php bloginfo('template_url');?>/img/blog-image.jpg" alt="NO IMAGE"></a>
                 </div>
                 <ul class="dateList dateList-archive">
                     <li>
-                        <p class="category-name">お知らせ</p>
+                        <p class="category-name">お役立ちコラム</p>
                     </li>
                     <time>
-                    <li class="dateList__item">2025.08.04</li>                                
+                        <li class="dateList__item">2025.08.04</li>
                     </time>
                 </ul>
                 <h3 class="heading heading-archive">タイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトル</h3>
             </li>
             <li>
-                <div class="eyecatch eyecatch-archive">    
-                    <a href="http://localhost:8080/hello-world/"><img src="http://localhost:8080/wp-content/themes/yaotemp/img/img_no.gif" alt="NO IMAGE"></a>
+                <div class="eyecatch eyecatch-archive">
+                    <a href=""><img src="<?php bloginfo('template_url');?>/img/blog-image.jpg" alt="NO IMAGE"></a>
                 </div>
                 <ul class="dateList dateList-archive">
                     <li>
-                        <p class="category-name">お知らせ</p>
+                        <p class="category-name">お役立ちコラム</p>
                     </li>
                     <time>
-                    <li class="dateList__item">2025.08.04</li>                                
+                        <li class="dateList__item">2025.08.04</li>
                     </time>
                 </ul>
                 <h3 class="heading heading-archive">タイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトル</h3>
             </li>
             <li>
-                <div class="eyecatch eyecatch-archive">    
-                    <a href="http://localhost:8080/hello-world/"><img src="http://localhost:8080/wp-content/themes/yaotemp/img/img_no.gif" alt="NO IMAGE"></a>
+                <div class="eyecatch eyecatch-archive">
+                    <a href=""><img src="<?php bloginfo('template_url');?>/img/blog-image.jpg" alt="NO IMAGE"></a>
                 </div>
                 <ul class="dateList dateList-archive">
                     <li>
-                        <p class="category-name">お知らせ</p>
+                        <p class="category-name">お役立ちコラム</p>
                     </li>
                     <time>
-                    <li class="dateList__item">2025.08.04</li>                                
+                        <li class="dateList__item">2025.08.04</li>
                     </time>
                 </ul>
                 <h3 class="heading heading-archive">タイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトル</h3>
             </li>
             <li>
-                <div class="eyecatch eyecatch-archive">    
-                    <a href="http://localhost:8080/hello-world/"><img src="http://localhost:8080/wp-content/themes/yaotemp/img/img_no.gif" alt="NO IMAGE"></a>
+                <div class="eyecatch eyecatch-archive">
+                    <a href=""><img src="<?php bloginfo('template_url');?>/img/blog-image.jpg" alt="NO IMAGE"></a>
                 </div>
                 <ul class="dateList dateList-archive">
                     <li>
-                        <p class="category-name">お知らせ</p>
+                        <p class="category-name">お役立ちコラム</p>
                     </li>
                     <time>
-                    <li class="dateList__item">2025.08.04</li>                                
+                        <li class="dateList__item">2025.08.04</li>
                     </time>
                 </ul>
                 <h3 class="heading heading-archive">タイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトル</h3>
@@ -677,8 +692,8 @@
 <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
 <script>
-    $(document).ready(function(){
-      $('.top-voices-list').slick({
+$(document).ready(function() {
+    $('.top-voices-list').slick({
         centerMode: true,
         centerPadding: '0',
         slidesToShow: 3,
@@ -687,8 +702,7 @@
         nextArrow: '<button class="slick-arrow slick-next"></button>',
         dots: true,
         infinite: true,
-        responsive: [
-          {
+        responsive: [{
             breakpoint: 768,
             settings: {
                 centerMode: true,
@@ -696,15 +710,14 @@
                 centerPadding: '60px',
                 dots: true,
             }
-          }
-        ]
-      });
+        }]
     });
+});
 </script>
 
 <script>
-    $(document).ready(function(){
-      $('.top-blog-archive').slick({
+$(document).ready(function() {
+    $('.top-blog-archive').slick({
         autoplay: false,
         centerMode: true,
         centerPadding: '0px',
@@ -712,23 +725,21 @@
         arrows: false,
         dots: true,
         infinite: true,
-        responsive: [
-          {
+        responsive: [{
             breakpoint: 768,
             settings: {
                 slidesToShow: 1,
                 centerPadding: '0px',
                 dots: true,
             }
-          }
-        ]
-      });
+        }]
     });
+});
 </script>
 
 <script>
-    $(document).ready(function(){
-      $('.top-company-logos').slick({
+$(document).ready(function() {
+    $('.top-company-logos').slick({
         autoplay: true,
         cssEase: 'ease-in-out',
         Speed: 600,
@@ -737,17 +748,15 @@
         arrows: false,
         dots: false,
         infinite: true,
-        responsive: [
-          {
+        responsive: [{
             breakpoint: 768,
             settings: {
                 slidesToShow: 3,
                 centerPadding: '60px',
             }
-          }
-        ]
-      });
+        }]
     });
+});
 </script>
 
 <?php get_footer(); ?>
