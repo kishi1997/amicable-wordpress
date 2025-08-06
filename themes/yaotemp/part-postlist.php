@@ -1,5 +1,5 @@
             <!-- //////////　通常記事読み込み ////////// -->
-            <div class="archive">
+            <div class="blog-archive">
                 
                 <?php $posts = get_posts('numberposts=6&cat=1');
                 foreach($posts as $post): ?>
@@ -23,17 +23,13 @@
                             </p>
                         </li>
                         <time>
-                            <li class="dateList__item icon-calendar"><?php the_time('Y.m.d'); ?></li>                                
+                            <li class="dateList__item"><?php the_time('Y.m.d'); ?></li>                                
                         </time>
                     </ul>    
 
                     <h3 class="heading heading-archive">
                         <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
                     </h3>
-
-                    <div class="btn btn-right">
-                        <a class="btn__link" href="<?php the_permalink(); ?>">詳しくみる</a>
-                    </div>    
                 </article>
                 <?php endforeach ?>
             </div>

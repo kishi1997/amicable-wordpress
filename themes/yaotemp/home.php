@@ -174,38 +174,282 @@
         </div>
     </div>
 </section>
-<div class="main-contents">
-    <p style="padding: 50px; margin: 10px 0; background-color: #ccc;">main-contents: 1200px;</p>
-</div>
-<div class="sub-contents">
-    <p style="padding: 50px; margin: 10px 0; background-color: #eee;">sub-contents: 1000px;</p>
-</div>
-<div class="slim-contents">
-    <p style="padding: 50px; margin: 10px 0; background-color: #ccc;">slim-contents: 768px;</p>
-</div>
-
-<!-- l-wrapper -->
-<div class="l-wrapper">
-
-    <main class="l-main">
-        <p style="margin: 100px 0;">トップページのコンテンツがここに入ります</p>
-
-        <div class="main-contents">
-
-            <!-- 記事一覧 -->
-            <?php include("part-postlist.php"); ?>
-
+<section class="top-sekoujirei">
+    <div class="l-container">
+        <div class="top-sekoujirei-inner">
+            <div class="top-sekoujirei-title__wrapper">
+                <p class="top-sekoujirei-eng__title">Examples of construction</p>
+                <h2 class="top-sekoujirei-title">
+                    <img src="<?php bloginfo('template_url');?>/img/top-sekoujirei-title.svg" alt="サービス紹介">
+                </h2>
+            </div>
             <!-- 施工事例一覧 -->
             <?php include("part-workslist.php"); ?>
-
-            <!-- イベント一覧 -->
-            <?php include("part-eventslist.php"); ?>
-
+            <a href="<?php bloginfo('url'); ?>/works/" class="top-sekoujirei-button">もっと見る</a>
         </div>
-    </main>
-</div>
-<!-- /l-wrapper -->
+    </div>
+</section>
+<section class="top-voices">
+    <div class="l-container">
+        <div class="top-voices-inner">
+            <div class="top-voices-title__wrapper">
+                <p class="top-voices-eng__title">Voices</p>
+                <h2 class="top-voices-title">
+                    <img src="<?php bloginfo('template_url');?>/img/top-voices-title.svg" alt="サービス紹介">
+                </h2>
+            </div>
+            <!-- お客様の声一覧 -->
+            <?php include("part-workslist.php"); ?>
+            <a href="<?php bloginfo('url'); ?>/works/" class="top-reason-button">もっと見る</a>
+        </div>
+    </div>
+</section>
 
 
+<section class="after-support">
+  <div class="container">
+    <div class="after-support__inner">
+    <div class="after-support__images-wrapper">
+      <div class="after-support__images">
+        <img src="<?php bloginfo('template_url');?>/img/top-support-image1.jpg" alt="点検作業中" class="after-support__img top-img">
+        <img src="<?php bloginfo('template_url');?>/img/top-support-image2.jpg" alt="ソーラーパネル点検" class="after-support__img bottom-img">
+      </div>
+    </div>
+      <div class="after-support__content">
+        <h2 class="after-support__heading">After Support</h2>
+        <p class="after-support__lead"><span>導入後もずっとお付き合い</span><br><strong>アフターサポート</strong></p>
+        <p class="after-support__text">
+          定期点検から緊急トラブル対応まで、自社一貫体制でフルサポート。<br>
+          導入後1年目は無料点検、2年目以降もリーズナブルなメンテナンスプランをご用意しています。<br>
+          お客様の安心と機器の長寿命化を第一に考え、いつでもお気軽にご相談いただけます。
+        </p>
+        <a href="<?php bloginfo('url'); ?>/works/" class="top-support-button">アフターサポートについて</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<?php
+    $plan_items = [
+        [
+            'title' => 'メニュー名メニュー名メニュー名',
+            'description' => '説明文など説明文など説明文など説明文など説明文など説明文',
+            'price' => '000,000', 
+            'tax_price' => '000,000', 
+        ],
+        [
+            'title' => 'メニュー名メニュー名メニュー名',
+            'description' => '説明文など説明文など説明文など説明文など説明文など説明文',
+            'price' => '000,000', 
+            'tax_price' => '000,000', 
+        ],
+        [
+            'title' => 'メニュー名メニュー名メニュー名',
+            'description' => '説明文など説明文など説明文など説明文など説明文など説明文',
+            'price' => '000,000', 
+            'tax_price' => '000,000', 
+        ],
+        [
+            'title' => 'メニュー名メニュー名メニュー名',
+            'description' => '説明文など説明文など説明文など説明文など説明文など説明文',
+            'price' => '000,000', 
+            'tax_price' => '000,000', 
+        ]
+    ];
+?>
+<section class="top-plan">
+    <div class="l-container">
+        <div class="top-plan-inner">
+            <div class="top-plan-title__wrapper">
+                <p class="top-plan-eng__title">plan</p>
+                <h2 class="top-plan-title">
+                    <img src="<?php bloginfo('template_url');?>/img/top-plan-title.svg" alt="料金プラン">
+                </h2>
+            </div>
+            <ul class="top-plan-container">
+                <?php foreach ($plan_items as $item) : ?>
+                <li class="top-plan-card">
+                    <div class="top-plan-card__header">
+                        <h3><?php echo wp_kses_post($item['title']); ?></h3>
+                        <p><?php echo wp_kses_post($item['description']); ?></p>
+                    </div>
+                    <div class="top-plan-card__body">
+                        <p class="top-plan-card__main"><span class="yen"><?php echo wp_kses_post($item['price']); ?></span>円</p>
+                        <p class="top-plan-card__sub">税込<span class="yen"><?php echo wp_kses_post($item['tax_price']); ?></span>円</p>
+                    </div>
+                </li>
+                <?php endforeach; ?>
+            </ul>
+            <a href="<?php bloginfo('url'); ?>/works/" class="top-plan-button">もっと見る</a>
+        </div>
+    </div>
+</section>
+
+
+
+<section class="top-staff">
+    <div class="l-container">
+        <div class="top-staff-inner">
+            <div class="top-staff-title__wrapper">
+                <p class="top-staff-eng__title">Staff</p>
+                <h2 class="top-staff-title">
+                    <img src="<?php bloginfo('template_url');?>/img/top-staff-title.svg" alt="スタッフ紹介">
+                </h2>
+                <p class="top-staff-fukidashi">私たちにお任せください！</p>
+            </div>
+            <ul class="top-staff-contents">
+                <li class="top-staff-card">
+                    <img src="<?php bloginfo('template_url');?>/img/top-staff-image1.jpg" alt="">
+                    <p class="staff-role">役職が入ります</p>
+                    <h3 class="staff-name">名字 名前</h3>
+                </li>
+                <li class="top-staff-card">
+                    <img src="<?php bloginfo('template_url');?>/img/top-staff-image2.jpg" alt="">
+                    <p class="staff-role">役職が入ります</p>
+                    <h3 class="staff-name">名字 名前</h3>
+                </li>
+                <li class="top-staff-card">
+                    <img src="<?php bloginfo('template_url');?>/img/top-staff-image3.jpg" alt="">
+                    <p class="staff-role">役職が入ります</p>
+                    <h3 class="staff-name">名字 名前</h3>
+                </li>
+            </ul>
+            <a href="<?php bloginfo('url'); ?>/works/" class="top-staff-button">もっと見る</a>
+        </div>
+    </div>
+</section>
+
+
+<section class="top-story">
+  <div class="l-container">
+    <div class="top-story-inner">
+        <div class="top-story-title__wrapper">
+            <p class="top-story-eng__title">Story</p>
+            <h2 class="top-story-title">代表取締役 高野浩 ストーリー紹介</h2>
+        </div>
+
+        <div class="top-story-content__wrapper">
+            <div class="story-box">
+                <div class="story-left">
+                    <img src="<?php bloginfo('template_url');?>/img/top-story-image1.jpg" alt="代表写真" class="story-img">
+                </div>
+                <div class="story-right">
+                    <div class="story-item">
+                        <h3><span class="dot"></span>私たちが「電気代0円の未来」を目指す理由</h3>
+                        <p>はじめまして。有限会社アミカブルサービスの代表取締役、高野浩です。私たちが目指しているのは、単に太陽光パネルを設置することではありません。<span class="blue">その先にある「電気代0円の未来」、そして災害に負けない、誰もが安心して笑顔で暮らせる社会</span>を本気で実現することです。 なぜ、私たちがそこまで強く願うのか。それは、電気とは全く関係のない場所から始まった、私の人生の歩みに深く関わっています。</p>
+                    </div>
+                    <div class="story-item">
+                        <h3><span class="dot"></span>原点はおばあちゃんの笑顔</h3>
+                        <p>私の原点は、茨城県のレンコン農家で過ごした幼少期にあります。物作りが好きだった私は、自分で作ったレンコン料理を大好きなおばあちゃんに食べてもらうことが何よりの喜びでした。あの時の、心から嬉しそうな笑顔。<span class="blue">「誰かを笑顔にしたい、喜んでもらいたい」</span>という想いは、この時から私の中に深く刻まれました。</p>
+                    </div>
+
+                    <div class="story-item">
+                        <h3><span class="dot"></span>回り道と挫折が教えてくれたこと</h3>
+                        <p>その後、飛行機への憧れから航空整備士になりましたが、厳しい現実に直面しました。もっと大きな仕事がしたいと建設業に飛び込み、専門技術を身につけて多くの人に頼られる喜びも知りました。しかし、人生は順風満帆にはいかず、椎間板ヘルニアで長期の入院生活を余儀なくされます。そこで目にしたのは、元気をなくしていく人々の姿でした。この時、私の心に再び火が灯ります。<span class="blue">「人を明るくする仕事がしたい！」</span>と。<br/>
+                        失意の中、実家で久しぶりにおばあちゃんに料理を振る舞うと、昔と変わらない満面の笑みを見せてくれました。その瞬間、稲妻に打たれたように感じたのです。「これだ！私が本当にやりたかったのは、この笑顔を作ることだ！」と。30歳にして、私は飲食業界へ飛び込むことを決意しました。</p>
+                    </div>
+                </div>
+            </div>
+
+    <div class="story-box">
+      <div class="story-left">
+        <div class="story-item">
+          <h3><span class="dot"></span>アミカブルサービスの誕生と最大の危機</h3>
+          <p>キッチンカーでお客様の笑顔に触れるうち、「自分のお店を持ちたい」という夢が膨らみます。その資金作りのために設立したのが、この「有限会社アミカブルサービス」です。社名には、地元・茨城県<span class="blue">阿見</span>町への恩返し（<span class="blue">アミ</span>）と、平和・友好的という意味の「<span class="blue">アミカブル</span>（amicable）」という想いを込めました。<br />
+          そして「人を明るくする」という原点に立ち返り、太陽光事業へと舵を切った矢先、会社設立13年目に最大の危機が訪れます。私たちが販売した産業用太陽光発電所が、大雨による土砂災害で崩壊してしまったのです。<br />
+          法的な責任は、私たちにはありませんでした。しかし、目の前には途方に暮れるお客様の姿がありました。その時、私の脳裏に浮かんだのは、あのおばあちゃんの笑顔です。<span class="blue">「お客様を笑顔にしたい。この人を助けたい」</span>。その一心で、私たちは会社負担で2,000万円をかけて修復することを決意しました。<br />
+          売上は立たず、私自身の給料は何ヶ月もゼロ。それでも、信じてついてきてくれる従業員の給料だけは一度も遅らせませんでした。必死で働き続け、3年後、ついに負債を完済することができたのです。</p>
+        </div>
+
+        <div class="story-item">
+            <h3><span class="dot"></span>私たちの約束</h3>
+            <p>この壮絶な経験は、私たちに3つの大切なことを教えてくれました。</p>
+                <ol class="promise-list">
+                    <li>1. 本当の責任<span class="blue">とは、お客様のお困り事を最後まで取り除くこと。</span></li>
+                    <li>2. <span class="blue">どんな困難にも</span>諦めずに粘り強く取り組む<span class="blue">ことの大切さ。</span></li>
+                    <li>3. <span class="blue">苦しい時も支え合える仲間こそが、何よりの宝物<span class="blue">であること。</span></li>
+                </ol>
+            <p>この想いこそが、アミカブルサービスの魂です。<br/>
+            特別な才能があったわけではありません。ただ、信じた道をまっすぐに、お客様のことだけを考えて突き進んできました。<br/>
+            災害も、高騰し続ける電気代も、私たちの暮らしを脅かす不安の種です。私たちは、エネルギーを自給自足できる安心な社会を創り、未来の子どもたちに笑顔の暮らしを繋いでいきたい。<br/>
+            電気のこと、そしてお家のことでお困り事があれば、ぜひ私たちにご相談ください。<br/>お客様の笑顔にお会いできる日を、心から楽しみにしています。</p>
+        </div>
+
+        <p class="representative-sign">有限会社アミカブルサービス<br>
+        <strong>代表取締役　高野 浩</strong></p>
+      </div>
+
+      <div class="story-right">
+      <img src="<?php bloginfo('template_url');?>/img/top-story-image2.jpg" alt="代表写真" class="story-img">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="top-company">
+    <div class="top-company-bg"></div>
+    <div class="l-container">
+        <div class="top-company-inner">
+            <div class="top-company-title__wrapper">
+                <p class="top-company-eng__title">Company</p>
+                <h2 class="top-company-title">
+                    <img src="<?php bloginfo('template_url');?>/img/top-company-title.svg" alt="料金プラン">
+                </h2>
+            </div>
+            <div class="top-company-description">
+                <p>有限会社アミカブルサービスは、地域のお客様に寄り添い続けて20年以上。<br />
+                太陽光発電や蓄電池の最適提案から、施工・アフターサービスまで一貫した自社体制で、高品質かつきめ細かなサポートを提供しています。『安心』『信頼』『地元密着』をモットーに、お客様の快適な暮らしを支えます。</p>
+            </div>
+            <ul class="top-company-cards">
+                <li>
+                    <a href="<?php bloginfo('url'); ?>/company/">
+                        <img src="<?php bloginfo('template_url');?>/img/top-company-icon-profile.svg" alt="会社概要">
+                        <p>会社概要</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="<?php bloginfo('template_url');?>/img/top-company-icon-access.svg" alt="アクセス">
+                        <p>アクセス</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="<?php bloginfo('template_url');?>/img/top-company-icon-recruit.svg" alt="採用情報">
+                        <p>採用情報</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <ul class="top-company-logos">
+            <li><img src="<?php bloginfo('template_url');?>/img/top-company-banner1.png" alt="再生可能エネルギー関連の情報発信基地 一般社団法人 日本PVプランナー協会"></li>
+            <li><img src="<?php bloginfo('template_url');?>/img/top-company-banner2.png" alt="新エネルギー革命会"></li>
+            <li><img src="<?php bloginfo('template_url');?>/img/top-company-banner3.png" alt="一般社団法人 新エネルギーO&M協議会"></li>
+            <li><img src="<?php bloginfo('template_url');?>/img/top-company-banner4.png" alt="JPEA 太陽光発電協会"></li>
+            <li><img src="<?php bloginfo('template_url');?>/img/top-company-banner5.png" alt="次世代型O&M 稼ぐ太陽光メンテ"></li>
+        </ul>
+</section>
+
+
+<section class="top-blog">
+    <div class="l-container">
+        <div class="top-blog-inner">
+            <div class="top-blog-title__wrapper">
+                <p class="top-blog-eng__title">Blog</p>
+                <h2 class="top-blog-title">
+                    <img src="<?php bloginfo('template_url');?>/img/top-blog-title.svg" alt="ブログ">
+                </h2>
+            </div>
+            <ul class="top-blog-category">
+                <li>お知らせ</li>
+                <li>お役立ちコラム</li>
+            </ul>
+            <!-- ブログ一覧 -->
+            <?php include("part-postlist.php"); ?>
+            <a href="<?php bloginfo('url'); ?>/works/" class="top-blog-button">一覧を見る</a>
+        </div>
+    </div>
+</section>
 
 <?php get_footer(); ?>
