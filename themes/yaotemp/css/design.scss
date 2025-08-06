@@ -46,11 +46,31 @@ $breakpoint-xs: 480px; //sp
     @content;
   }
 }
+
+.u-sp {
+  display: none;
+
+  @include max-screen($breakpoint-sm) {
+      display: block;
+  }
+}
+
+.u-pc {
+  display: block;
+
+  @include max-screen($breakpoint-sm) {
+      display: none!important;
+  }
+}
+
 // レイアウト
 .l-container {
   max-width: 1200px;
-  padding: 0 4%;
   margin-inline: auto;
+
+  @include max-screen($breakpoint-sm) {
+    padding: 0 4%;
+  }
 }
 
 body {
@@ -1151,50 +1171,139 @@ body {
 
 
 /* =================================================================
-  Examples of construction /  施工事例
+  Sekoujirei /  施工事例
 ================================================================= */
 .top-sekoujirei {
-  padding: 100px 0 170px;
+  padding: 80px 0 89px;
   background-image: url("../img/top-sekoujirei-bg.png");
   background-size: cover;
   background-position: center;
 
   @include max-screen($breakpoint-md) {
-    padding: 60px 0;
+    padding: 35px 0 64px;
   }
 
-  .top-sekoujirei-title__wrapper {
+  &-title__wrapper {
     margin-bottom: 6rem;
     display: flex;
     flex-direction: column;
     align-items: center;
+    
     @include max-screen($breakpoint-md) {
       margin-bottom: 3rem;
     }
   }
-  .top-sekoujirei-eng__title {
+
+  &-eng__title {
     font-family: $font-eng;
     color: $title-light-blue;
     font-size: 1.5rem;
     line-height: 2;
   }
-  .top-sekoujirei-title {
-    width: 19vw;
-    max-width: 278px;
-    min-width: 169px;
+
+  &-title {
+    width: 100%;
+    max-width: 337px;
+
+    @include max-screen($breakpoint-sm) {
+      max-width: 190px;
+    }
   }
 
-  .top-sekoujirei-button {
+  &-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 70px 40px;
+
+    @include max-screen($breakpoint-sm) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px 22px;
+    }
+  
+    &__item {
+      width: 100%;
+      margin: 0;
+  
+      a {
+        display: block;
+        width: auto;
+        height: auto;
+        margin-left: 0 !important;
+      }
+    }
+  
+    &__images {
+      position: relative;
+  
+      img {
+        aspect-ratio: 13 / 8;
+        height: auto; 
+      }
+  
+      .category-name {
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 10;
+        width: 108px;
+        height: 32px;
+        text-align: center;
+        line-height: 32px;
+        font-size: 16px;
+        font-weight: 500;
+        font-family: "Noto Sans JP", sans-serif;
+        color: #fff;
+        background: $title-orange;
+      }
+  
+      &::before {
+        aspect-ratio: 13 / 8;
+        width: 100%;
+        object-fit: cover;
+        padding-top: unset;
+        overflow: unset;
+      }
+    }
+  
+    &__content {
+      margin-top: 15px;
+      font-size: 1.6rem;
+
+      @include max-screen($breakpoint-sm) {
+        margin-top: 0;
+        font-size: 1.2rem;
+      }
+  
+      h4 {
+        margin-bottom: 10px;
+        font-size: 2.2rem;
+        font-weight: bold;
+
+        @include max-screen($breakpoint-sm) {
+          font-size: 1.4rem;
+        }
+      }
+
+      p {
+        line-height: 1.8;
+      }
+  
+      .area-name {    
+        font-weight: 350;
+      }
+    }
+  }
+
+  &-button {
     display: block;
     max-width: 436px;
     width: 100%;
     margin: 80px auto 0;
     padding: 30px 10px;
-    background: #2182d8;
     background: linear-gradient(
-      127deg,
-      rgba(33, 130, 216, 1) 100%,
-      rgba(27, 101, 196, 1) 0%
+      274.72deg,
+      #2182D8 -5.7%,
+      #1B65C4 91.29%
     );
     color: #fff;
     font-size: 2rem;
@@ -1222,6 +1331,7 @@ body {
       width: 8px;
       height: 14px;
       transform: translateY(-50%);
+
       @include max-screen($breakpoint-s) {
         right: 16px;
         width: 5px;
@@ -1232,62 +1342,9 @@ body {
     @include max-screen($breakpoint-s) {
       font-size: 1.4rem;
       padding: 16px 10px;
-      margin-top: 3rem;
+      margin-top: 24px;
       max-width: 262px;
     }
-  }
-}
-.sekoujirei-archive {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 70px 40px;
-
-  .archiveItem {
-    width: 100%;
-    margin: 0;
-  }
-  .eyecatch::before {
-    aspect-ratio: 13 / 8;
-    width: 100%;
-    object-fit: cover;
-    padding-top: unset;
-    overflow: unset;
-  }
-  .eyecatch a {
-    display: block;
-    width: auto;
-    height: auto;
-    margin-left: 0 !important;
-  }
-  .eyecatch img {
-    aspect-ratio: 13 / 8;
-    height: auto; 
-  }
-  .category-name {
-    position: absolute;
-    left: 0;
-    top: 0;
-    z-index: 10;
-    width: 108px;
-    height: 32px;
-    text-align: center;
-    line-height: 32px;
-    font-size: 16px;
-    font-weight: 500;
-    font-family: "Noto Sans JP", sans-serif;
-    color: #fff;
-    background: $title-orange;
-  }
-  .sekoujirei-content {
-    margin-top: 15px;
-    font-size: 16px;
-  }
-  .area-name {    
-    font-weight: 350;
-  }
-  .eyecatch h4 {
-    font-size: 22px;
-    font-weight: bold;
   }
 }
 
@@ -1295,47 +1352,83 @@ body {
   Voices /  お客様の声
 ================================================================= */
 .top-voices {
-  padding: 100px 0 170px;
+  padding: 74px 0 90px;
   background-image: url("../img/top-voices-bg.png");
   background-size: cover;
   background-position: center;
 
   @include max-screen($breakpoint-md) {
-    padding: 60px 0;
+    padding: 35px 0 38px;
   }
 
-  .top-voices-title__wrapper {
+  &-title__wrapper {
     margin-bottom: 6rem;
     display: flex;
     flex-direction: column;
     align-items: center;
+
     @include max-screen($breakpoint-md) {
       margin-bottom: 3rem;
     }
   }
-  .top-voices-eng__title {
+
+  &-eng__title {
     font-family: $font-eng;
     color: $title-light-blue;
     font-size: 1.5rem;
     line-height: 2;
   }
-  .top-voices-title {
-    width: 19vw;
-    max-width: 278px;
-    min-width: 169px;
+
+  &-title {
+    width: 100%;
+    max-width: 400px;
+
+    @include max-screen($breakpoint-sm) {
+      max-width: 256px;
+    }
   }
 
-  .top-reason-button {
+  &-list__item {
+    transition: all 0.3s ease;
+    transform: scale(0.8382);
+  }
+
+  &-list__images img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 24px;
+    margin-bottom: 20px;
+  }
+
+  &-list__content p {
+      font-size: 2.4rem;
+      font-weight: 400;
+      line-height: 1.8;
+
+      @include max-screen($breakpoint-sm) {
+        font-size: 1.2rem;
+      }
+  }
+
+  .area-name {
+      margin-bottom: 20px;
+      font-weight: bold;
+
+      @include max-screen($breakpoint-sm) {
+        margin-bottom: 9px;
+      }
+  }
+
+  &-button {
     display: block;
     max-width: 436px;
     width: 100%;
-    margin: 80px auto 0;
+    margin: 130px auto 0;
     padding: 30px 10px;
-    background: #2182d8;
     background: linear-gradient(
-      127deg,
-      rgba(33, 130, 216, 1) 100%,
-      rgba(27, 101, 196, 1) 0%
+      274.72deg,
+      #2182D8 -5.7%,
+      #1B65C4 91.29%
     );
     color: #fff;
     font-size: 2rem;
@@ -1363,6 +1456,7 @@ body {
       width: 8px;
       height: 14px;
       transform: translateY(-50%);
+
       @include max-screen($breakpoint-s) {
         right: 16px;
         width: 5px;
@@ -1373,201 +1467,254 @@ body {
     @include max-screen($breakpoint-s) {
       font-size: 1.4rem;
       padding: 16px 10px;
-      margin-top: 3rem;
+      margin-top: 47px;
       max-width: 262px;
+    }
+  }
+
+  /* slick / スライド */
+
+  .slick-slide.slick-center.top-voices-list__item {
+    transform: scale(1);
+  }
+
+  .slick-arrow {
+    width: 60px;
+    height: 60px;
+    background-color: $blue;
+    border: none;
+    position: absolute;
+    top: 35%;
+    transform: translateY(-50%);
+    z-index: 10;
+    cursor: pointer;
+    padding: 0;
+
+    @include max-screen($breakpoint-sm) {
+      width: 30px;
+      height: 30px;
+    }
+  }
+  
+  .slick-arrow::before {
+    content: '';
+    display: block;
+    width: 17px;
+    height: 17px;
+    border-top: 2px solid #fff;
+    border-right: 2px solid #fff;
+    transform: rotate(45deg);
+    margin: auto;
+    position: relative;
+    top: 0;
+    left: 0;
+
+    @include max-screen($breakpoint-sm) {
+      width: 8px;
+      height: 8px;
+    }
+  }
+
+  .slick-arrow::before {
+    opacity: 1;
+  }
+  
+  .slick-prev {
+    left: 0;
+  }
+  
+  .slick-prev::before {
+    transform: rotate(-135deg);
+  }
+  
+  .slick-next {
+    right: 0;
+  }
+  
+  .slick-next::before {
+    transform: rotate(45deg);
+  }
+
+  .slick-prev:hover,
+  .slick-prev:focus,
+  .slick-next:hover,
+  .slick-next:focus {
+    color: #fff !important;
+    background-color: $blue!important;
+    opacity: 0.9;
+    outline: none;
+  }
+
+  .slick-dots {
+    bottom: -74px;
+
+    @include max-screen($breakpoint-sm) {
+      bottom: -30px;
+    }
+  }
+
+  @include max-screen($breakpoint-sm) {
+    .slick-dots li {
+      margin: 0;
+    }
+  }
+
+  .slick-dots li button:before {
+    font-size: 15px;
+
+    @include max-screen($breakpoint-sm) {
+      font-size: 10px;
     }
   }
 }
 
 /* =================================================================
-  After support /  アフターサポート
+  Support /  アフターサポート
 ================================================================= */
-.after-support {
+.top-support {
   background: linear-gradient(to bottom, #fffde5 0%, #fff 100%);
   padding: 80px 0 120px;
   background-image: url("../img/top-support-bg.png");
-}
+  background-size: 1540px;
 
-.container {
-  max-width: 100%;
-  margin: 0 auto;
-  padding: 0 20px;
-}
+  @include max-screen($breakpoint-sm) {
+    padding: 50px 0 120px;
+  }
 
-.after-support__inner {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 150px;
-}
-
-.after-support__images-wrapper {
-  width: 50%;
-  position: relative;
-  margin-left: -150px; /* ← これで "はみ出し" を演出 */
-}
-
-
-.after-support__images {
-  position: relative;
-  /*width: 50%;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  */
-}
-
-.after-support__img {
-  width: 100%;
-  border-radius: 40px;
-  /*object-fit: cover;*/
-}
-
-.bottom-img {
-  position: absolute;
-  bottom: -207px;
-  right: -118px;
-  width: 70%;
-  border-radius: 40px;
-  z-index: 2;
-  /*
-  width: 80%;
-  margin-left: auto;
-  border-radius: 16px;
-  */
-}
-
-
-.after-support__content {
-  width: 50%;
-  padding-left: 30px;
-}
-
-.after-support__heading {
-  font-size: 9.0rem;
-  font-weight: 400;
-  color: #2b9dffb3;
-  margin-bottom: 53px;
-  font-family: $font-eng;
-  text-align: left;
-  margin-left: -165px;
-}
-
-.after-support__lead {
-  font-size: 4.3rem;
-  line-height: 1.375;
-  margin-bottom: 33px;
-  font-weight: bold;
-  color: #f15a24;
-}
-
-.after-support__lead span {
-  
-  font-size: 3.1rem; 
-}
-
-.after-support__text {
-  font-size: 1.8rem;
-  font-weight: 400;
-  line-height: 1.8;
-  margin-bottom: 60px;
-  color: $blue;
-}
-
-.top-support-button {
-  display: block;
-    min-width: 396px;
-    padding: 3.2rem 0;
-    background: linear-gradient(
-      127deg,
-      rgba(33, 130, 216, 1) 100%,
-      rgba(27, 101, 196, 1) 0%
-    );
-    color: #fff;
-    font-size: 2rem;
-    font-weight: bold;
-    text-decoration: none;
-    border-radius: 50px;
-    transition: opacity 0.3s;
+  &__inner {
     position: relative;
-    text-align: center;
-    margin-left: auto;
-    width: -moz-fit-content;
-    width: fit-content;
-
-    &:hover {
-      opacity: 0.8;
-    }
-
-    &::after {
-      content: "";
-      position: absolute;
-      right: 25px;
-      top: 50%;
-      background-image: url("../img/ico-arrow-right.svg");
-      background-size: cover;
-      background-repeat: no-repeat;
-      display: block;
-      width: 8px;
-      height: 14px;
-      transform: translateY(-50%);
-      @include max-screen($breakpoint-s) {
-        right: 16px;
-        width: 5px;
-        height: 8px;
-      }
-    }
-
-    @include max-screen($breakpoint-s) {
-      font-size: 1.4rem;
-      padding: 16px 10px;
-      margin-top: 3rem;
-      max-width: 262px;
-    }
-  }
-
-.top-support {
-  padding: 100px 0 170px;
-  background-image: url("../img/top-support-bg.png");
-  background-size: cover;
-  background-position: center;
-
-  @include max-screen($breakpoint-md) {
-    padding: 60px 0;
-  }
-
-  .top-support-title__wrapper {
-    margin-bottom: 6rem;
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
     align-items: center;
-    @include max-screen($breakpoint-md) {
-      margin-bottom: 3rem;
+    gap: 150px;
+
+    > :first-child {
+      width: 100%;
+      z-index: 10;
+    }
+  
+    @include max-screen($breakpoint-sm) {
+      flex-flow: column;
+      gap: 140px;
     }
   }
-  .top-support-eng__title {
-    font-family: $font-eng;
-    color: $title-light-blue;
-    font-size: 1.5rem;
-    line-height: 2;
-  }
-  .top-support-title {
-    width: 19vw;
-    max-width: 278px;
-    min-width: 169px;
+
+  &-title__wrapper {
+    position: relative;
+    z-index: 5;
   }
 
-  .top-support-button {
-    display: block;
-    max-width: 436px;
+  &-eng__title {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%) translateX(120px);
+    max-width: 607px;
     width: 100%;
-    margin: 80px auto 0;
+    font-size: 9.0rem;
+    font-weight: 400;
+    color: #2b9dffb3;
+    font-family: $font-eng;
+  
+    @include max-screen($breakpoint-sm) {
+      position: static;
+      transform: unset;
+      font-size: 4rem;
+      text-align: center;
+      margin-left: 0;
+    }
+  }
+
+  &__images {
+
+    img {
+      position: absolute;
+      border-radius: 40px;
+
+      @include max-screen($breakpoint-sm) {
+        border-radius: 10px;
+      }
+
+      &:nth-of-type(1) {
+        left: -190px;
+        top: 60px;
+        max-width: 572px;
+
+        @include max-screen($breakpoint-sm) {
+          left: -24px;
+          top: 70px;
+          max-width: 280px;
+        }
+      }
+      &:nth-of-type(2) {
+        bottom: 0;
+        left: 13%;
+        max-width: 348px;
+        z-index: 2;
+
+        @include max-screen($breakpoint-sm) {
+          left: auto;
+          right: 0;
+          bottom: auto;
+          max-width: 170px;
+        }
+      }
+    }
+  }
+
+  &__content {
+    @include min-screen($breakpoint-sm) {
+      width: 50%;
+      padding-left: 30px;
+    }
+  }
+
+  &__lead {
+    font-size: 4.3rem;
+    line-height: 1.375;
+    margin-bottom: 33px;
+    font-weight: bold;
+    color: #f15a24;
+
+    @include max-screen($breakpoint-sm) {
+      margin-bottom: 20px;
+      text-align: center;
+      font-size: 3.3rem;
+    }
+  
+    span {
+      font-size: 3.1rem;
+
+      @include max-screen($breakpoint-sm) {
+          font-size: 2.3rem; 
+      }
+    } 
+  }
+
+  &__text {
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: 1.8;
+    margin-bottom: 60px;
+    color: $blue;
+  
+    @include max-screen($breakpoint-sm) {
+      margin-bottom: 30px;
+      font-size: 1.5rem;
+    }
+  }
+
+  &-button {
+    display: block;
+    max-width: 396px;
+    width: 100%;
+    margin-left: auto;
     padding: 30px 10px;
-    background: #2182d8;
     background: linear-gradient(
-      127deg,
-      rgba(33, 130, 216, 1) 100%,
-      rgba(27, 101, 196, 1) 0%
+      274.72deg,
+      #2182D8 -5.7%,
+      #1B65C4 91.29%
     );
     color: #fff;
     font-size: 2rem;
@@ -1578,6 +1725,10 @@ body {
     transition: opacity 0.3s;
     position: relative;
     line-height: 2;
+
+    @include max-screen($breakpoint-sm) {
+      margin-inline: auto;
+    }
 
     &:hover {
       opacity: 0.8;
@@ -1605,10 +1756,10 @@ body {
     @include max-screen($breakpoint-s) {
       font-size: 1.4rem;
       padding: 16px 10px;
-      margin-top: 3rem;
+      margin-top: 28px;
       max-width: 262px;
     }
-  }
+  } 
 }
 
 /* =================================================================
@@ -1622,7 +1773,8 @@ body {
   background-position: top;
 
   @include max-screen($breakpoint-md) {
-    padding: 60px 0;
+    background-image: url("../img/top-plan-bg_sp.png");
+    padding: 50px 0;
   }
 
   &-title__wrapper {
@@ -1683,6 +1835,7 @@ body {
       width: 8px;
       height: 14px;
       transform: translateY(-50%);
+
       @include max-screen($breakpoint-s) {
         right: 16px;
         width: 5px;
@@ -1693,7 +1846,7 @@ body {
     @include max-screen($breakpoint-s) {
       font-size: 1.4rem;
       padding: 16px 10px;
-      margin-top: 3rem;
+      margin-top: 22px;
       max-width: 262px;
     }
   }
@@ -1704,12 +1857,17 @@ body {
   gap: 40px;
   max-width: 1200px;
   margin: 0 auto;
+
+  @include max-screen($breakpoint-md) {
+    grid-template-columns: 1fr;
+    gap: 13px;
+  }
   }
 
   &-card {
     background: #fff;
     border-radius: 16px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 4px 4px 4px 0px #00000040;
     overflow: hidden;
 
     &__header {
@@ -1719,20 +1877,36 @@ body {
       text-align: center;
       font-weight: bold;
 
+      @include max-screen($breakpoint-sm) {
+        padding: 14px 10px 13px;
+      }
+      
       h3 {
         font-size: 3.2rem;
         margin-bottom: 8px;
+
+        @include max-screen($breakpoint-sm) {
+          font-size: 2rem;
+        }
       }
 
       p {
         font-size: 1.8rem;
         line-height: 1.5;
+
+        @include max-screen($breakpoint-sm) {
+          font-size: 1.2rem;
+        }
       }
     }
 
     &__body {
       padding: 24px 16px;
       text-align: center;
+
+      @include max-screen($breakpoint-sm) {
+        padding: 7px 16px 18px;
+      }
     }
 
     &__main {
@@ -1740,9 +1914,17 @@ body {
       color: $base-text;
       font-weight: bold;
 
+      @include max-screen($breakpoint-sm) {
+        font-size: 2.4rem;
+      }
+
       .yen {
         font-size: 7.2rem;
         color: $title-orange;
+
+        @include max-screen($breakpoint-sm) {
+          font-size: 4.3rem;
+        }
       }
     }
     
@@ -1752,8 +1934,16 @@ body {
       color: #696969;
       font-weight: bold;
 
+      @include max-screen($breakpoint-sm) {
+        font-size: 1.2rem;
+      }
+
       span {
         font-size: 2.6rem;
+
+        @include max-screen($breakpoint-sm) {
+          font-size: 1.6rem;
+        }
       }
     }
   }
@@ -1770,29 +1960,30 @@ body {
   background-position: top;
 
   @include max-screen($breakpoint-md) {
-    padding: 60px 0;
+    padding: 42px 0 77px;
+    background-size: auto;
   }
 
   &-title__wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
-    @include max-screen($breakpoint-md) {
-      margin-bottom: 3rem;
-    }
   }
+
   &-eng__title {
     font-family: $font-eng;
     color: $title-light-blue;
     font-size: 1.5rem;
     line-height: 2;
   }
+
   &-title {
     width: 19vw;
     max-width: 278px;
     min-width: 169px;
     margin-bottom: 23px;
   }
+
   &-fukidashi {
     position: relative;
     display: inline-block;
@@ -1807,6 +1998,12 @@ body {
     font-weight: 400;
     line-height: 1.5;
     color: #000000;
+
+    @include max-screen($breakpoint-sm) {
+      width: 318px;
+      margin-bottom: 47px;
+      padding: 8px;
+    }
 
     &::before {
       content: "";
@@ -1837,7 +2034,6 @@ body {
     width: 100%;
     margin: 60px auto 0;
     padding: 30px 10px;
-    background: #2182d8;    
     background: linear-gradient(
       274.72deg,
       #2182D8 -5.7%,
@@ -1879,55 +2075,67 @@ body {
     @include max-screen($breakpoint-s) {
       font-size: 1.4rem;
       padding: 16px 10px;
-      margin-top: 3rem;
+      margin-top: 28px;
       max-width: 262px;
+    }
+  }
+
+  &-contents {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+  
+    @include max-screen($breakpoint-sm) {
+      gap: 26px;
+    }
+  }
+
+  &-card {
+    overflow: hidden;
+    width: 260px;
+    text-align: center;
+  
+    @include max-screen($breakpoint-sm) {
+      width: 290px;
+    }
+
+    img {
+      border-radius: 15px;
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .staff-role {
+      bottom: 0;
+      background: #FF5E28;
+      color: #fff;
+      font-size: 1.4rem;
+      margin: 20px 9px 0;
+      padding: 4px 0;
+    
+      @include max-screen($breakpoint-sm) {
+        margin: 16px 0 0;
+        padding: 6px 0;
+        font-size: 1.5rem;
+      }
+    }
+
+    .staff-name {
+      font-size: 2rem;
+      color: #003366;
+      font-weight: bold;
+      margin-top: 16px;
+    
+      @include max-screen($breakpoint-sm) {
+        margin-top: 0;
+        font-size: 2.5rem;
+      }
     }
   }
 }
 
-
-.section-title .main-title {
-  font-size: 32px;
-  font-weight: bold;
-  color: #FFD700;
-  text-shadow: 2px 2px #333;
-}
-
-.top-staff-contents {
-  display: flex;
-  justify-content: center;
-  gap: 40px;
-  flex-wrap: wrap;
-}
-
-.top-staff-card {
-  overflow: hidden;
-  width: 260px;
-  text-align: center;
-}
-
-.top-staff-card img {
-  border-radius: 15px;
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-.top-staff-card .staff-role {
-  bottom: 0;
-  background: #FF5E28;
-  color: #fff;
-  font-size: 14px;
-  margin: 20px 9px 0;
-  padding: 4px 0;
-}
-
-.staff-name {
-  font-size: 20px;
-  color: #003366;
-  font-weight: bold;
-  margin-top: 16px;
-}
 
 /* =================================================================
   Story /  会社ストーリー
@@ -1941,7 +2149,8 @@ body {
   background-position: top;
 
   @include max-screen($breakpoint-md) {
-    padding: 60px 0;
+    padding: 39px 4% 50px;
+    background-size: auto;
   }
 
   .l-container {
@@ -1952,8 +2161,9 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+
     @include max-screen($breakpoint-md) {
-      margin-bottom: 3rem;
+      margin-bottom: 2.4rem;
     }
   }
 
@@ -1970,23 +2180,24 @@ body {
     color: #207BD3;
     font-size: 3rem;
     font-weight: bold;
-  }
-}
-  .section-subtitle {
-    text-align: center;
-    font-size: 14px;
-    color: #999;
+
+    @include max-screen($breakpoint-md) {
+      margin-bottom: 0;
+      font-size: 1.8rem;
+    }
   }
 
-  .section-title {
-    text-align: center;
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 50px;
-    color: #005bac;
+  &-content__wrapper {
+    padding: 80px 58px 58px;
+    background: #fff;
+    box-shadow: 0px 5px 10px 10px #00000012;
+
+    @include max-screen($breakpoint-sm) {
+      padding: 17px;
+    }
   }
 
-  .story-box {
+  &-box {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -1995,90 +2206,113 @@ body {
 
     &:nth-of-type(1) {
       margin-bottom: 53px;
+
+      @include max-screen($breakpoint-sm) {
+        margin-bottom: -20px;
+      }
     }
 
-    .story-left,
-    .story-right {
+    &__left,
+    &__right {
       flex: 1;
       min-width: 300px;
+
+      img {
+        width: 100%;
+        height: auto;
+      }
     }
 
-    &:nth-of-type(odd) .story-left {
+    &:nth-of-type(odd) .top-story-box__left {
       max-width: 400px;
     }
 
-    &:nth-of-type(even) .story-right {
+    &:nth-of-type(even) .top-story-box__right {
       max-width: 354px;
+
+      @include max-screen($breakpoint-sm) {
+        img {
+          display: none;
+        }
+      }      
+    }
+  }
+
+  &-item {
+    margin-bottom: 30px;
+
+    @include max-screen($breakpoint-sm) {
+      margin-bottom: 25px;
     }
 
-    .story-img {
-      width: 100%;
-      height: auto;
+    &:last-of-type {
+      margin-bottom: 0;
     }
 
-    .story-item {
-      margin-bottom: 30px;
+    h3 {
+      margin-bottom: 10px;
+      font-size: 1.8rem;
+      font-weight: bold;
+      line-height: 1;
 
-      &:last-of-type {
-        margin-bottom: 0;
+      @include max-screen($breakpoint-sm) {
+        font-size: 1.4rem;
       }
 
-      h3 {
-        margin-bottom: 10px;
-        font-size: 18px;
-        font-weight: bold;
-        line-height: 1;
+      .dot {
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        background: #ff4500;
+        border-radius: 50%;
+        margin-right: 6px;
+        vertical-align: top;
 
-        .dot {
-          display: inline-block;
-          width: 20px;
-          height: 20px;
-          background: #ff4500;
-          border-radius: 50%;
-          margin-right: 6px;
-          vertical-align: top;
+        @include max-screen($breakpoint-sm) {
+          width: 14px;
+          height: 14px;
         }
       }
-
-      p {
-        font-size: 1.3rem;
-        line-height: 1.8;
-        color: #000;
-      }
-
-      .blue {
-        color: #00B3D6;
-        font-weight: bold;
-      }
     }
 
-    .promise-list {
-      list-style: none;
-      padding: 0;
-
-      li {
-        margin-bottom: 10px;
-        font-weight: bold;
-        color: $base-text;
-      }
-    }
-
-    .representative-sign {
-      margin-top: 30px;
-      font-size: 1.7rem;
-      line-height: 1.6;
+    p {
+      font-size: 1.3rem;
+      line-height: 1.8;
       color: #000;
-
-      strong {
-        font-size: 2.2rem;
+      
+      @include max-screen($breakpoint-sm) {
+        font-size: 1.1rem;
       }
     }
+
+    .blue {
+      color: #00B3D6;
+      font-weight: bold;
+    }
   }
-  .top-story-content__wrapper {
-    padding: 80px 58px 58px;
-    background: #fff;
-    box-shadow: 0px 5px 10px 10px #00000012;
+
+  .promise-list {
+    list-style: none;
+    padding: 0;
+
+    li {
+      margin-bottom: 10px;
+      font-weight: bold;
+      color: $base-text;
+    }
   }
+
+  .representative-sign {
+    margin-top: 30px;
+    font-size: 1.7rem;
+    line-height: 1.6;
+    color: #000;
+
+    strong {
+      font-size: 2.2rem;
+    }
+  }
+}
 
 /* =================================================================
   Company /  企業情報
@@ -2086,26 +2320,31 @@ body {
 .top-company {
   text-align: center;
   background-color: #fff;
-  position: relative;
-  padding-bottom: 385px;
+  padding-top: 60px;
+  padding-bottom: 80px;
+
+  background-size: contain;
+  background-position: top;
+  background-repeat: repeat-x;
+  background-size: auto;
+  background-image: url("../img/top-company-bg.png");
 
   @include max-screen($breakpoint-md) {
-    padding: 0;
-  }
-
-  &-bg {
-    height: 545px;
-    background-image: url("../img/top-company-bg.png");
-    background-size: cover;
-    background-position: top;
+    padding-top: 40px;
+    padding-bottom: 27px;
+    background-size: auto 72%;
   }
 
   .l-container {
     padding: 0;
-    position: absolute;
     top: 60px;
     left: 50%;
-    transform: translateX(-50%);
+
+    @include max-screen($breakpoint-sm) {
+      top: 50px;
+      width: 100%;
+      padding: 0 4%;
+    }
   }
 
   &-title__wrapper {
@@ -2131,6 +2370,14 @@ body {
     text-align: center;
     font-size: 3rem;
     font-weight: bold;
+
+    @include max-screen($breakpoint-sm) {
+      margin-bottom: 0;
+
+      img {
+        max-height: 44px;
+      }
+    }
   }
 
   &-description {
@@ -2141,6 +2388,12 @@ body {
     font-size: 1.8rem;
     font-weight: 400;
     color: #fff;
+
+    @include max-screen($breakpoint-sm) {
+      margin: 0 auto 55px;
+      padding: 0 20px;
+      font-size: 1.5rem;
+    }
   }
 
   &-cards {
@@ -2149,9 +2402,16 @@ body {
     gap: 60px;
     margin-bottom: 63px;
 
+    @include max-screen($breakpoint-sm) {
+      gap: 10px;
+      margin-bottom: 39px;
+    }
+
     li {
-      width: 300px;
-      height: 310px;
+      max-width: 300px;
+      max-height: 310px;
+      width: 100%;
+      height: auto;
       padding: 65px;
       text-align: center;
       text-decoration: none;
@@ -2161,15 +2421,30 @@ body {
       box-shadow: 4px 4px 4px 0px #00000040;
       transition: 0.5s;
 
+      @include max-screen($breakpoint-sm) {
+        padding: 23px 10px;
+        border-radius: 7px;
+        box-shadow: 1.42px 1.42px 1.42px 0px #00000040;
+      }
+
       img {
         width: auto;
         height: 100px;
         margin-bottom: 40px;
+
+        @include max-screen($breakpoint-sm) {
+          height: 40px;
+          margin-bottom: 14px;
+        }
       }
 
       p {
         font-size: 2.5rem;
         font-weight: bold;
+
+        @include max-screen($breakpoint-sm) {
+          font-size: 1.4rem;
+        }
       }
 
       &:hover {
@@ -2180,19 +2455,26 @@ body {
   }
 
   &-logos {
-    position: absolute;
-    left: 50%;
-    bottom: 81px;
-    transform: translateX(-50%);
+    bottom: 0;
     display: flex;
     gap: 13px;
     justify-content: space-between;
     width: 100%;
     background-color: #fff;
 
+    @include max-screen($breakpoint-sm) {
+      overflow: hidden;
+    }
+
     li img {
-      width: 100%;
+      width: auto;
       max-height: 85px;
+
+      @include max-screen($breakpoint-sm) {
+        max-height: 55px;
+        max-width: 100%;
+        width: auto;
+      }
     }
   }
 }
@@ -2208,7 +2490,7 @@ body {
   background-position: center;
 
   @include max-screen($breakpoint-md) {
-    padding: 60px 0;
+    padding: 36px 0 57px;
   }
 
   &-title__wrapper {
@@ -2219,6 +2501,12 @@ body {
 
     @include max-screen($breakpoint-md) {
       margin-bottom: 3rem;
+    }
+  }
+
+  &-title {
+    @include max-screen($breakpoint-sm) {
+      max-width: 117px;
     }
   }
 
@@ -2236,6 +2524,10 @@ body {
     gap: 15px;
     margin-bottom: 54px;
 
+    @include max-screen($breakpoint-sm) {
+      margin-bottom: 24px;
+    }
+
     li {
       padding: 10px 20px;
       border: 2px solid $blue;
@@ -2243,8 +2535,75 @@ body {
       font-weight: 600;
       background-color: #fff;
       border-radius: 5px;
+
+      @include max-screen($breakpoint-sm) {
+        font-size: 2rem;
+      }
     }
   }
+  
+  &-archive {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 70px 40px;
+
+  li {
+    max-width: 326px;
+    width: 100%;
+    margin: 0 10px;
+    
+    @include max-screen($breakpoint-sm) {
+      max-width: 183px;
+      margin: 0 6px;
+    }
+  }
+  
+  h3 {
+    font-size: 2.2rem!important;
+    font-weight: bold;
+
+    @include max-screen($breakpoint-sm) {
+      font-size: 1.2rem !important;
+    }
+  }
+
+  img {
+    border-radius: 20px;
+
+    @include max-screen($breakpoint-sm) {
+      border-radius: 12px;
+    }
+  }
+
+  .dateList {
+    margin-bottom: 18px;
+
+    &__item {
+      color: $blue;
+      font-size: 23px;
+      
+      @include max-screen($breakpoint-sm) {
+        font-size: 1.3rem !important;
+      }
+    }
+  }
+
+  .category-name {
+    border: 1.5px solid $blue;
+    border-radius: 5px;
+    background-color: #fff;
+    color: $blue;
+    font-size: 16px;
+    font-weight: 200;
+    padding: 5px;
+    max-width: 118px;
+    height: auto;
+    text-align: center;
+    @include max-screen($breakpoint-sm) {
+      font-size: 0.9rem !important;
+    }
+  }
+}
 
   &-button {
     display: block;
@@ -2284,6 +2643,7 @@ body {
       width: 8px;
       height: 14px;
       transform: translateY(-50%);
+
       @include max-screen($breakpoint-s) {
         right: 16px;
         width: 5px;
@@ -2294,47 +2654,23 @@ body {
     @include max-screen($breakpoint-s) {
       font-size: 1.4rem;
       padding: 16px 10px;
-      margin-top: 3rem;
+      margin-top: 44px;
       max-width: 262px;
     }
   }
-}
 
-.blog-archive {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 70px 40px;
+  @include max-screen($breakpoint-sm) {
+    .slick-dots li {
+      margin: 0;
+    }
+  }
 
-  .archiveItem {
-    width: 100%;
-    margin: 0;
-  }
-  
-  h3 {
-    font-size: 2.2rem!important;
-    font-weight: bold;
-  }
-  img {
-    border-radius: 20px;
-  }
-  .dateList {
-    margin-bottom: 18px;
-  }
-  .category-name {
-    border: 1.5px solid $blue;
-    border-radius: 5px;
-    background-color: #fff;
-    color: $blue;
-    font-size: 16px;
-    font-weight: 200;
-    padding: 5px 26px;
-    max-width: 118px;
-    height: auto;
-    text-align: center;
-  }
-  .dateList__item {
-    color: $blue;
-    font-size: 23px;
+  .slick-dots li button:before {
+    font-size: 15px;
+
+    @include max-screen($breakpoint-sm) {
+      font-size: 10px;
+    }
   }
 }
 
@@ -2348,12 +2684,20 @@ body {
   color: #000;
   text-align: center;
 
+  @include max-screen($breakpoint-sm) {
+    padding: 40px 4% 60px;
+  }
+
   &__inner {
     display: flex;
     justify-content: space-between;
     gap: 40px;
     max-width: 1200px;
     margin-inline: auto;
+
+    @include max-screen($breakpoint-sm) {
+      flex-direction: column;
+    }
   }
 
   &__left {
@@ -2363,8 +2707,12 @@ body {
 
   &-eng__title {
       font-family: $font-eng;
-      font-size: 6.4rem;
+      font-size: clamp(4rem, 7.21vw, 6.4rem);
       font-weight: 600;
+
+      @include max-screen($breakpoint-sm) {
+        text-align: center;
+      }
   }
 
   &-title {
@@ -2372,11 +2720,21 @@ body {
       font-weight: bold;
       margin-bottom: 40px;
       font-weight: 700;
+
+      @include max-screen($breakpoint-sm) {
+        margin-bottom: 30px;
+        text-align: center;
+      }
   }
 
   &-text {
       font-size: 1.4rem;
       font-weight: 400;
+
+      @include max-screen($breakpoint-sm) {
+        font-size: 1.3rem;
+        line-height: 1.8;
+      }
   }
 
   &__right {
@@ -2384,6 +2742,11 @@ body {
     gap: 40px;
     color: $base-text;
     font-weight: bold;
+
+    @include max-screen($breakpoint-sm) {
+      flex-direction: column;
+      gap: 30px;
+    }
   }
 
   &__method {
@@ -2395,10 +2758,20 @@ body {
   &__method-label {
     font-size: 1.2rem;
     margin-bottom: 16px;
+
+    &:nth-child(1) {
+      @include max-screen($breakpoint-sm) {
+        margin-bottom: 11px;
+      }
+    }
   }
 
   &__tel {
     font-size: 2.2rem;
+
+    @include max-screen($breakpoint-sm) {
+      margin-bottom: 11px;
+    }
   }
 
   &__time {
@@ -2415,7 +2788,13 @@ body {
       274.72deg, #FB6C20 -4.37%,
       #FC5D19 -4.36%,
       #FF2200 91.29%
-      );
+    );
+
+    @include max-screen($breakpoint-sm) {
+      max-width: 185px;
+      margin-inline: auto;
+      padding: 12px 48px;
+    }
   }
 }
 
@@ -2423,6 +2802,12 @@ body {
   footer /  フッター
 ================================================================= */
 .l-footer {
+  padding-top: 67px;
+  background: #F4F4F4;
+
+  @include max-screen($breakpoint-sm) {
+    padding: 73px 4% 0;
+  }
 
   &__inner {
     display: flex;
@@ -2431,6 +2816,12 @@ body {
     max-width: 1200px;
     margin-inline: auto;
     margin-bottom: 80px;
+
+    @include max-screen($breakpoint-sm) {
+      flex-direction: column;
+      gap: 40px;
+      margin: 0 20px 23px;
+    }
   }
 
   &__left {
@@ -2441,38 +2832,81 @@ body {
   }
 
   &__logo {
-    width: 227px;
     margin-bottom: 32px;
     mix-blend-mode: multiply;
+
+    @include max-screen($breakpoint-sm) {
+      text-align: center;
+    }
+
+    img {
+      width: 227px;
+    }
   }
 
   &__address {
-    margin-bottom: 20px;
+
+    @include min-screen($breakpoint-sm) {
+      margin-bottom: 20px;
+    }
   }
 
   &__nav {
     display: flex;
     font-size: 1.4rem;
     gap: 120px;
-    margin-right: 40px;
+
+    @include min-screen($breakpoint-sm) {
+      margin-right: 40px;
+    }
 
     ul {
       text-align: left;
       font-weight: 400;
 
       li {
-        margin-bottom: 10px;
-      }  
+        margin-top: 6px;
+        margin-bottom: 20px;
+      }
     }
   }
 
+  &-childMenu li {
+    position: relative;
+    padding-left: 3.2rem;
+    list-style: none;
+    margin-bottom: 6px!important;
+  }
+  
+  &-childMenu li::before {
+    content: '';
+    position: absolute;
+    left: 1.4rem;
+    top: 10px;
+    width: 1rem;
+    height: 1px;
+    background-color: $blue;
+  }
+
   &__copyright {
-    text-align: left;
-    color: $base-text;
+    display: flex;
+    justify-content: space-between;
     max-width: 1200px;
     margin: 0;
     margin-inline: auto;
-    padding-top: 32px;
+    padding: 32px 0;
+    font-size: 1.4rem;
+    font-weight: 400;
+    text-align: left;
+    color: $base-text;
     border-top: 1px solid $blue;
+
+    @include max-screen($breakpoint-sm) {
+      flex-direction: column-reverse;
+      margin: 0 auto 73px;
+      gap: 32px;
+      text-align: center;
+    }
   }
 }
+

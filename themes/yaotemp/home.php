@@ -184,13 +184,91 @@
                 </h2>
             </div>
             <!-- 施工事例一覧 -->
-            <?php include("part-workslist.php"); ?>
+            <ul class="top-sekoujirei-list">
+                <li class="top-sekoujirei-list__item">
+                    <a href="<?php the_permalink(); ?>">
+                        <div class="top-sekoujirei-list__images">
+                            <img src="<?php bloginfo('template_url');?>/img/top-sekoujirei-image1.jpg" alt="NO IMAGE"/>
+                            <span class="category-name">カテゴリ名</span>
+                        </div>
+                        <div class="top-sekoujirei-list__content">
+                            <p class="area-name">〇〇市A様</p>
+                            <h4>タイトルタイトルタイトルタイトル</h4>
+                            <p class="u-pc">本文引用本文引用本文引用本文引用本文引用本文引用本文引用本文引用本文引用本文引用</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="top-sekoujirei-list__item">
+                    <a href="<?php the_permalink(); ?>">
+                        <div class="top-sekoujirei-list__images">
+                            <img src="<?php bloginfo('template_url');?>/img/top-sekoujirei-image1.jpg" alt="NO IMAGE"/>
+                            <span class="category-name">カテゴリ名</span>
+                        </div>
+                        <div class="top-sekoujirei-list__content">
+                            <p class="area-name">〇〇市A様</p>
+                            <h4>タイトルタイトルタイトルタイトル</h4>
+                            <p class="u-pc">本文引用本文引用本文引用本文引用本文引用本文引用本文引用本文引用本文引用本文引用</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="top-sekoujirei-list__item">
+                    <a href="<?php the_permalink(); ?>">
+                        <div class="top-sekoujirei-list__images">
+                            <img src="<?php bloginfo('template_url');?>/img/top-sekoujirei-image1.jpg" alt="NO IMAGE"/>
+                            <span class="category-name">カテゴリ名</span>
+                        </div>
+                        <div class="top-sekoujirei-list__content">
+                            <p class="area-name">〇〇市A様</p>
+                            <h4>タイトルタイトルタイトルタイトル</h4>
+                            <p class="u-pc">本文引用本文引用本文引用本文引用本文引用本文引用本文引用本文引用本文引用本文引用</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="top-sekoujirei-list__item">
+                    <a href="<?php the_permalink(); ?>">
+                        <div class="top-sekoujirei-list__images">
+                            <img src="<?php bloginfo('template_url');?>/img/top-sekoujirei-image1.jpg" alt="NO IMAGE"/>
+                            <span class="category-name">カテゴリ名</span>
+                        </div>
+                        <div class="top-sekoujirei-list__content">
+                            <p class="area-name">〇〇市A様</p>
+                            <h4>タイトルタイトルタイトルタイトル</h4>
+                            <p class="u-pc">本文引用本文引用本文引用本文引用本文引用本文引用本文引用本文引用本文引用本文引用</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="top-sekoujirei-list__item">
+                    <a href="<?php the_permalink(); ?>">
+                        <div class="top-sekoujirei-list__images">
+                            <img src="<?php bloginfo('template_url');?>/img/top-sekoujirei-image1.jpg" alt="NO IMAGE"/>
+                            <span class="category-name">カテゴリ名</span>
+                        </div>
+                        <div class="top-sekoujirei-list__content">
+                            <p class="area-name">〇〇市A様</p>
+                            <h4>タイトルタイトルタイトルタイトル</h4>
+                            <p class="u-pc">本文引用本文引用本文引用本文引用本文引用本文引用本文引用本文引用本文引用本文引用</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="top-sekoujirei-list__item">
+                    <a href="<?php the_permalink(); ?>">
+                        <div class="top-sekoujirei-list__images">
+                            <img src="<?php bloginfo('template_url');?>/img/top-sekoujirei-image1.jpg" alt="NO IMAGE"/>
+                            <span class="category-name">カテゴリ名</span>
+                        </div>
+                        <div class="top-sekoujirei-list__content">
+                            <p class="area-name">〇〇市A様</p>
+                            <h4>タイトルタイトルタイトルタイトル</h4>
+                            <p class="u-pc">本文引用本文引用本文引用本文引用本文引用本文引用本文引用本文引用本文引用本文引用</p>
+                        </div>
+                    </a>
+                </li>
+            </ul>
             <a href="<?php bloginfo('url'); ?>/works/" class="top-sekoujirei-button">もっと見る</a>
         </div>
     </div>
 </section>
 <section class="top-voices">
-    <div class="l-container">
         <div class="top-voices-inner">
             <div class="top-voices-title__wrapper">
                 <p class="top-voices-eng__title">Voices</p>
@@ -199,64 +277,90 @@
                 </h2>
             </div>
             <!-- お客様の声一覧 -->
-            <?php include("part-workslist.php"); ?>
-            <a href="<?php bloginfo('url'); ?>/works/" class="top-reason-button">もっと見る</a>
+            <ul class="top-voices-list">
+                <li class="top-voices-list__item">
+                    <a href="<?php the_permalink(); ?>">
+                        <div class="top-voices-list__images">
+                            <img src="<?php bloginfo('template_url');?>/img/top-voices-image1.jpg" alt="NO IMAGE"/>
+                        </div>
+                        <div class="top-voices-list__content">
+                            <p class="area-name">〇〇市A様</p>
+                            <p>本文引用本文引用本文引用本文引用本文引用本文引用本文引用本文引用本文引用本文引用</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="top-voices-list__item">
+                    <a href="<?php the_permalink(); ?>">
+                        <div class="top-voices-list__images">
+                            <img src="<?php bloginfo('template_url');?>/img/top-voices-image2.jpg" alt="NO IMAGE"/>
+                        </div>
+                        <div class="top-voices-list__content">
+                            <p class="area-name">〇〇市A様</p>
+                            <p>本文引用本文引用本文引用本文引用本文引用本文引用本文引用本文引用本文引用本文引用</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="top-voices-list__item">
+                    <a href="<?php the_permalink(); ?>">
+                        <div class="top-voices-list__images">
+                            <img src="<?php bloginfo('template_url');?>/img/top-voices-image3.jpg" alt="NO IMAGE"/>
+                        </div>
+                        <div class="top-voices-list__content">
+                            <p class="area-name">〇〇市A様</p>
+                            <p>本文引用本文引用本文引用本文引用本文引用本文引用本文引用本文引用本文引用本文引用</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="top-voices-list__item">
+                    <a href="<?php the_permalink(); ?>">
+                        <div class="top-voices-list__images">
+                            <img src="<?php bloginfo('template_url');?>/img/top-voices-image1.jpg" alt="NO IMAGE"/>
+                        </div>
+                        <div class="top-voices-list__content">
+                            <p class="area-name">〇〇市A様</p>
+                            <p>本文引用本文引用本文引用本文引用本文引用本文引用本文引用本文引用本文引用本文引用</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="top-voices-list__item">
+                    <a href="<?php the_permalink(); ?>">
+                        <div class="top-voices-list__images">
+                            <img src="<?php bloginfo('template_url');?>/img/top-voices-image2.jpg" alt="NO IMAGE"/>
+                        </div>
+                        <div class="top-voices-list__content">
+                            <p class="area-name">〇〇市A様</p>
+                            <p>本文引用本文引用本文引用本文引用本文引用本文引用本文引用本文引用本文引用本文引用</p>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+            <a href="<?php bloginfo('url'); ?>/voices/" class="top-voices-button">もっと見る</a>
+        </div>
+</section>
+
+<section class="top-support">
+    <div class="l-container">
+        <div class="top-support__inner">
+            <div class="top-support-title__wrapper">
+                <h2 class="top-support-eng__title">After Support</h2>
+            </div>
+            <div class="top-support__images-wrapper">
+                <div class="top-support__images">
+                    <img src="<?php bloginfo('template_url');?>/img/top-support-image1.jpg" alt="点検作業中イメージ画像">
+                    <img src="<?php bloginfo('template_url');?>/img/top-support-image2.jpg" alt="ソーラーパネル点検イメージ画像">
+                </div>
+            </div>
+            <div class="top-support__content">
+                <p class="top-support__lead"><span>導入後もずっとお付き合い</span><br><strong>アフターサポート</strong></p>
+                <p class="top-support__text">
+                定期点検から緊急トラブル対応まで、自社一貫体制でフルサポート。導入後1年目は無料点検、2年目以降もリーズナブルなメンテナンスプランをご用意しています。お客様の安心と機器の長寿命化を第一に考え、いつでもお気軽にご相談いただけます。
+                </p>
+                <a href="<?php bloginfo('url'); ?>/" class="top-support-button">アフターサポートについて</a>
+            </div>
         </div>
     </div>
 </section>
 
-
-<section class="after-support">
-  <div class="container">
-    <div class="after-support__inner">
-    <div class="after-support__images-wrapper">
-      <div class="after-support__images">
-        <img src="<?php bloginfo('template_url');?>/img/top-support-image1.jpg" alt="点検作業中" class="after-support__img top-img">
-        <img src="<?php bloginfo('template_url');?>/img/top-support-image2.jpg" alt="ソーラーパネル点検" class="after-support__img bottom-img">
-      </div>
-    </div>
-      <div class="after-support__content">
-        <h2 class="after-support__heading">After Support</h2>
-        <p class="after-support__lead"><span>導入後もずっとお付き合い</span><br><strong>アフターサポート</strong></p>
-        <p class="after-support__text">
-          定期点検から緊急トラブル対応まで、自社一貫体制でフルサポート。<br>
-          導入後1年目は無料点検、2年目以降もリーズナブルなメンテナンスプランをご用意しています。<br>
-          お客様の安心と機器の長寿命化を第一に考え、いつでもお気軽にご相談いただけます。
-        </p>
-        <a href="<?php bloginfo('url'); ?>/works/" class="top-support-button">アフターサポートについて</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<?php
-    $plan_items = [
-        [
-            'title' => 'メニュー名メニュー名メニュー名',
-            'description' => '説明文など説明文など説明文など説明文など説明文など説明文',
-            'price' => '000,000', 
-            'tax_price' => '000,000', 
-        ],
-        [
-            'title' => 'メニュー名メニュー名メニュー名',
-            'description' => '説明文など説明文など説明文など説明文など説明文など説明文',
-            'price' => '000,000', 
-            'tax_price' => '000,000', 
-        ],
-        [
-            'title' => 'メニュー名メニュー名メニュー名',
-            'description' => '説明文など説明文など説明文など説明文など説明文など説明文',
-            'price' => '000,000', 
-            'tax_price' => '000,000', 
-        ],
-        [
-            'title' => 'メニュー名メニュー名メニュー名',
-            'description' => '説明文など説明文など説明文など説明文など説明文など説明文',
-            'price' => '000,000', 
-            'tax_price' => '000,000', 
-        ]
-    ];
-?>
 <section class="top-plan">
     <div class="l-container">
         <div class="top-plan-inner">
@@ -267,18 +371,46 @@
                 </h2>
             </div>
             <ul class="top-plan-container">
-                <?php foreach ($plan_items as $item) : ?>
                 <li class="top-plan-card">
                     <div class="top-plan-card__header">
-                        <h3><?php echo wp_kses_post($item['title']); ?></h3>
-                        <p><?php echo wp_kses_post($item['description']); ?></p>
+                        <h3>メニュー名メニュー名メニュー名</h3>
+                        <p>説明文など説明文など説明文など説明文など説明文など説明文</p>
                     </div>
                     <div class="top-plan-card__body">
-                        <p class="top-plan-card__main"><span class="yen"><?php echo wp_kses_post($item['price']); ?></span>円</p>
-                        <p class="top-plan-card__sub">税込<span class="yen"><?php echo wp_kses_post($item['tax_price']); ?></span>円</p>
+                        <p class="top-plan-card__main"><span class="yen">000,000</span>円</p>
+                        <p class="top-plan-card__sub">税込<span class="yen">000,000</span>円</p>
                     </div>
                 </li>
-                <?php endforeach; ?>
+                <li class="top-plan-card">
+                    <div class="top-plan-card__header">
+                        <h3>メニュー名メニュー名メニュー名</h3>
+                        <p>説明文など説明文など説明文など説明文など説明文など説明文</p>
+                    </div>
+                    <div class="top-plan-card__body">
+                        <p class="top-plan-card__main"><span class="yen">000,000</span>円</p>
+                        <p class="top-plan-card__sub">税込<span class="yen">000,000</span>円</p>
+                    </div>
+                </li>
+                <li class="top-plan-card">
+                    <div class="top-plan-card__header">
+                        <h3>メニュー名メニュー名メニュー名</h3>
+                        <p>説明文など説明文など説明文など説明文など説明文など説明文</p>
+                    </div>
+                    <div class="top-plan-card__body">
+                        <p class="top-plan-card__main"><span class="yen">000,000</span>円</p>
+                        <p class="top-plan-card__sub">税込<span class="yen">000,000</span>円</p>
+                    </div>
+                </li>
+                <li class="top-plan-card">
+                    <div class="top-plan-card__header">
+                        <h3>メニュー名メニュー名メニュー名</h3>
+                        <p>説明文など説明文など説明文など説明文など説明文など説明文</p>
+                    </div>
+                    <div class="top-plan-card__body">
+                        <p class="top-plan-card__main"><span class="yen">000,000</span>円</p>
+                        <p class="top-plan-card__sub">税込<span class="yen">000,000</span>円</p>
+                    </div>
+                </li>
             </ul>
             <a href="<?php bloginfo('url'); ?>/works/" class="top-plan-button">もっと見る</a>
         </div>
@@ -329,21 +461,25 @@
         </div>
 
         <div class="top-story-content__wrapper">
-            <div class="story-box">
-                <div class="story-left">
-                    <img src="<?php bloginfo('template_url');?>/img/top-story-image1.jpg" alt="代表写真" class="story-img">
+            <div class="top-story-box">
+                <div class="top-story-box__left">
+                    <picture>
+                        <source media="(max-width: 768px)" srcset="<?php bloginfo('template_url');?>/img/top-story-image1_sp.jpg" />
+                            <img src="<?php bloginfo('template_url');?>/img/top-story-image1.jpg" alt="代表取締役 高野浩" />
+                    </picture>
                 </div>
-                <div class="story-right">
-                    <div class="story-item">
+                <div class="top-story-box__right">
+                    <div class="top-story-item">
                         <h3><span class="dot"></span>私たちが「電気代0円の未来」を目指す理由</h3>
-                        <p>はじめまして。有限会社アミカブルサービスの代表取締役、高野浩です。私たちが目指しているのは、単に太陽光パネルを設置することではありません。<span class="blue">その先にある「電気代0円の未来」、そして災害に負けない、誰もが安心して笑顔で暮らせる社会</span>を本気で実現することです。 なぜ、私たちがそこまで強く願うのか。それは、電気とは全く関係のない場所から始まった、私の人生の歩みに深く関わっています。</p>
+                        <p>はじめまして。有限会社アミカブルサービスの代表取締役、高野浩です。<br/>
+                        私たちが目指しているのは、単に太陽光パネルを設置することではありません。<span class="blue">その先にある「電気代0円の未来」、そして災害に負けない、誰もが安心して笑顔で暮らせる社会</span>を本気で実現することです。 <br/>
+                        なぜ、私たちがそこまで強く願うのか。それは、電気とは全く関係のない場所から始まった、私の人生の歩みに深く関わっています。</p>
                     </div>
-                    <div class="story-item">
+                    <div class="top-story-item">
                         <h3><span class="dot"></span>原点はおばあちゃんの笑顔</h3>
                         <p>私の原点は、茨城県のレンコン農家で過ごした幼少期にあります。物作りが好きだった私は、自分で作ったレンコン料理を大好きなおばあちゃんに食べてもらうことが何よりの喜びでした。あの時の、心から嬉しそうな笑顔。<span class="blue">「誰かを笑顔にしたい、喜んでもらいたい」</span>という想いは、この時から私の中に深く刻まれました。</p>
                     </div>
-
-                    <div class="story-item">
+                    <div class="top-story-item u-pc">
                         <h3><span class="dot"></span>回り道と挫折が教えてくれたこと</h3>
                         <p>その後、飛行機への憧れから航空整備士になりましたが、厳しい現実に直面しました。もっと大きな仕事がしたいと建設業に飛び込み、専門技術を身につけて多くの人に頼られる喜びも知りました。しかし、人生は順風満帆にはいかず、椎間板ヘルニアで長期の入院生活を余儀なくされます。そこで目にしたのは、元気をなくしていく人々の姿でした。この時、私の心に再び火が灯ります。<span class="blue">「人を明るくする仕事がしたい！」</span>と。<br/>
                         失意の中、実家で久しぶりにおばあちゃんに料理を振る舞うと、昔と変わらない満面の笑みを見せてくれました。その瞬間、稲妻に打たれたように感じたのです。「これだ！私が本当にやりたかったのは、この笑顔を作ることだ！」と。30歳にして、私は飲食業界へ飛び込むことを決意しました。</p>
@@ -351,9 +487,9 @@
                 </div>
             </div>
 
-    <div class="story-box">
-      <div class="story-left">
-        <div class="story-item">
+    <div class="top-story-box u-pc">
+      <div class="top-story-box__left">
+        <div class="top-story-item">
           <h3><span class="dot"></span>アミカブルサービスの誕生と最大の危機</h3>
           <p>キッチンカーでお客様の笑顔に触れるうち、「自分のお店を持ちたい」という夢が膨らみます。その資金作りのために設立したのが、この「有限会社アミカブルサービス」です。社名には、地元・茨城県<span class="blue">阿見</span>町への恩返し（<span class="blue">アミ</span>）と、平和・友好的という意味の「<span class="blue">アミカブル</span>（amicable）」という想いを込めました。<br />
           そして「人を明るくする」という原点に立ち返り、太陽光事業へと舵を切った矢先、会社設立13年目に最大の危機が訪れます。私たちが販売した産業用太陽光発電所が、大雨による土砂災害で崩壊してしまったのです。<br />
@@ -361,7 +497,7 @@
           売上は立たず、私自身の給料は何ヶ月もゼロ。それでも、信じてついてきてくれる従業員の給料だけは一度も遅らせませんでした。必死で働き続け、3年後、ついに負債を完済することができたのです。</p>
         </div>
 
-        <div class="story-item">
+        <div class="top-story-item">
             <h3><span class="dot"></span>私たちの約束</h3>
             <p>この壮絶な経験は、私たちに3つの大切なことを教えてくれました。</p>
                 <ol class="promise-list">
@@ -379,8 +515,8 @@
         <strong>代表取締役　高野 浩</strong></p>
       </div>
 
-      <div class="story-right">
-      <img src="<?php bloginfo('template_url');?>/img/top-story-image2.jpg" alt="代表写真" class="story-img">
+      <div class="top-story-box__right">
+        <img src="<?php bloginfo('template_url');?>/img/top-story-image2.jpg" alt="太陽光発電イメージ写真" class="u-pc">
       </div>
     </div>
   </div>
@@ -428,28 +564,190 @@
             <li><img src="<?php bloginfo('template_url');?>/img/top-company-banner3.png" alt="一般社団法人 新エネルギーO&M協議会"></li>
             <li><img src="<?php bloginfo('template_url');?>/img/top-company-banner4.png" alt="JPEA 太陽光発電協会"></li>
             <li><img src="<?php bloginfo('template_url');?>/img/top-company-banner5.png" alt="次世代型O&M 稼ぐ太陽光メンテ"></li>
+            <li><img src="<?php bloginfo('template_url');?>/img/top-company-banner1.png" alt="再生可能エネルギー関連の情報発信基地 一般社団法人 日本PVプランナー協会"></li>
+            <li><img src="<?php bloginfo('template_url');?>/img/top-company-banner2.png" alt="新エネルギー革命会"></li>
         </ul>
 </section>
 
 
 <section class="top-blog">
-    <div class="l-container">
-        <div class="top-blog-inner">
-            <div class="top-blog-title__wrapper">
-                <p class="top-blog-eng__title">Blog</p>
-                <h2 class="top-blog-title">
-                    <img src="<?php bloginfo('template_url');?>/img/top-blog-title.svg" alt="ブログ">
-                </h2>
-            </div>
-            <ul class="top-blog-category">
-                <li>お知らせ</li>
-                <li>お役立ちコラム</li>
-            </ul>
-            <!-- ブログ一覧 -->
-            <?php include("part-postlist.php"); ?>
-            <a href="<?php bloginfo('url'); ?>/works/" class="top-blog-button">一覧を見る</a>
+    <div class="top-blog-inner">
+        <div class="top-blog-title__wrapper">
+            <p class="top-blog-eng__title">Blog</p>
+            <h2 class="top-blog-title">
+                <img src="<?php bloginfo('template_url');?>/img/top-blog-title.svg" alt="ブログ">
+            </h2>
         </div>
+        <ul class="top-blog-category">
+            <li><a href="<?php bloginfo('url'); ?>/">お知らせ</a></li>
+            <li><a href="<?php bloginfo('url'); ?>/">お役立ちコラム</a></li>
+        </ul>
+        <!-- ブログ一覧 -->
+        <ul class="top-blog-archive">
+            <li>
+                <div class="eyecatch eyecatch-archive">    
+                    <a href="http://localhost:8080/hello-world/"><img src="http://localhost:8080/wp-content/themes/yaotemp/img/img_no.gif" alt="NO IMAGE"></a>
+                </div>
+                <ul class="dateList dateList-archive">
+                    <li>
+                        <p class="category-name">お知らせ</p>
+                    </li>
+                    <time>
+                    <li class="dateList__item">2025.08.04</li>                                
+                    </time>
+                </ul>
+                <h3 class="heading heading-archive">タイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトル</h3>
+            </li>
+            <li>
+                <div class="eyecatch eyecatch-archive">    
+                    <a href="http://localhost:8080/hello-world/"><img src="http://localhost:8080/wp-content/themes/yaotemp/img/img_no.gif" alt="NO IMAGE"></a>
+                </div>
+                <ul class="dateList dateList-archive">
+                    <li>
+                        <p class="category-name">お知らせ</p>
+                    </li>
+                    <time>
+                    <li class="dateList__item">2025.08.04</li>                                
+                    </time>
+                </ul>
+                <h3 class="heading heading-archive">タイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトル</h3>
+            </li>
+            <li>
+                <div class="eyecatch eyecatch-archive">    
+                    <a href="http://localhost:8080/hello-world/"><img src="http://localhost:8080/wp-content/themes/yaotemp/img/img_no.gif" alt="NO IMAGE"></a>
+                </div>
+                <ul class="dateList dateList-archive">
+                    <li>
+                        <p class="category-name">お知らせ</p>
+                    </li>
+                    <time>
+                    <li class="dateList__item">2025.08.04</li>                                
+                    </time>
+                </ul>
+                <h3 class="heading heading-archive">タイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトル</h3>
+            </li>
+            <li>
+                <div class="eyecatch eyecatch-archive">    
+                    <a href="http://localhost:8080/hello-world/"><img src="http://localhost:8080/wp-content/themes/yaotemp/img/img_no.gif" alt="NO IMAGE"></a>
+                </div>
+                <ul class="dateList dateList-archive">
+                    <li>
+                        <p class="category-name">お知らせ</p>
+                    </li>
+                    <time>
+                    <li class="dateList__item">2025.08.04</li>                                
+                    </time>
+                </ul>
+                <h3 class="heading heading-archive">タイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトル</h3>
+            </li>
+            <li>
+                <div class="eyecatch eyecatch-archive">    
+                    <a href="http://localhost:8080/hello-world/"><img src="http://localhost:8080/wp-content/themes/yaotemp/img/img_no.gif" alt="NO IMAGE"></a>
+                </div>
+                <ul class="dateList dateList-archive">
+                    <li>
+                        <p class="category-name">お知らせ</p>
+                    </li>
+                    <time>
+                    <li class="dateList__item">2025.08.04</li>                                
+                    </time>
+                </ul>
+                <h3 class="heading heading-archive">タイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトル</h3>
+            </li>
+            <li>
+                <div class="eyecatch eyecatch-archive">    
+                    <a href="http://localhost:8080/hello-world/"><img src="http://localhost:8080/wp-content/themes/yaotemp/img/img_no.gif" alt="NO IMAGE"></a>
+                </div>
+                <ul class="dateList dateList-archive">
+                    <li>
+                        <p class="category-name">お知らせ</p>
+                    </li>
+                    <time>
+                    <li class="dateList__item">2025.08.04</li>                                
+                    </time>
+                </ul>
+                <h3 class="heading heading-archive">タイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトル</h3>
+            </li>
+        </ul>
+        <a href="<?php bloginfo('url'); ?>/blog/" class="top-blog-button">一覧を見る</a>
     </div>
 </section>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+<script>
+    $(document).ready(function(){
+      $('.top-voices-list').slick({
+        centerMode: true,
+        centerPadding: '0',
+        slidesToShow: 3,
+        arrows: true,
+        prevArrow: '<button class="slick-arrow slick-prev"></button>',
+        nextArrow: '<button class="slick-arrow slick-next"></button>',
+        dots: true,
+        infinite: true,
+        responsive: [
+          {
+            breakpoint: 768,
+            settings: {
+                centerMode: true,
+                slidesToShow: 1,
+                centerPadding: '60px',
+                dots: true,
+            }
+          }
+        ]
+      });
+    });
+</script>
+
+<script>
+    $(document).ready(function(){
+      $('.top-blog-archive').slick({
+        autoplay: false,
+        centerMode: true,
+        centerPadding: '0px',
+        slidesToShow: 5,
+        arrows: false,
+        dots: true,
+        infinite: true,
+        responsive: [
+          {
+            breakpoint: 768,
+            settings: {
+                slidesToShow: 1,
+                centerPadding: '0px',
+                dots: true,
+            }
+          }
+        ]
+      });
+    });
+</script>
+
+<script>
+    $(document).ready(function(){
+      $('.top-company-logos').slick({
+        autoplay: true,
+        cssEase: 'ease-in-out',
+        Speed: 600,
+        centerMode: false,
+        slidesToShow: 5,
+        arrows: false,
+        dots: false,
+        infinite: true,
+        responsive: [
+          {
+            breakpoint: 768,
+            settings: {
+                slidesToShow: 3,
+                centerPadding: '60px',
+            }
+          }
+        ]
+      });
+    });
+</script>
 
 <?php get_footer(); ?>
