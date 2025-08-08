@@ -427,45 +427,46 @@ body {
   width: 12.7vw;
   height: auto;
 }
-.header-menu {
+.header .header-menu {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 2.7vw;
 }
 @media screen and (max-width: 1080px) {
-  .header-menu {
+  .header .header-menu {
     display: none;
   }
 }
 @media screen and (min-width: 1280px) {
-  .header-menu {
+  .header .header-menu {
     gap: 40px;
   }
 }
-.header-menu li {
+.header .header-menu li {
   position: relative;
+  font-weight: 500;
 }
-.header-menu li:hover .pc-header__childMenu {
+.header .header-menu li:hover .pc-header__childMenu {
   position: absolute;
   top: 100%;
   left: 0;
   display: block;
   opacity: 1;
 }
-.header-menu li .pc-header__childMenu {
+.header .header-menu li .pc-header__childMenu {
   display: none;
   opacity: 0;
   padding-top: 12px;
 }
-.header-menu li .pc-header__childMenu > ul {
+.header .header-menu li .pc-header__childMenu > ul {
   display: flex;
   z-index: 10;
 }
-.header-menu li .pc-header__childMenu > ul > div:nth-child(2) {
+.header .header-menu li .pc-header__childMenu > ul > div:nth-child(2) {
   border-left: 1px solid #c4c4c4;
 }
-.header-menu li .pc-header__childMenu > ul li {
+.header .header-menu li .pc-header__childMenu > ul li {
   background-color: #f8f8f8;
   position: relative;
   min-width: 100%;
@@ -479,39 +480,41 @@ body {
   border-bottom: 1px solid #c4c4c4;
 }
 @media screen and (max-width: 768px) {
-  .header-menu li .pc-header__childMenu > ul li {
+  .header .header-menu li .pc-header__childMenu > ul li {
     position: static;
   }
 }
-.header-menu li .pc-header__childMenu > ul a {
+.header .header-menu li .pc-header__childMenu > ul a {
   display: block;
   color: #000;
 }
 @media screen and (max-width: 768px) {
-  .header-menu li .pc-header__childMenu > ul a:before {
+  .header .header-menu li .pc-header__childMenu > ul a:before {
     content: "ー";
     padding: 0 0.5em;
     font-weight: bold;
   }
 }
-.header-menu li p {
+.header .header-menu li p {
   position: relative;
   display: inline-block;
   display: flex;
   cursor: pointer;
   align-items: center;
+  margin-right: 16px;
   font-size: 1.5rem;
 }
 @media screen and (max-width: 768px) {
-  .header-menu li p {
+  .header .header-menu li p {
     padding: 10px;
     border-bottom: 1px solid #fff;
     justify-content: center;
     font-weight: bold;
     background-color: rgb(89, 101, 98);
+    margin-right: 0;
   }
 }
-.header-menu li p:after {
+.header .header-menu li p:after {
   content: "";
   background-image: url("../img/ico-arrow-bottom.svg");
   width: 12px;
@@ -525,21 +528,20 @@ body {
   transform: translate(100%, -50%);
 }
 @media screen and (max-width: 768px) {
-  .header-menu li p:hover {
+  .header .header-menu li p:hover {
     background-color: #222;
   }
 }
 @media screen and (max-width: 1340px) {
-  .header-menu li p {
+  .header .header-menu li p {
     font-size: 1.3rem;
   }
 }
-.header-menu a {
-  color: rgb(89, 101, 98);
-  font-size: 1.5rem;
+.header .header-menu a {
+  font-size: 1.6rem;
 }
 @media screen and (max-width: 1340px) {
-  .header-menu a {
+  .header .header-menu a {
     font-size: 1.3rem;
   }
 }
@@ -550,7 +552,7 @@ body {
   left: 0;
   right: 0;
   width: 100%;
-  z-index: 2000;
+  z-index: 1000;
   background: linear-gradient(to bottom, #ffffc6 3%, #fff);
 }
 .top-fv-banner .top-fv-banner__inner {
@@ -584,7 +586,7 @@ body {
   font-family: "Chakra Petch", sans-serif;
 }
 .top-fv-banner .top-fv-banner__details {
-  font-size: 0.9rem;
+  font-size: 1.3rem;
   text-align: left;
 }
 .top-fv-banner .top-fv-banner__action {
@@ -605,9 +607,6 @@ body {
     width: 90%;
     border: 4px solid #0a366f;
     border-radius: 12px;
-  }
-  .top-fv-banner .br-sp {
-    display: block;
   }
   .top-fv-banner .top-fv-banner__text {
     display: inline-block;
@@ -648,6 +647,9 @@ body {
 @media screen and (min-width: 1080px) {
   .top-fv-banner {
     width: 68%;
+  }
+  .top-fv-banner .br-sp {
+    display: block;
   }
   .top-fv-banner .top-fv-banner__phone {
     display: flex;
@@ -912,6 +914,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 80px;
+  padding: 0 4%;
 }
 @media screen and (max-width: 1080px) {
   .top .top-service .top-service-list {
@@ -927,7 +930,7 @@ body {
 @media screen and (max-width: 1080px) {
   .top .top-service .top-service-item {
     position: relative;
-    max-width: 800px;
+    max-width: 640px;
   }
 }
 @media screen and (max-width: 768px) {

@@ -42,18 +42,19 @@
                                 <ul>
                                     <div>
                                         <li><a href="<?php bloginfo('url'); ?>/service1/">
-                                                サービス1</a>
+                                                太陽光発電</a>
                                         </li>
                                         <li><a href="<?php bloginfo('url'); ?>/service2/">
-                                                サービス2</a>
+                                                家庭用蓄電池</a>
                                         </li>
                                         <li><a href="<?php bloginfo('url'); ?>/service3/">
-                                                サービス3</a></li>
+                                                修理サービス </a></li>
                                     </div>
                                 </ul>
                             </div>
                         </li>
-                        <li><a href="<?php bloginfo('url'); ?>/results/">施工事例</a></li>
+                        <li><a href="<?php bloginfo('url'); ?>/works/">施工事例</a></li>
+                        <li><a href="<?php bloginfo('url'); ?>/voice/">お客様の声</a></li>
                         <li><a href="<?php bloginfo('url'); ?>/company/">会社概要</a></li>
                     </ul>
                 </div>
@@ -83,36 +84,35 @@
                                     <div class="header-openNav__pcRight__container">
                                         <div class="header-menu__2col header-menu__2col__noChildMenu">
                                             <ul>
-                                                <li><a href="<?php bloginfo('url'); ?>/beginner/">不動産売却相談</a></li>
                                                 <li><a href="<?php bloginfo('url'); ?>/reason/">選ばれる理由</a></li>
-                                                <li class="u-pc">
-                                                    <div>売却相談</div>
+                                                <li>
+                                                    <div>サービス</div>
                                                     <ul class="header-childMenu">
-                                                        <li><a href="<?php bloginfo('url'); ?>/news/">- マンション</a></li>
-                                                        <li><a href="<?php bloginfo('url'); ?>/column/">- 土地・戸建</a></li>
+                                                        <li><a href="<?php bloginfo('url'); ?>/sunlight/">- 太陽光発電</a>
+                                                        </li>
+                                                        <li><a href="<?php bloginfo('url'); ?>/battery/">- 家庭用蓄電池</a>
+                                                        </li>
+                                                        <li><a href="<?php bloginfo('url'); ?>/repair/">- 修理サービス </a>
+                                                        </li>
                                                     </ul>
                                                 </li>
-                                                <li><a href="<?php bloginfo('url'); ?>/voice/">お客様の声</a>
-                                                </li>
-                                                <li class="u-pc">
-                                                    <div>店舗紹介</div>
-                                                    <ul class="header-childMenu">
-                                                        <li><a href="<?php bloginfo('url'); ?>/shop/">- 立石店</a></li>
-                                                        <li><a href="<?php bloginfo('url'); ?>/shop/">- 堀切店</a></li>
-                                                    </ul>
-                                                </li>
-                                                <li><a href="<?php bloginfo('url'); ?>/staff/">スタッフ紹介</a>
-                                                </li>
-                                                <li class="u-pc">
-                                                    <div>ブログ</div>
-                                                    <ul class="header-childMenu">
-                                                        <li><a href="<?php bloginfo('url'); ?>/news/">- お知らせ</a></li>
-                                                        <li><a href="<?php bloginfo('url'); ?>/column/">- コラム</a></li>
-                                                    </ul>
+                                                <li><a href="<?php bloginfo('url'); ?>/support/">アフターメンテナンス</a></li>
+                                                <li><a href="<?php bloginfo('url'); ?>/works/">施工事例</a></li>
+                                                <li><a href="<?php bloginfo('url'); ?>/voice/">お客様の声</a></li>
+                                                <li><a href="<?php bloginfo('url'); ?>/faq/">よくある質問</a></li>
+                                                <li><a href="<?php bloginfo('url'); ?>/price/">料金プラン</a>
                                                 </li>
                                             </ul>
                                             <ul>
-                                                <li><a href="<?php bloginfo('url'); ?>/faq/">よくある質問</a>
+                                                <li><a href="<?php bloginfo('url'); ?>/faq/">イベント情報</a>
+                                                </li>
+                                                <li>
+                                                    <div>ブログ</div>
+                                                    <ul class="header-childMenu">
+                                                        <li><a href="<?php bloginfo('url'); ?>/news/">- お知らせ</a></li>
+                                                        <li><a href="<?php bloginfo('url'); ?>/column/">- お役立ちコラム </a>
+                                                        </li>
+                                                    </ul>
                                                 </li>
                                                 <li><a href="<?php bloginfo('url'); ?>/company/">会社概要</a>
                                                 </li>
