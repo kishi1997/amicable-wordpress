@@ -14,7 +14,7 @@
                     <img src="<?php bloginfo('template_url');?>/img/l-contact-icon-tel.svg" alt="電話アイコン">
                 </div>
                 <p class="l-contact__method-label">お電話でお問い合わせ</p>
-                <p class="l-contact__tel">0120-887-190</p>
+                <p class="l-contact__tel"><a href="tel:0120-887-190">0120-887-190</a></p>
                 <p class="l-contact__time">受付時間10:00〜0:00（定休日：＿＿＿＿）</p>
             </div>
             <div class="l-contact__method contact__method--mail">
@@ -22,7 +22,7 @@
                     <img src="<?php bloginfo('template_url');?>/img/l-contact-icon-mail.svg" alt="メールアイコン">
                 </div>
                 <p class="l-contact__method-label">メールでお問い合わせ</p>
-                <a href="#" class="l-contact__btn">メールフォーム</a>
+                <a href="<?php bloginfo('url'); ?>/contact/" class="l-contact__btn">メールフォーム</a>
             </div>
         </div>
     </div>
@@ -50,33 +50,33 @@
                 <li class="u-pc">
                     <div>サービス</div>
                     <ul class="l-footer-childMenu">
-                        <li><a href="<?php bloginfo('url'); ?>/">太陽光発電</a></li>
-                        <li><a href="<?php bloginfo('url'); ?>/">家庭用蓄電池</a></li>
-                        <li><a href="<?php bloginfo('url'); ?>/">修理サービス</a></li>
+                        <li><a href="<?php bloginfo('url'); ?>/sunlight/">太陽光発電</a></li>
+                        <li><a href="<?php bloginfo('url'); ?>/battery/">家庭用蓄電池</a></li>
+                        <li><a href="<?php bloginfo('url'); ?>/repair/">修理サービス</a></li>
                     </ul>
                 </li>
-                <li><a href="<?php bloginfo('url'); ?>/">アフターメンテナンス</a></li>
+                <li><a href="<?php bloginfo('url'); ?>/support/">アフターメンテナンス</a></li>
                 <li><a href="<?php bloginfo('url'); ?>/price/">料金プラン</a></li>
             </ul>
             <ul>
-                <li><a href="<?php bloginfo('url'); ?>/">施工事例</a></li>
-                <li><a href="<?php bloginfo('url'); ?>/">お客様の声</a></li>
-                <li><a href="<?php bloginfo('url'); ?>/">イベント情報</a></li>
+                <li><a href="<?php bloginfo('url'); ?>/works/">施工事例</a></li>
+                <li><a href="<?php bloginfo('url'); ?>/voice/">お客様の声</a></li>
+                <li><a href="<?php bloginfo('url'); ?>/faq/">イベント情報</a></li>
                 <li class="u-pc">
                     <div>ブログ</div>
                     <ul class="l-footer-childMenu">
                         <li><a href="<?php bloginfo('url'); ?>/news/">お知らせ</a></li>
-                        <li><a href="<?php bloginfo('url'); ?>/">お役立ちコラム</a></li>
+                        <li><a href="<?php bloginfo('url'); ?>/column/">お役立ちコラム</a></li>
                     </ul>
                 </li>
-                <li><a href="<?php bloginfo('url'); ?>/">会社概要</a></li>
-                <li><a href="<?php bloginfo('url'); ?>/">よくある質問</a></li>
+                <li><a href="<?php bloginfo('url'); ?>/company/">会社概要</a></li>
+                <li><a href="<?php bloginfo('url'); ?>/faq/">よくある質問</a></li>
             </ul>
         </div>
     </div>
     <div class="l-footer__copyright">
         <p>© <?php echo date( 'Y' ); ?> texttexttexttext. All rights reserved <a href="<?php echo home_url(); ?>"></a>.</p>
-        <p><a href="<?php echo home_url(); ?>">プライバシーポリシー</a></p>
+        <p><a href="<?php echo home_url(); ?>/policy/">プライバシーポリシー</a></p>
     </div>
 </footer>
 <!-- /l-footer -->
