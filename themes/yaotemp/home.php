@@ -76,7 +76,7 @@
                     </p>
                 </li>
             </ul>
-            <a href="<?php bloginfo('url'); ?>/works/" class="top-reason-button">
+            <a href="<?php bloginfo('url'); ?>/reason/" class="top-reason-button">
                 選ばれる理由を詳しく見る
             </a>
         </div>
@@ -115,7 +115,7 @@
                         <p class="top-service-item__text">
                             屋根一面に太陽のチカラを。高効率パネルと最適設置で、最大の発電量を引き出します。日中の余剰電力は蓄電池へ、使い時にしっかり活用。電気代削減だけでなく、CO₂削減にも貢献するクリーンエネルギーです。
                         </p>
-                        <a href="<?php bloginfo('url'); ?>/works/" class="top-service-item__button">太陽光発電について</a>
+                        <a href="<?php bloginfo('url'); ?>/sunlight/" class="top-service-item__button">太陽光発電について</a>
                     </div>
                 </li>
                 <li class="top-service-item">
@@ -141,7 +141,7 @@
                         <p class="top-service-item__text">
                             昼間に発電した電気を溜めて、夜間や停電時にも安定供給。万が一の非常時にも、家族の暮らしを守ります。使い方に合わせた最適容量でご提案し、ライフスタイルにフィットした省エネライフを実現します。
                         </p>
-                        <a href="<?php bloginfo('url'); ?>/works/" class="top-service-item__button">家庭用蓄電池について</a>
+                        <a href="<?php bloginfo('url'); ?>/battery/" class="top-service-item__button">家庭用蓄電池について</a>
                     </div>
                 </li>
                 <li class="top-service-item">
@@ -167,7 +167,7 @@
                         <p class="top-service-item__text">
                             発電トラブルや機器の不具合にも、自社スタッフが迅速駆けつけ。原因を徹底調査し、メーカー規格に準拠した修理・交換を行います。電話一本で現場へ、アフター保証内作業は追加費用不要で対応します。
                         </p>
-                        <a href="<?php bloginfo('url'); ?>/works/" class="top-service-item__button">修理サービスについて</a>
+                        <a href="<?php bloginfo('url'); ?>/repair/" class="top-service-item__button">修理サービスについて</a>
                     </div>
                 </li>
             </ul>
@@ -355,7 +355,7 @@
                 <p class="top-support__text">
                     定期点検から緊急トラブル対応まで、自社一貫体制でフルサポート。導入後1年目は無料点検、2年目以降もリーズナブルなメンテナンスプランをご用意しています。お客様の安心と機器の長寿命化を第一に考え、いつでもお気軽にご相談いただけます。
                 </p>
-                <a href="<?php bloginfo('url'); ?>/" class="top-support-button">アフターサポートについて</a>
+                <a href="<?php bloginfo('url'); ?>/support/" class="top-support-button">アフターサポートについて</a>
             </div>
         </div>
     </div>
@@ -412,7 +412,7 @@
                     </div>
                 </li>
             </ul>
-            <a href="<?php bloginfo('url'); ?>/works/" class="top-plan-button">もっと見る</a>
+            <a href="<?php bloginfo('url'); ?>/price/" class="top-plan-button">もっと見る</a>
         </div>
     </div>
 </section>
@@ -444,7 +444,7 @@
                     <h3 class="top-staff-card__name">名字 名前</h3>
                 </li>
             </ul>
-            <a href="<?php bloginfo('url'); ?>/works/" class="top-staff-button">もっと見る</a>
+            <a href="<?php bloginfo('url'); ?>/staff/" class="top-staff-button">もっと見る</a>
         </div>
     </div>
 </section>
