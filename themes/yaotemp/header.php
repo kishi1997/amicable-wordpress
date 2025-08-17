@@ -41,13 +41,13 @@
                             <div class="pc-header__childMenu">
                                 <ul>
                                     <div>
-                                        <li><a href="<?php bloginfo('url'); ?>/service1/">
+                                        <li><a href="<?php bloginfo('url'); ?>/sunlight/">
                                                 太陽光発電</a>
                                         </li>
-                                        <li><a href="<?php bloginfo('url'); ?>/service2/">
+                                        <li><a href="<?php bloginfo('url'); ?>/battery/">
                                                 家庭用蓄電池</a>
                                         </li>
-                                        <li><a href="<?php bloginfo('url'); ?>/service3/">
+                                        <li><a href="<?php bloginfo('url'); ?>/repair/">
                                                 修理サービス </a></li>
                                     </div>
                                 </ul>

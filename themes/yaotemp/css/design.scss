@@ -3142,24 +3142,28 @@ $primary-color: #0a366f;
 
 .c-parts-sec {
   width: 100%;
-  max-width: 1200px;
+  max-width: 1110px;
   margin-top: 60px;
   margin-inline: auto;
   text-align: center;
   line-height: 1.5;
-  @include max-screen($breakpoint-sm) {
+  @include max-screen($breakpoint-md) {
     padding: 0 4%;
-    text-align: left;
   }
   @include max-screen($breakpoint-xs) {
     margin-top: 30px;
+    text-align: left;
   }
 
   .c-parts-sec__title {
     margin-bottom: 20px;
-    font-size: 4rem;
+    font-size: clamp(2.6rem, 2.78vw, 4rem);
     font-weight: bold;
     color: $title-orange;
+
+    @include max-screen($breakpoint-sm) {
+      font-size: 2.2rem;
+    }
   }
   .c-parts-sec__text {
     font-size: 2rem;
@@ -3175,16 +3179,20 @@ $primary-color: #0a366f;
   grid-column: 1 / -1;
   width: 100%;
   max-width: 938px;
-  margin: 37px auto 50px;
+  margin: 87px auto 50px;
+
+  @include max-screen($breakpoint-sm) {
+    max-width: 480px;
+  }
 
   .c-parts-check__title {
     margin-bottom: 31px;
-    font-size: clamp(2.6rem, 2.6vw, 3.6rem);
+    font-size: clamp(1.8rem, 1.62vw, 3.6rem);
     font-weight: 900;
     text-align: center;
 
     span {
-      font-size: 4.8rem;
+      font-size: clamp(2.5rem, 2.43vw, 4.8rem);
     }
   }
 
@@ -3212,8 +3220,11 @@ $primary-color: #0a366f;
 
       p {
         padding-left: 20px;
-        font-size: 1.8rem;
+        font-size: clamp(1.4rem, 1.25vw, 1.8rem);
         font-weight: bold;
+
+        @include max-screen($breakpoint-sm) {
+        }
 
         @include max-screen($breakpoint-xs) {
           font-size: 1.4rem;
@@ -3297,6 +3308,10 @@ $primary-color: #0a366f;
   }
   .c-service-list__box.c-service-list__box__2col  {
     grid-template-columns: repeat(2, 1fr);
+
+    li {
+      aspect-ratio: 7/3;
+    }
   }
   .c-service-list__box.c-service-list__box__3col  {
     grid-template-columns: repeat(3, 1fr);
@@ -3325,24 +3340,42 @@ $primary-color: #0a366f;
 }
 
 .c-merit-point {
-  margin-bottom: 170px;
+  margin-bottom: 137px;
+
+  @include max-screen($breakpoint-sm) {
+    margin-bottom: 80px;
+  }
 
   .c-merit-point__title {
-    font-size: 4.5rem;
+    font-size: clamp(2.5rem, 3.13vw, 4.5rem);
     font-weight: bold;
     text-align: center;
   }
   .c-merit-point__content {
+    display: grid;
+    gap: 30px;
     margin-top: 40px;
+
+    @include max-screen($breakpoint-sm) {
+      gap: 60px;
+      margin-top: 30px;
+    }
   }
   
   .c-merit-point__item {
     display: grid;
+    gap: clamp(28px, 4.17vw, 60px);
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
 
+    @include max-screen($breakpoint-sm) {
+      gap: 0;
+      grid-template-columns: 1fr;
+      max-width: 480px;
+      margin-inline: auto;
+    }
+
     .c-merit-point-body {
-      padding: 0 50px 30px;
 
       .deco-number {
         font-family: $font-eng;
@@ -3350,29 +3383,50 @@ $primary-color: #0a366f;
         font-weight: 400;
         color: #2b9dffb3;
 
+        @include max-screen($breakpoint-sm) {
+          font-size: 5rem;
+        }
+
         span {
           font-size: 9.7rem;
+
+          @include max-screen($breakpoint-sm) {
+            font-size: 6rem;
+          }
         }
       }
     }
 
     .c-merit-point-item-title {
       position: relative;
-      font-size: 3rem;
+      font-size: clamp(2rem, 2.08vw, 3rem);
       margin-bottom: 60px;
+
+      @include max-screen($breakpoint-sm) {
+        margin-bottom: 30px;
+      }
     }
     .c-merit-point-item-title::before {
       content: "";
       position: absolute;
-      bottom: -100%;
+      top: calc(100% + 30px);
       left: 0;
-      transform: translate(0%, -50%);
       height: 7px;
       width: 35%;
       background-color: #0a366f;
+
+      @include max-screen($breakpoint-sm) {
+        height: 3px;
+        top: calc(100% + 15px);
+      }
     }
     .c-merit-point-item-text {
       font-size: 1.8rem;
+      line-height: 1.67;
+
+      @include max-screen($breakpoint-sm) {
+        font-size: 1.5rem;
+      }
     }
   }
   .c-merit-point__item:nth-child(even) {
@@ -3518,6 +3572,7 @@ $primary-color: #0a366f;
       }
 
       .c-number-feature__image img {
+        width: 100%;
         border-radius: 24px;
         box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.2509803922);
       }
@@ -3618,24 +3673,60 @@ $primary-color: #0a366f;
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
 
+  @include max-screen($breakpoint-sm) {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .c-2col-contents__image img {
+    border-radius: 4rem;
+
+    @include max-screen($breakpoint-sm) {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+    }
+
+    @include max-screen($breakpoint-xs) {
+      height: 200px;
+    }
+  }
+
   .c-2col-contents-body {
     padding: 0 60px;
+
+    @include max-screen($breakpoint-md) {
+      padding: 0;
+      padding-left: 40px;
+    }
+    @include max-screen($breakpoint-sm) {
+      padding: 0;
+    }
 
     .c-2col-contents__title {
       position: relative;
       margin-bottom: 60px;
-      font-size: 3rem;
+      font-size: clamp(2.2rem,2.08vw,3rem);
       font-weight: 900;
+
+      @include max-screen($breakpoint-sm) {
+        margin-bottom: 30px;
+      }
     }
+
     .c-2col-contents__title::before {
       content: "";
       position: absolute;
-      bottom: -100%;
+      top: calc(100% + 30px);
       left: 0;
-      transform: translate(0%, -50%);
       height: 7px;
       width: 35%;
       background-color: #0a366f;
+
+      @include max-screen($breakpoint-sm) {
+        height: 3px;
+        top: calc(100% + 15px);
+      }
   }
     .c-2col-contents__text {
       font-size: 1.8rem;
@@ -3653,7 +3744,7 @@ $primary-color: #0a366f;
 
   .c-flow-contents__title {
     margin-bottom: 31px;
-    font-size: 4rem;
+    font-size: clamp(2.5rem, 2.78vw, 4rem);
     font-weight: bold;
     text-align: center;
   }
@@ -3661,35 +3752,62 @@ $primary-color: #0a366f;
     display: flex;
     flex-wrap: wrap;
     gap: 80px;
+    padding-bottom: 8px;
+
+    @include max-screen($breakpoint-sm) {
+      gap: 40px;
+    }
 
     .c-flow-contents__item {
       position: relative;
-      overflow: visible;
+      overflow: hidden;
       display: grid;
       grid-template-columns: 315px 1fr;
       justify-content: center;
       text-align: left;
       border-radius: 4rem;
       background-color: #fff;
+      box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+
+      @include max-screen($breakpoint-md) {
+        grid-template-columns: 1fr;
+        grid-template-rows: 340px 1fr;
+        max-width: 640px;
+        margin-inline: auto;
+      }
+      @include max-screen($breakpoint-sm) {
+        max-width: 480px;
+      }
 
       .c-flow-contents__item-image img {
         display: block;
+        width: 100%;
         height: 100%;
         object-fit: cover;
         border-radius: 4rem 0 0 4rem;
+
+        @include max-screen($breakpoint-md) {
+          border-radius: unset;
+        }
       }
 
       .c-flow-contents__item-body {
         margin-bottom: 30px;
         padding: 20px 30px;
 
+        @include max-screen($breakpoint-sm) {
+          margin-bottom: 10px;
+          padding: 20px;
+        }
+
         .c-flow-contents__item-title {
-          margin-bottom: 25px;
-          font-size: 3rem;
+          margin-bottom: 20px;
+          font-size: clamp(2.3rem, 2.08vw, 3rem);
           font-weight: bold;
+          color: #fc5018;
         }
         .c-flow-contents__item-text {
-          font-size: 1.2rem;
+          font-size: 1.5rem;
           font-weight: 500;
           line-height: 1.9;
         }
@@ -3719,31 +3837,55 @@ $primary-color: #0a366f;
   margin-inline: auto;
   margin-bottom: 124px;
 
+  @include max-screen($breakpoint-sm) {
+    margin-bottom: 80px;
+  }
+
   .c-advantage-contents__title {
     margin-top: 130px;
     margin-bottom: 46px;
-    font-size: 4rem;
+    font-size: clamp(2.5rem, 2.78vw, 4rem);
     font-weight: bold;
     text-align: center;
+
+    @include max-screen($breakpoint-sm) {
+      margin-top: 80px;
+    }
   }
 
   .c-advantage-contents__list {
     display: grid;
     gap: 90px;
 
+    @include max-screen($breakpoint-sm) {
+      gap: 50px;
+    }
+
     .c-advantage-contents__item {
+      display: grid;
+      gap: 55px;
       padding-bottom: 30px;
       border-bottom: 1px solid $blue;
 
+      .c-advantage-contents__images img {
+        max-width: 188px;
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
+        border-radius: 50%;
+      }
+
       .c-advantage-contents-item-title {
         margin-bottom: 30px;
-        font-size: 3rem;
+        font-size: clamp(2.2rem,2.08vw,3rem);
         font-weight: 900;
       }
       .c-advantage-contents-item-text {
         font-size: 1.8rem;
         line-height: 1.6;
       }
+    }
+    .c-advantage-contents__item_2col {
+      grid-template-columns: 188px 1fr;
     }
   }
 }
@@ -3753,25 +3895,33 @@ $primary-color: #0a366f;
 
   .c-faq-title {
     margin-bottom: 40px;
-    font-size: 3.2rem;
+    font-size: clamp(2.5rem,2.08vw,3.2rem);
     font-weight: bold;
     text-align: center;
   }
   .faq_listItem {
     margin-bottom: 40px;
+
+    @include max-screen($breakpoint-xs) {
+      margin-bottom: 20px;
+    }
   }
   .faq_q {
     position: relative;
     padding: 34px 35px 30px 88px;
-    background: #D3EEA6;
+    background: rgba(43, 157, 255, 0.7019607843);
     border-radius: 20px 20px 0 0;
     font-size: 1.8rem;
     font-weight: 700;
-    line-height: 1.35;
     letter-spacing: 0.1em;
     -webkit-transition: all 0.3s ease-in-out;
     -moz-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
+
+    @include max-screen($breakpoint-sm) {
+      padding: 15px 15px 15px 60px;
+      font-size: 1.4rem;
+    }
   }
   .faq_q:before {
     content: "Q";
@@ -3786,19 +3936,31 @@ $primary-color: #0a366f;
     height: 52px;
     margin: auto;
     padding-bottom: 5px;
-    background-color: #93CF30;
+    background-color: #fff;
     font-size: 2.0rem;
-    color: #ffffff;
+    color: rgba(43, 157, 255, 0.7019607843);
     line-height: 1;
     border-radius: 50%;
+
+    @include max-screen($breakpoint-sm) {
+      left: 10px;
+      width: 40px;
+      height: 40px;
+      font-size: 1.6rem;
+    }
   }
   .faq_a {
     position: relative;
     padding: 23px 35px 30px 88px;
     font-size: 1.5rem;
+    line-height: 1.67;
     border-radius: 0 0 20px 20px;
     background-color: #ffffff;
-    border: 2px solid #D3EEA6;
+    border: 2px solid rgba(43, 157, 255, 0.7019607843);
+
+    @include max-screen($breakpoint-sm) {
+      padding: 15px;
+    }
   }
   .faq_a:before {
     content: "A";
@@ -3811,13 +3973,17 @@ $primary-color: #0a366f;
     justify-content: center;
     width: 52px;
     height: 52px;
-    margin: auto;
+    margin-top: 23px;
     padding-bottom: 5px;
-    background-color: #93CF30;
+    background-color: rgba(43, 157, 255, 0.7019607843);
     font-size: 2.0rem;
     color: #ffffff;
     line-height: 1;
     border-radius: 50%;
+
+    @include max-screen($breakpoint-sm) {
+      display: none;
+    }
   }
 }
 
@@ -4131,13 +4297,22 @@ $primary-color: #0a366f;
     font-size: 15px;
 
     @include max-screen($breakpoint-sm) {
-      font-size: 10px;
+      font-size: 1rem;
     }
   }
 }
 
 .page-reason {
+  margin-top: -25px;
   margin-bottom: 20px;
+
+  @include max-screen($breakpoint-md) {
+    margin-top: -30px;
+  }
+
+  @include max-screen($breakpoint-sm) {
+    margin-top: -45px;
+  }
 
   .pagehead-set {
     position: relative;
@@ -4147,13 +4322,8 @@ $primary-color: #0a366f;
     background-repeat: no-repeat;
     aspect-ratio: 14 / 3;
     width: 100%;
-    margin-top: -30px;
     padding: 0;
     z-index: 0;
-
-    @include max-screen($breakpoint-sm) {
-      margin-top: -50px;
-    }
 
     @include max-screen($breakpoint-xs) {
       height: 120px;
@@ -4204,6 +4374,128 @@ $primary-color: #0a366f;
   .c-number-feature {
     .c-parts-check {
       margin: 0px auto 50px;
+    }
+  }
+}
+
+.page-sunlight {
+  margin-top: -25px;
+  margin-bottom: 20px;
+
+  @include max-screen($breakpoint-md) {
+    margin-top: -30px;
+  }
+
+  @include max-screen($breakpoint-sm) {
+    margin-top: -45px;
+  }
+
+  .pagehead-set {
+    position: relative;
+    background-image: url(../img/sunlight-mv-bg.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    aspect-ratio: 14 / 3;
+    width: 100%;
+    padding: 0;
+    z-index: 0;
+
+    @include max-screen($breakpoint-xs) {
+      height: 120px;
+    }
+  }
+
+  .pagehead-text {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 39.8%;
+    padding: 26px 40px;
+    font-weight: bold;
+    text-align: left;
+    line-height: 1.4;
+    background-color: #fff;
+    background: linear-gradient(274.72deg, #2182d8 -5.7%, #1b65c4 91.29%);
+    box-sizing: border-box;
+    z-index: 2;
+
+    @include max-screen($breakpoint-sm) {
+      padding: 7px 10px;
+    }
+  }
+  .pagehead-text h1 {
+    margin-bottom: 8px;
+    font-size: clamp(1.3rem, 3.47vw, 5rem);
+    color: #FBEC19;
+
+    @include max-screen($breakpoint-sm) {
+      margin-bottom: 4px;
+    }
+  }
+  .pagehead-set p {
+    margin-top: 0;
+    font-family: $font-eng;
+    font-size: 2rem;
+    font-weight: 400;
+    text-transform: capitalize;
+    line-height: 1;
+    color: #fff;
+
+    @include max-screen($breakpoint-sm) {
+      font-size: 1.2rem;
+    }
+  }
+
+  .page-sunlight-maker {
+    max-width: 1200px;
+    margin-inline: auto;
+    margin-bottom: 170px;
+
+    @include max-screen($breakpoint-sm) {
+      margin-bottom: 100px;
+    }
+
+    .page-sunlight-maker__title {
+      margin-bottom: 30px;
+      font-size: clamp(2.5rem,2.78vw,4rem);
+      font-weight: bold;
+      text-align: center;
+    }
+
+    .page-sunlight-maker__list {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+
+      @include max-screen($breakpoint-xs) {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px 10px;
+      }
+
+      .page-sunlight-maker__image {
+        width: 100%;
+        padding: 10px;
+        aspect-ratio: 2 / 1;
+        align-content: center;
+        background: #fff;
+      }
+
+      .page-sunlight-maker__image img {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+      }
+
+      .page-sunlight-maker__item p {
+        display: inline-block;
+        width: 100%;
+        padding: 10px 0 0;
+        text-align: center;
+        font-weight: bold;
+        font-size: clamp(1.6rem, 1.8vw, 2.4rem);
+      }
     }
   }
 }
