@@ -3236,7 +3236,7 @@ $primary-color: #0a366f;
 }
 
 .c-service-list {
-  margin-top: 145px;
+  margin-top: 100px;
   margin-bottom: 60px;
   max-width: 1200px;
   margin-inline: auto;
@@ -3686,70 +3686,98 @@ $primary-color: #0a366f;
   }
 }
 
-.c-2col-contents__item {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  align-items: center;
+.c-2col-contents {
 
-  @include max-screen($breakpoint-sm) {
-    grid-template-columns: 1fr;
-    gap: 20px;
+  .c-2col-contents__title {
+    font-size: clamp(2.5rem, 3.13vw, 4.5rem);
+    font-weight: bold;
+    text-align: center;
   }
 
-  .c-2col-contents__image img {
-    border-radius: 4rem;
+  .c-2col-contents__content {
+    display: grid;
+    gap: 30px;
+    margin-top: 40px;
 
     @include max-screen($breakpoint-sm) {
-      width: 100%;
-      height: 300px;
-      object-fit: cover;
-    }
-
-    @include max-screen($breakpoint-xs) {
-      height: 200px;
+      gap: 60px;
+      margin-top: 30px;
     }
   }
 
-  .c-2col-contents-body {
-    padding: 0 60px;
+  .c-2col-contents__item:nth-child(even) {
+    direction: rtl;
+  }
 
-    @include max-screen($breakpoint-md) {
-      padding: 0;
-      padding-left: 40px;
-    }
+  .c-2col-contents__item {
+    display: grid;
+    gap: clamp(28px, 4.17vw, 60px);
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+  
     @include max-screen($breakpoint-sm) {
-      padding: 0;
+      grid-template-columns: 1fr;
+      gap: 20px;
     }
-
-    .c-2col-contents__title {
-      position: relative;
-      margin-bottom: 60px;
-      font-size: clamp(2.2rem,2.08vw,3rem);
-      font-weight: 900;
-
+  
+    .c-2col-contents__image img {
+      border-radius: 4rem;
+  
       @include max-screen($breakpoint-sm) {
-        margin-bottom: 30px;
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+      }
+  
+      @include max-screen($breakpoint-xs) {
+        height: 200px;
       }
     }
-
-    .c-2col-contents__title::before {
-      content: "";
-      position: absolute;
-      top: calc(100% + 30px);
-      left: 0;
-      height: 7px;
-      width: 35%;
-      background-color: #0a366f;
-
-      @include max-screen($breakpoint-sm) {
-        height: 3px;
-        top: calc(100% + 15px);
+  
+    .c-2col-contents-body {
+  
+      @include max-screen($breakpoint-md) {
+        padding: 0;
+        padding-left: 40px;
       }
-  }
-    .c-2col-contents__text {
-      font-size: 1.8rem;
-      font-weight: 400;
-      line-height: 1.67;
+      @include max-screen($breakpoint-sm) {
+        padding: 0;
+      }
+  
+      .c-2col-contents-item-title {
+        position: relative;
+        margin-bottom: 60px;
+        font-size: clamp(2rem,2.08vw,3rem);
+        font-weight: 900;
+  
+        @include max-screen($breakpoint-sm) {
+          margin-bottom: 30px;
+        }
+      }
+  
+      .c-2col-contents-item-title::before {
+        content: "";
+        position: absolute;
+        top: calc(100% + 30px);
+        left: 0;
+        height: 7px;
+        width: 35%;
+        background-color: #0a366f;
+  
+        @include max-screen($breakpoint-sm) {
+          height: 3px;
+          top: calc(100% + 15px);
+        }
+    }
+      .c-2col-contents-item-text {
+        font-size: 1.8rem;
+        font-weight: 400;
+        line-height: 1.67;
+
+        @include max-screen($breakpoint-sm) {
+          font-size: 1.5rem;
+        }
+      }
     }
   }
 }
@@ -3772,10 +3800,6 @@ $primary-color: #0a366f;
     gap: 80px;
     padding-bottom: 8px;
 
-    @include max-screen($breakpoint-sm) {
-      gap: 40px;
-    }
-
     .c-flow-contents__item {
       position: relative;
       overflow: hidden;
@@ -3786,15 +3810,25 @@ $primary-color: #0a366f;
       border-radius: 4rem;
       background-color: #fff;
       box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+      overflow: visible;
 
       @include max-screen($breakpoint-md) {
         grid-template-columns: 1fr;
         grid-template-rows: 340px 1fr;
         max-width: 640px;
         margin-inline: auto;
+        border-radius: 4rem;
       }
-      @include max-screen($breakpoint-sm) {
+      @include max-screen($breakpoint-xs) {
         max-width: 480px;
+        grid-template-rows: 240px 1fr;
+      }
+
+      .c-flow-contents__item-image {
+        @include max-screen($breakpoint-md) {
+          overflow: hidden;
+          border-radius: 4rem 4rem 0 0;
+        }
       }
 
       .c-flow-contents__item-image img {
@@ -3820,7 +3854,7 @@ $primary-color: #0a366f;
 
         .c-flow-contents__item-title {
           margin-bottom: 20px;
-          font-size: clamp(2.3rem, 2.08vw, 3rem);
+          font-size: clamp(2rem, 2.08vw, 3rem);
           font-weight: bold;
           color: #fc5018;
         }
@@ -4562,7 +4596,7 @@ $primary-color: #0a366f;
 
   .pagehead-set {
     position: relative;
-    background-image: url(../img/sunlight-mv-bg.jpg);
+    background-image: url(../img/battery-mv-bg.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -4615,6 +4649,101 @@ $primary-color: #0a366f;
 
     @include max-screen($breakpoint-sm) {
       font-size: 1.2rem;
+    }
+  }
+  .c-number-feature {
+    margin-bottom: 180px;
+
+    @include max-screen($breakpoint-md) {
+      margin-top: 160px;
+      margin-bottom: 80px;
+    }
+
+    @include max-screen($breakpoint-sm) {
+      margin-top: 80px;
+    }
+
+    @include max-screen($breakpoint-xs) {
+      margin-top: 40px;
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.page-repair {
+  margin-top: -25px;
+  margin-bottom: 20px;
+
+  @include max-screen($breakpoint-md) {
+    margin-top: -30px;
+  }
+
+  @include max-screen($breakpoint-sm) {
+    margin-top: -45px;
+  }
+
+  .pagehead-set {
+    position: relative;
+    background-image: url(../img/repair-mv-bg.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    aspect-ratio: 14 / 3;
+    width: 100%;
+    padding: 0;
+    z-index: 0;
+
+    @include max-screen($breakpoint-xs) {
+      height: 120px;
+    }
+  }
+
+  .pagehead-text {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 39.8%;
+    padding: 26px 40px;
+    font-weight: bold;
+    text-align: left;
+    line-height: 1.4;
+    background-color: #fff;
+    background: linear-gradient(274.72deg, #2182d8 -5.7%, #1b65c4 91.29%);
+    box-sizing: border-box;
+    z-index: 2;
+
+    @include max-screen($breakpoint-sm) {
+      padding: 7px 10px;
+    }
+  }
+  .pagehead-text h1 {
+    margin-bottom: 8px;
+    font-size: clamp(1.3rem, 3.47vw, 5rem);
+    color: #FBEC19;
+
+    @include max-screen($breakpoint-sm) {
+      margin-bottom: 4px;
+    }
+  }
+  .pagehead-set p {
+    margin-top: 0;
+    font-family: $font-eng;
+    font-size: 2rem;
+    font-weight: 400;
+    text-transform: capitalize;
+    line-height: 1;
+    color: #fff;
+
+    @include max-screen($breakpoint-sm) {
+      font-size: 1.2rem;
+    }
+  }
+  .c-2col-contents {
+    margin-top: 136px;
+
+    @include max-screen($breakpoint-sm) {
+      margin-top: 80px;
     }
   }
   .c-number-feature {
