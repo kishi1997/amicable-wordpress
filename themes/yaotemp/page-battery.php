@@ -270,28 +270,20 @@
 
         <section class="c-service-list">
             <div class="l-container">
-                <h3 class="c-service-list__title">サービス</h3>
-                <ul class="c-service-list__box c-service-list__box__3col">
+                <h3 class="c-service-list__title">その他のサービス</h3>
+                <ul class="c-service-list__box c-service-list__box__2col">
                     <li>
-                        <a href="http://localhost:8080/sunlight/">
+                        <a href="<?php bloginfo('url'); ?>/sunlight/">
                             <div class="top-service-item__icon">
-                                <img src="http://localhost:8080/wp-content/themes/yaotemp/img/top-service-icon-solar.svg" alt="太陽光パネルのアイコンめてでも安心。わかりやすい説明と相談体制」イメージ画像">
+                                <img src="<?php bloginfo('template_url');?>/img/top-service-icon-solar.svg" alt="太陽光パネルのアイコンめてでも安心。わかりやすい説明と相談体制」イメージ画像">
                             </div>
                             <p>太陽光発電</p>
                         </a>
                     </li>
                     <li>
-                        <a href="http://localhost:8080/battery/">
+                        <a href="<?php bloginfo('url'); ?>/repair/">
                             <div class="top-service-item__icon">
-                                <img src="http://localhost:8080/wp-content/themes/yaotemp/img/top-service-icon-battery.svg" alt="太陽光パネルのアイコンめてでも安心。わかりやすい説明と相談体制」イメージ画像">
-                            </div>
-                            <p>家庭用蓄電池</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="http://localhost:8080/repair/">
-                            <div class="top-service-item__icon">
-                                <img src="http://localhost:8080/wp-content/themes/yaotemp/img/top-service-icon-repair.svg" alt="修理サービス">
+                                <img src="<?php bloginfo('template_url');?>/img/top-service-icon-repair.svg" alt="修理サービス">
                             </div>
                             <p>修理サービス</p>
                         </a>
@@ -304,30 +296,5 @@
         <!-- /l-main -->
     </div>
 </div>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-<script>
-// .c-voices / お客様の声スライド
-$(document).ready(function() {
-    $('.c-voices-list').slick({
-        centerMode: true,
-        centerPadding: '0',
-        slidesToShow: 3,
-        arrows: true,
-        prevArrow: '<button class="slick-arrow slick-prev"></button>',
-        nextArrow: '<button class="slick-arrow slick-next"></button>',
-        dots: true,
-        infinite: true,
-        lazyLoad: 'progressive',
-        responsive: [{
-            breakpoint: 768,
-            settings: {
-                centerPadding: '60px',
-                slidesToShow: 1,
-            }
-        }]
-    });
-});
-</script>
 
 <?php get_footer(); ?>

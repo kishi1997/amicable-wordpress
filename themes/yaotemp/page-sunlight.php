@@ -274,69 +274,9 @@
             </div>
         </section>
 
-        <section class="c-voices">
-            <div class="l-container">
-                <div class="c-voices-inner">
-                    <div class="c-voices-title__wrapper">
-                        <p class="c-voices-eng__title">Voices</p>
-                        <h2 class="c-voices-title">
-                            <img src="<?php bloginfo('template_url');?>/img/top-voices-title.svg" alt="お客様の声">
-                        </h2>
-                    </div>
-                    <ul class="c-voices-list">
-                        <li class="c-voices-list__item">
-                            <a href="<?php the_permalink(); ?>">
-                                <div class="c-voices-list__images">
-                                    <img src="<?php bloginfo('template_url');?>/img/top-voices-image1.jpg" alt="NO IMAGE" />
-                                </div>
-                                <div class="c-voices-list__content">
-                                    <p class="c-voices-list__content_area">〇〇市A様</p>
-                                    <p>本文引用本文引用本文引用本文引用本文引用本文引用本文引用本文引用本文引用本文引用</p>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="c-voices-list__item">
-                            <a href="<?php the_permalink(); ?>">
-                                <div class="c-voices-list__images">
-                                    <img src="<?php bloginfo('template_url');?>/img/top-voices-image2.jpg" alt="NO IMAGE" />
-                                </div>
-                                <div class="c-voices-list__content">
-                                    <p class="c-voices-list__content_area">〇〇市A様</p>
-                                    <p>本文引用本文引用本文引用本文引用本文引用本文引用本文引用本文引用本文引用本文引用</p>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="c-voices-list__item">
-                            <a href="<?php the_permalink(); ?>">
-                                <div class="c-voices-list__images">
-                                    <img src="<?php bloginfo('template_url');?>/img/top-voices-image3.jpg" alt="NO IMAGE" />
-                                </div>
-                                <div class="c-voices-list__content">
-                                    <p class="c-voices-list__content_area">〇〇市A様</p>
-                                    <p>本文引用本文引用本文引用本文引用本文引用本文引用本文引用本文引用本文引用本文引用</p>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="c-voices-list__item">
-                            <a href="<?php the_permalink(); ?>">
-                                <div class="c-voices-list__images">
-                                    <img src="<?php bloginfo('template_url');?>/img/top-voices-image1.jpg" alt="NO IMAGE" />
-                                </div>
-                                <div class="c-voices-list__content">
-                                    <p class="c-voices-list__content_area">〇〇市A様</p>
-                                    <p>本文引用本文引用本文引用本文引用本文引用本文引用本文引用本文引用本文引用本文引用</p>
-                                </div>
-                            </a>
-                        </li>
-                    </ul>
-                    <a href="<?php bloginfo('url'); ?>/voice/" class="c-button">もっと見る</a>
-                </div>
-            </div>
-        </section>
-
         <section class="c-service-list">
             <div class="l-container">
-                <h3 class="c-service-list__title">サービス</h3>
+                <h3 class="c-service-list__title">その他のサービス</h3>
                 <ul class="c-service-list__box c-service-list__box__2col">
                     <li>
                         <a href="<?php bloginfo('url'); ?>/battery/">
@@ -362,30 +302,5 @@
         <!-- /l-main -->
     </div>
 </div>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-<script>
-// .c-voices / お客様の声スライド
-$(document).ready(function() {
-    $('.c-voices-list').slick({
-        centerMode: true,
-        centerPadding: '0',
-        slidesToShow: 3,
-        arrows: true,
-        prevArrow: '<button class="slick-arrow slick-prev"></button>',
-        nextArrow: '<button class="slick-arrow slick-next"></button>',
-        dots: true,
-        infinite: true,
-        lazyLoad: 'progressive',
-        responsive: [{
-            breakpoint: 768,
-            settings: {
-                centerPadding: '60px',
-                slidesToShow: 1,
-            }
-        }]
-    });
-});
-</script>
 
 <?php get_footer(); ?>
