@@ -3076,6 +3076,7 @@ body {
 @media screen and (max-width: 768px) {
   .c-parts-check {
     max-width: 480px;
+    margin: 60px auto 50px;
   }
 }
 .c-parts-check .c-parts-check__title {
@@ -3129,7 +3130,12 @@ body {
 }
 @media screen and (max-width: 1080px) {
   .c-service-list {
-    margin-top: 0;
+    margin-top: 80px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .c-service-list {
+    margin-top: 60px;
   }
 }
 .c-service-list .c-service-list__title {
@@ -3248,6 +3254,11 @@ body {
     margin-top: 30px;
   }
 }
+@media screen and (max-width: 480px) {
+  .c-merit-point .c-merit-point__content {
+    gap: 30px;
+  }
+}
 .c-merit-point .c-merit-point__item {
   display: grid;
   gap: clamp(28px, 4.17vw, 60px);
@@ -3261,6 +3272,9 @@ body {
     max-width: 480px;
     margin-inline: auto;
   }
+}
+.c-merit-point .c-merit-point__item .c-merit-point__image img {
+  width: 100%;
 }
 .c-merit-point .c-merit-point__item .c-merit-point-body .deco-number {
   font-family: "Chakra Petch", sans-serif;
@@ -3336,12 +3350,16 @@ body {
     padding-top: 30px;
   }
 }
+.c-number-feature .c-number-feature__title {
+  font-size: clamp(2.5rem, 3.13vw, 4.5rem);
+  font-weight: bold;
+}
 .c-number-feature .c-number-feature__content {
   margin-top: 60px;
 }
 @media screen and (max-width: 768px) {
   .c-number-feature .c-number-feature__content {
-    margin-top: 0;
+    margin-top: 30px;
   }
   .c-number-feature .c-number-feature__content .c-number-feature__content:not(:first-child) {
     margin-top: 60px;
@@ -3453,6 +3471,7 @@ body {
 @media screen and (max-width: 480px) {
   .c-number-feature .c-number-feature__content .c-number-feature__item {
     gap: 24px;
+    margin-bottom: 30px;
   }
 }
 .c-number-feature .c-number-feature__content .c-number-feature__item .c-number-feature__image img {
@@ -3728,21 +3747,33 @@ body {
   margin-inline: auto;
   margin-bottom: 124px;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1080px) {
   .c-advantage-contents {
-    margin-bottom: 80px;
+    margin-bottom: 60px;
+    margin-bottom: 60px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .c-advantage-contents {
+    margin-bottom: 40px;
   }
 }
 .c-advantage-contents .c-advantage-contents__title {
   margin-top: 130px;
   margin-bottom: 46px;
-  font-size: clamp(2.5rem, 2.78vw, 4rem);
+  font-size: clamp(2.3rem, 2.78vw, 4rem);
   font-weight: bold;
   text-align: center;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1080px) {
   .c-advantage-contents .c-advantage-contents__title {
-    margin-top: 80px;
+    margin-top: 60px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .c-advantage-contents .c-advantage-contents__title {
+    margin-top: 30px;
+    margin-bottom: 26px;
   }
 }
 .c-advantage-contents .c-advantage-contents__list {
@@ -3760,6 +3791,17 @@ body {
   padding-bottom: 30px;
   border-bottom: 1px solid #0a366f;
 }
+@media screen and (max-width: 480px) {
+  .c-advantage-contents .c-advantage-contents__list .c-advantage-contents__item {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .c-advantage-contents .c-advantage-contents__list .c-advantage-contents__item .c-advantage-contents__images {
+    margin-inline: auto;
+  }
+}
 .c-advantage-contents .c-advantage-contents__list .c-advantage-contents__item .c-advantage-contents__images img {
   max-width: 188px;
   aspect-ratio: 1/1;
@@ -3769,19 +3811,29 @@ body {
 }
 .c-advantage-contents .c-advantage-contents__list .c-advantage-contents__item .c-advantage-contents-item-title {
   margin-bottom: 30px;
-  font-size: clamp(2.2rem, 2.08vw, 3rem);
+  font-size: clamp(2rem, 2.08vw, 3rem);
   font-weight: 900;
+}
+@media screen and (max-width: 768px) {
+  .c-advantage-contents .c-advantage-contents__list .c-advantage-contents__item .c-advantage-contents-item-title {
+    margin-bottom: 14px;
+  }
 }
 .c-advantage-contents .c-advantage-contents__list .c-advantage-contents__item .c-advantage-contents-item-text {
   font-size: 1.8rem;
   line-height: 1.6;
 }
-.c-advantage-contents .c-advantage-contents__list .c-advantage-contents__item_2col {
+.c-advantage-contents .c-advantage-contents__list_2col li {
   grid-template-columns: 188px 1fr;
 }
 
 .c-faq {
   margin-bottom: 66px;
+}
+@media screen and (max-width: 768px) {
+  .c-faq {
+    margin-bottom: 20px;
+  }
 }
 .c-faq .c-faq-title {
   margin-bottom: 40px;
@@ -4379,4 +4431,99 @@ body {
   text-align: center;
   font-weight: bold;
   font-size: clamp(1.6rem, 1.8vw, 2.4rem);
+}
+
+.page-battery {
+  margin-top: -25px;
+  margin-bottom: 20px;
+}
+@media screen and (max-width: 1080px) {
+  .page-battery {
+    margin-top: -30px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .page-battery {
+    margin-top: -45px;
+  }
+}
+.page-battery .pagehead-set {
+  position: relative;
+  background-image: url(../img/sunlight-mv-bg.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  aspect-ratio: 14/3;
+  width: 100%;
+  padding: 0;
+  z-index: 0;
+}
+@media screen and (max-width: 480px) {
+  .page-battery .pagehead-set {
+    height: 120px;
+  }
+}
+.page-battery .pagehead-text {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 39.8%;
+  padding: 26px 40px;
+  font-weight: bold;
+  text-align: left;
+  line-height: 1.4;
+  background-color: #fff;
+  background: linear-gradient(274.72deg, #2182d8 -5.7%, #1b65c4 91.29%);
+  box-sizing: border-box;
+  z-index: 2;
+}
+@media screen and (max-width: 768px) {
+  .page-battery .pagehead-text {
+    padding: 7px 10px;
+  }
+}
+.page-battery .pagehead-text h1 {
+  margin-bottom: 8px;
+  font-size: clamp(1.3rem, 3.47vw, 5rem);
+  color: #FBEC19;
+}
+@media screen and (max-width: 768px) {
+  .page-battery .pagehead-text h1 {
+    margin-bottom: 4px;
+  }
+}
+.page-battery .pagehead-set p {
+  margin-top: 0;
+  font-family: "Chakra Petch", sans-serif;
+  font-size: 2rem;
+  font-weight: 400;
+  text-transform: capitalize;
+  line-height: 1;
+  color: #fff;
+}
+@media screen and (max-width: 768px) {
+  .page-battery .pagehead-set p {
+    font-size: 1.2rem;
+  }
+}
+.page-battery .c-number-feature {
+  margin-bottom: 180px;
+}
+@media screen and (max-width: 1080px) {
+  .page-battery .c-number-feature {
+    margin-top: 160px;
+    margin-bottom: 80px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .page-battery .c-number-feature {
+    margin-top: 80px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .page-battery .c-number-feature {
+    margin-top: 40px;
+    margin-bottom: 20px;
+  }
 }/*# sourceMappingURL=design.css.map */

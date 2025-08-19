@@ -3183,6 +3183,7 @@ $primary-color: #0a366f;
 
   @include max-screen($breakpoint-sm) {
     max-width: 480px;
+    margin: 60px auto 50px;
   }
 
   .c-parts-check__title {
@@ -3239,8 +3240,12 @@ $primary-color: #0a366f;
   margin-bottom: 60px;
   max-width: 1200px;
   margin-inline: auto;
+
   @include max-screen($breakpoint-md) {
-    margin-top: 0;
+    margin-top: 80px;
+  }
+  @include max-screen($breakpoint-sm) {
+    margin-top: 60px;
   }
 
   .c-service-list__title {
@@ -3360,6 +3365,9 @@ $primary-color: #0a366f;
       gap: 60px;
       margin-top: 30px;
     }
+    @include max-screen($breakpoint-xs) {
+      gap: 30px;
+    }
   }
   
   .c-merit-point__item {
@@ -3373,6 +3381,10 @@ $primary-color: #0a366f;
       grid-template-columns: 1fr;
       max-width: 480px;
       margin-inline: auto;
+    }
+
+    .c-merit-point__image img {
+      width: 100%;
     }
 
     .c-merit-point-body {
@@ -3448,11 +3460,16 @@ $primary-color: #0a366f;
     padding-top: 30px;
   }
 
+  .c-number-feature__title {
+    font-size: clamp(2.5rem, 3.13vw, 4.5rem);
+    font-weight: bold;
+  }
+
   .c-number-feature__content {
     margin-top: 60px;
     
     @include max-screen($breakpoint-sm) {
-      margin-top: 0;
+      margin-top: 30px;
 
       .c-number-feature__content:not(:first-child) {
         margin-top: 60px;
@@ -3569,6 +3586,7 @@ $primary-color: #0a366f;
 
       @include max-screen($breakpoint-xs) {
         gap: 24px;
+        margin-bottom: 30px;
       }
 
       .c-number-feature__image img {
@@ -3837,19 +3855,28 @@ $primary-color: #0a366f;
   margin-inline: auto;
   margin-bottom: 124px;
 
-  @include max-screen($breakpoint-sm) {
-    margin-bottom: 80px;
+  @include max-screen($breakpoint-md) {
+    margin-bottom: 60px;
+    margin-bottom: 60px;
+  }
+  @include max-screen($breakpoint-xs) {
+    margin-bottom: 40px;
   }
 
   .c-advantage-contents__title {
     margin-top: 130px;
     margin-bottom: 46px;
-    font-size: clamp(2.5rem, 2.78vw, 4rem);
+    font-size: clamp(2.3rem, 2.78vw, 4rem);
     font-weight: bold;
     text-align: center;
 
-    @include max-screen($breakpoint-sm) {
-      margin-top: 80px;
+    @include max-screen($breakpoint-md) {
+      margin-top: 60px;
+    }
+
+    @include max-screen($breakpoint-xs) {
+      margin-top: 30px;
+      margin-bottom: 26px;
     }
   }
 
@@ -3867,6 +3894,17 @@ $primary-color: #0a366f;
       padding-bottom: 30px;
       border-bottom: 1px solid $blue;
 
+      @include max-screen($breakpoint-xs) {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+
+      .c-advantage-contents__images {
+        @include max-screen($breakpoint-xs) {
+          margin-inline: auto;
+        }
+      }
+
       .c-advantage-contents__images img {
         max-width: 188px;
         aspect-ratio: 1 / 1;
@@ -3876,22 +3914,31 @@ $primary-color: #0a366f;
 
       .c-advantage-contents-item-title {
         margin-bottom: 30px;
-        font-size: clamp(2.2rem,2.08vw,3rem);
+        font-size: clamp(2rem,2.08vw,3rem);
         font-weight: 900;
+
+        @include max-screen($breakpoint-sm) {
+          margin-bottom: 14px;
+        }
       }
       .c-advantage-contents-item-text {
         font-size: 1.8rem;
         line-height: 1.6;
       }
     }
-    .c-advantage-contents__item_2col {
-      grid-template-columns: 188px 1fr;
-    }
+  }
+
+  .c-advantage-contents__list_2col li {
+    grid-template-columns: 188px 1fr;
   }
 }
 
 .c-faq {
   margin-bottom: 66px;
+
+  @include max-screen($breakpoint-sm) {
+    margin-bottom: 20px;
+  }
 
   .c-faq-title {
     margin-bottom: 40px;
@@ -4372,6 +4419,7 @@ $primary-color: #0a366f;
     }
   }
   .c-number-feature {
+
     .c-parts-check {
       margin: 0px auto 50px;
     }
@@ -4496,6 +4544,94 @@ $primary-color: #0a366f;
         font-weight: bold;
         font-size: clamp(1.6rem, 1.8vw, 2.4rem);
       }
+    }
+  }
+}
+
+.page-battery {
+  margin-top: -25px;
+  margin-bottom: 20px;
+
+  @include max-screen($breakpoint-md) {
+    margin-top: -30px;
+  }
+
+  @include max-screen($breakpoint-sm) {
+    margin-top: -45px;
+  }
+
+  .pagehead-set {
+    position: relative;
+    background-image: url(../img/sunlight-mv-bg.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    aspect-ratio: 14 / 3;
+    width: 100%;
+    padding: 0;
+    z-index: 0;
+
+    @include max-screen($breakpoint-xs) {
+      height: 120px;
+    }
+  }
+
+  .pagehead-text {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 39.8%;
+    padding: 26px 40px;
+    font-weight: bold;
+    text-align: left;
+    line-height: 1.4;
+    background-color: #fff;
+    background: linear-gradient(274.72deg, #2182d8 -5.7%, #1b65c4 91.29%);
+    box-sizing: border-box;
+    z-index: 2;
+
+    @include max-screen($breakpoint-sm) {
+      padding: 7px 10px;
+    }
+  }
+  .pagehead-text h1 {
+    margin-bottom: 8px;
+    font-size: clamp(1.3rem, 3.47vw, 5rem);
+    color: #FBEC19;
+
+    @include max-screen($breakpoint-sm) {
+      margin-bottom: 4px;
+    }
+  }
+  .pagehead-set p {
+    margin-top: 0;
+    font-family: $font-eng;
+    font-size: 2rem;
+    font-weight: 400;
+    text-transform: capitalize;
+    line-height: 1;
+    color: #fff;
+
+    @include max-screen($breakpoint-sm) {
+      font-size: 1.2rem;
+    }
+  }
+  .c-number-feature {
+    margin-bottom: 180px;
+
+    @include max-screen($breakpoint-md) {
+      margin-top: 160px;
+      margin-bottom: 80px;
+    }
+
+    @include max-screen($breakpoint-sm) {
+      margin-top: 80px;
+    }
+
+    @include max-screen($breakpoint-xs) {
+      margin-top: 40px;
+      margin-bottom: 20px;
     }
   }
 }
