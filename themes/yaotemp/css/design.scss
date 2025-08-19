@@ -529,9 +529,10 @@ body {
             margin: 0 auto;
             float: none;
             z-index: 1;
-            padding: 8px 12px;
+            padding: 16px 20px;
             text-align: center;
             border-bottom: 1px solid #c4c4c4;
+            font-size: 1.3rem;
 
             @include max-screen($breakpoint-sm) {
               position: static;
@@ -540,13 +541,11 @@ body {
 
           a {
             display: block;
-            color: #000;
 
             &:before {
               @include max-screen($breakpoint-sm) {
                 content: "ー";
                 padding: 0 0.5em;
-                // color: #aaa;
                 font-weight: bold;
               }
             }
@@ -1305,7 +1304,7 @@ body {
     }
   }
 
-  .top-sekoujirei-list__content  p {
+  .top-sekoujirei-list__content p {
     line-height: 1.8;
   }
 
@@ -1316,10 +1315,7 @@ body {
     width: 100%;
     margin: 80px auto 0;
     padding: 30px 10px;
-    background: linear-gradient(
-      274.72deg, #2182d8 -5.7%,
-      #1b65c4 91.29%
-    );
+    background: linear-gradient(274.72deg, #2182d8 -5.7%, #1b65c4 91.29%);
     color: #fff;
     font-size: 2rem;
     font-weight: bold;
@@ -1359,7 +1355,7 @@ body {
       width: 5px;
       height: 8px;
     }
-  }    
+  }
 }
 
 /* =================================================================
@@ -1440,10 +1436,7 @@ body {
     width: 100%;
     margin: 130px auto 0;
     padding: 30px 10px;
-    background: linear-gradient(
-      274.72deg, #2182d8 -5.7%,
-      #1b65c4 91.29%
-    );
+    background: linear-gradient(274.72deg, #2182d8 -5.7%, #1b65c4 91.29%);
     color: #fff;
     font-size: 2rem;
     font-weight: bold;
@@ -1452,7 +1445,7 @@ body {
     line-height: 2;
     border-radius: 50px;
     transition: opacity 0.3s;
-    
+
     @include max-screen($breakpoint-s) {
       font-size: 1.4rem;
       padding: 16px 10px;
@@ -1508,7 +1501,7 @@ body {
     transform: translateY(-50%);
     z-index: 10;
     cursor: pointer;
-    
+
     @include max-screen($breakpoint-sm) {
       width: 30px;
       height: 30px;
@@ -1528,7 +1521,7 @@ body {
     border-right: 2px solid #fff;
     transform: rotate(45deg);
     opacity: 1;
-    
+
     @include max-screen($breakpoint-sm) {
       width: 8px;
       height: 8px;
@@ -1663,7 +1656,7 @@ body {
     }
   }
 
-  .top-support__images img:nth-of-type(1)  {
+  .top-support__images img:nth-of-type(1) {
     left: -190px;
     top: 60px;
     max-width: 572px;
@@ -1733,7 +1726,7 @@ body {
     font-weight: 400;
     line-height: 1.8;
     color: $blue;
-    
+
     @include max-screen($breakpoint-sm) {
       margin-bottom: 30px;
       font-size: 1.5rem;
@@ -1763,7 +1756,7 @@ body {
       margin-top: 28px;
       max-width: 262px;
     }
-    
+
     @include max-screen(980px) {
       margin-inline: auto;
     }
@@ -1863,7 +1856,7 @@ body {
       max-width: 262px;
     }
   }
-    
+
   .top-plan-button:hover {
     opacity: 0.8;
   }
@@ -1922,7 +1915,7 @@ body {
     text-align: center;
     background: #003366;
     color: #fff;
-    
+
     @include max-screen($breakpoint-lg) {
       text-align: left;
     }
@@ -1967,7 +1960,7 @@ body {
   .top-plan-card__main .yen {
     font-size: 7.2rem;
     color: $title-orange;
-    
+
     @include max-screen($breakpoint-sm) {
       font-size: 4.3rem;
     }
@@ -1978,7 +1971,7 @@ body {
     font-size: 2rem;
     font-weight: bold;
     color: #696969;
-    
+
     @include max-screen($breakpoint-sm) {
       font-size: 1.2rem;
     }
@@ -1986,7 +1979,7 @@ body {
 
   .top-plan-card__sub span {
     font-size: 2.6rem;
-    
+
     @include max-screen($breakpoint-sm) {
       font-size: 1.6rem;
     }
@@ -2045,7 +2038,7 @@ body {
     border: 4px solid #58b0fb;
     border-radius: 100px;
     background-color: #ffffff;
-    
+
     @include max-screen($breakpoint-sm) {
       width: 318px;
       margin-bottom: 47px;
@@ -2114,7 +2107,7 @@ body {
     font-size: 1.4rem;
     color: #fff;
     background: #ff5e28;
-    
+
     @include max-screen($breakpoint-sm) {
       margin: 16px 0 0;
       padding: 6px 0;
@@ -2127,7 +2120,7 @@ body {
     font-size: 2rem;
     font-weight: bold;
     color: #003366;
-    
+
     @include max-screen($breakpoint-sm) {
       margin-top: 0;
       font-size: 2.5rem;
@@ -2158,7 +2151,7 @@ body {
       max-width: 262px;
     }
   }
-    
+
   .top-staff-button::hover {
     opacity: 0.8;
   }
@@ -2181,7 +2174,7 @@ body {
       width: 5px;
       height: 8px;
     }
-  } 
+  }
 }
 
 /* =================================================================
@@ -2272,9 +2265,8 @@ body {
       flex-direction: column;
     }
   }
-  
+
   .top-story-box:nth-of-type(1) {
-    
     @include min-screen($breakpoint-md) {
       margin-bottom: 53px;
     }
@@ -2285,9 +2277,8 @@ body {
       }
     }
   }
-  
-  .top-story-box:nth-of-type(2) {
 
+  .top-story-box:nth-of-type(2) {
     @include max-screen($breakpoint-md) {
       flex-direction: column-reverse;
 
@@ -2303,7 +2294,7 @@ body {
       }
     }
   }
-  
+
   .top-story-box__left,
   .top-story-box__right {
     display: flex;
@@ -2360,46 +2351,46 @@ body {
   }
 }
 
-  .top-story-promise__list {
-    list-style-type: decimal;
-    margin: 10px 0;
-    padding-right: 1.5em;
-    font-size: 1.3rem;
-    font-weight: bold;
-    color: $base-text;
+.top-story-promise__list {
+  list-style-type: decimal;
+  margin: 10px 0;
+  padding-right: 1.5em;
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: $base-text;
+
+  @include max-screen($breakpoint-sm) {
+    font-size: 1.1rem;
+  }
+}
+
+.top-story-promise__list > li {
+  list-style-type: auto;
+  list-style-position: inside;
+  line-height: 1.8;
+  font-weight: bold;
+  color: $base-text;
+}
+
+.top-story-sign {
+  margin-top: 30px;
+  font-size: 1.7rem;
+  line-height: 1.6;
+  color: #000;
+
+  @include max-screen($breakpoint-sm) {
+    margin-top: 16px;
+    font-size: 1.4rem;
+  }
+
+  strong {
+    font-size: 2.2rem;
 
     @include max-screen($breakpoint-sm) {
-      font-size: 1.1rem;
+      font-size: 2rem;
     }
   }
-   
-  .top-story-promise__list > li {
-    list-style-type: auto;
-    list-style-position: inside;
-    line-height: 1.8;
-    font-weight: bold;
-    color: $base-text;
-  }
-
-  .top-story-sign {
-    margin-top: 30px;
-    font-size: 1.7rem;
-    line-height: 1.6;
-    color: #000;
-
-    @include max-screen($breakpoint-sm) {
-      margin-top: 16px;
-      font-size: 1.4rem;
-    }
-
-    strong {
-      font-size: 2.2rem;
-
-      @include max-screen($breakpoint-sm) {
-        font-size: 2rem;
-      }
-    }
-  }
+}
 
 /* =================================================================
   Company /  企業情報
@@ -2551,7 +2542,7 @@ body {
       overflow: hidden;
     }
   }
-    
+
   .top-company-logos img {
     width: 100%;
     height: 57px;
@@ -2632,14 +2623,14 @@ body {
   }
 
   .top-blog_tab__archive {
-    width: 100%!important;
-    margin: 0 auto 10px!important;
+    width: 100% !important;
+    margin: 0 auto 10px !important;
     display: none;
   }
 
   .top-blog_tab__archive.slick-initialized {
     display: block;
-    animation: panel-show .9s ease-in-out forwards;
+    animation: panel-show 0.9s ease-in-out forwards;
   }
 
   .top-blog_tab__panel {
@@ -2648,7 +2639,7 @@ body {
 
   .top-blog_tab__panel.active {
     display: block;
-    animation: panel-show .3s ease-in-out forwards;
+    animation: panel-show 0.3s ease-in-out forwards;
   }
 
   /* パネル切り替えのアニメーション */
@@ -2663,8 +2654,9 @@ body {
 
   .eyecatch img,
   .top-blog_tab__archive img {
-    border-radius: 20px!important;
-    transition: border-radius 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 20px !important;
+    transition: border-radius 0.3s ease, transform 0.3s ease,
+      box-shadow 0.3s ease;
 
     @include max-screen($breakpoint-sm) {
       border-radius: 12px;
@@ -2674,7 +2666,7 @@ body {
   .eyecatch img:hover {
     transform: scale(1);
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-    border-radius: 20px!important;
+    border-radius: 20px !important;
   }
 
   .dateList {
@@ -2685,7 +2677,7 @@ body {
   .dateList__item {
     color: $blue;
     font-size: 23px;
-    margin-right: 0!important;
+    margin-right: 0 !important;
 
     @include max-screen($breakpoint-sm) {
       font-size: 1.3rem !important;
@@ -2762,7 +2754,7 @@ body {
   /* スライド */
   .slick-slide {
     width: 100% !important;
-    max-width:326px;
+    max-width: 326px;
     margin: 0 10px;
 
     @include max-screen($breakpoint-sm) {
@@ -2783,7 +2775,7 @@ body {
       font-size: 1.2rem !important;
     }
   }
-  
+
   .slick-dots {
     bottom: -65px;
   }
@@ -3107,7 +3099,7 @@ $primary-color: #0a366f;
   transition: opacity 0.3s;
   position: relative;
   line-height: 2;
-  
+
   @include max-screen($breakpoint-s) {
     margin-top: 44px;
     padding: 16px 10px;
@@ -3312,20 +3304,20 @@ $primary-color: #0a366f;
       }
     }
   }
-  .c-service-list__box.c-service-list__box__2col  {
+  .c-service-list__box.c-service-list__box__2col {
     grid-template-columns: repeat(2, 1fr);
 
     li {
       aspect-ratio: 7/3;
     }
   }
-  .c-service-list__box.c-service-list__box__3col  {
+  .c-service-list__box.c-service-list__box__3col {
     grid-template-columns: repeat(3, 1fr);
   }
 
   @include max-screen($breakpoint-xs) {
     .c-service-list__box.c-service-list__box__2col,
-    .c-service-list__box.c-service-list__box__3col{
+    .c-service-list__box.c-service-list__box__3col {
       grid-template-columns: 1fr;
     }
   }
@@ -3340,8 +3332,8 @@ $primary-color: #0a366f;
   transform: translateY(-26%);
 
   @include max-screen($breakpoint-sm) {
-      width: 156px;
-      transform: translateY(-50%);
+    width: 156px;
+    transform: translateY(-50%);
   }
 }
 
@@ -3370,7 +3362,7 @@ $primary-color: #0a366f;
       gap: 30px;
     }
   }
-  
+
   .c-merit-point__item {
     display: grid;
     gap: clamp(28px, 4.17vw, 60px);
@@ -3389,7 +3381,6 @@ $primary-color: #0a366f;
     }
 
     .c-merit-point-body {
-
       .deco-number {
         font-family: $font-eng;
         font-size: 7.7rem;
@@ -3468,7 +3459,7 @@ $primary-color: #0a366f;
 
   .c-number-feature__content {
     margin-top: 60px;
-    
+
     @include max-screen($breakpoint-sm) {
       margin-top: 30px;
 
@@ -3489,7 +3480,7 @@ $primary-color: #0a366f;
       @include max-screen($breakpoint-sm) {
         grid-template-columns: 1fr;
       }
-      
+
       .c-number-feature__item div {
         flex: 1 1 calc(50% - 20px);
       }
@@ -3626,7 +3617,7 @@ $primary-color: #0a366f;
       position: relative;
       max-width: 490px;
       margin-top: 74px;
-    
+
       @include max-screen($breakpoint-sm) {
         width: 100%;
         margin-top: 0;
@@ -3678,7 +3669,7 @@ $primary-color: #0a366f;
         @include max-screen($breakpoint-sm) {
           font-size: 1.3rem;
         }
-        
+
         .c-number-feature__text:nth-child(1) {
           margin-top: 0;
         }
@@ -3688,7 +3679,6 @@ $primary-color: #0a366f;
 }
 
 .c-2col-contents {
-
   .c-2col-contents__title {
     font-size: clamp(2.5rem, 3.13vw, 4.5rem);
     font-weight: bold;
@@ -3715,28 +3705,27 @@ $primary-color: #0a366f;
     gap: clamp(28px, 4.17vw, 60px);
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
-  
+
     @include max-screen($breakpoint-sm) {
       grid-template-columns: 1fr;
       gap: 20px;
     }
-  
+
     .c-2col-contents__image img {
       border-radius: 4rem;
-  
+
       @include max-screen($breakpoint-sm) {
         width: 100%;
         height: 300px;
         object-fit: cover;
       }
-  
+
       @include max-screen($breakpoint-xs) {
         height: 200px;
       }
     }
-  
+
     .c-2col-contents-body {
-  
       @include max-screen($breakpoint-md) {
         padding: 0;
         padding-left: 40px;
@@ -3744,18 +3733,18 @@ $primary-color: #0a366f;
       @include max-screen($breakpoint-sm) {
         padding: 0;
       }
-  
+
       .c-2col-contents-item-title {
         position: relative;
         margin-bottom: 60px;
-        font-size: clamp(2rem,2.08vw,3rem);
+        font-size: clamp(2rem, 2.08vw, 3rem);
         font-weight: 900;
-  
+
         @include max-screen($breakpoint-sm) {
           margin-bottom: 30px;
         }
       }
-  
+
       .c-2col-contents-item-title::before {
         content: "";
         position: absolute;
@@ -3764,12 +3753,12 @@ $primary-color: #0a366f;
         height: 7px;
         width: 35%;
         background-color: #0a366f;
-  
+
         @include max-screen($breakpoint-sm) {
           height: 3px;
           top: calc(100% + 15px);
         }
-    }
+      }
       .c-2col-contents-item-text {
         font-size: 1.8rem;
         font-weight: 400;
@@ -3949,7 +3938,7 @@ $primary-color: #0a366f;
 
       .c-advantage-contents-item-title {
         margin-bottom: 30px;
-        font-size: clamp(2rem,2.08vw,3rem);
+        font-size: clamp(2rem, 2.08vw, 3rem);
         font-weight: 900;
 
         @include max-screen($breakpoint-sm) {
@@ -3977,7 +3966,7 @@ $primary-color: #0a366f;
 
   .c-faq-title {
     margin-bottom: 40px;
-    font-size: clamp(2.5rem,2.08vw,3.2rem);
+    font-size: clamp(2.5rem, 2.08vw, 3.2rem);
     font-weight: bold;
     text-align: center;
   }
@@ -4019,7 +4008,7 @@ $primary-color: #0a366f;
     margin: auto;
     padding-bottom: 5px;
     background-color: #fff;
-    font-size: 2.0rem;
+    font-size: 2rem;
     color: rgba(43, 157, 255, 0.7019607843);
     line-height: 1;
     border-radius: 50%;
@@ -4058,7 +4047,7 @@ $primary-color: #0a366f;
     margin-top: 23px;
     padding-bottom: 5px;
     background-color: rgba(43, 157, 255, 0.7019607843);
-    font-size: 2.0rem;
+    font-size: 2rem;
     color: #ffffff;
     line-height: 1;
     border-radius: 50%;
@@ -4194,7 +4183,7 @@ $primary-color: #0a366f;
     }
   }
 
-  .c-sekoujirei-list__content  p {
+  .c-sekoujirei-list__content p {
     line-height: 1.8;
   }
 
@@ -4308,7 +4297,7 @@ $primary-color: #0a366f;
     transform: translateY(-50%);
     z-index: 10;
     cursor: pointer;
-    
+
     @include max-screen($breakpoint-sm) {
       width: 30px;
       height: 30px;
@@ -4328,7 +4317,7 @@ $primary-color: #0a366f;
     border-right: 2px solid #fff;
     transform: rotate(45deg);
     opacity: 1;
-    
+
     @include max-screen($breakpoint-sm) {
       width: 8px;
       height: 8px;
@@ -4434,7 +4423,7 @@ $primary-color: #0a366f;
   .pagehead-text h1 {
     margin-bottom: 8px;
     font-size: clamp(1.3rem, 3.47vw, 5rem);
-    color: #FBEC19;
+    color: #fbec19;
 
     @include max-screen($breakpoint-sm) {
       margin-bottom: 4px;
@@ -4454,7 +4443,6 @@ $primary-color: #0a366f;
     }
   }
   .c-number-feature {
-
     .c-parts-check {
       margin: 0px auto 50px;
     }
@@ -4511,7 +4499,7 @@ $primary-color: #0a366f;
   .pagehead-text h1 {
     margin-bottom: 8px;
     font-size: clamp(1.3rem, 3.47vw, 5rem);
-    color: #FBEC19;
+    color: #fbec19;
 
     @include max-screen($breakpoint-sm) {
       margin-bottom: 4px;
@@ -4542,7 +4530,7 @@ $primary-color: #0a366f;
 
     .page-sunlight-maker__title {
       margin-bottom: 30px;
-      font-size: clamp(2.5rem,2.78vw,4rem);
+      font-size: clamp(2.5rem, 2.78vw, 4rem);
       font-weight: bold;
       text-align: center;
     }
@@ -4633,7 +4621,7 @@ $primary-color: #0a366f;
   .pagehead-text h1 {
     margin-bottom: 8px;
     font-size: clamp(1.3rem, 3.47vw, 5rem);
-    color: #FBEC19;
+    color: #fbec19;
 
     @include max-screen($breakpoint-sm) {
       margin-bottom: 4px;
@@ -4721,7 +4709,7 @@ $primary-color: #0a366f;
   .pagehead-text h1 {
     margin-bottom: 8px;
     font-size: clamp(1.3rem, 3.47vw, 5rem);
-    color: #FBEC19;
+    color: #fbec19;
 
     @include max-screen($breakpoint-sm) {
       margin-bottom: 4px;
@@ -4816,7 +4804,7 @@ $primary-color: #0a366f;
   .pagehead-text h1 {
     margin-bottom: 8px;
     font-size: clamp(1.3rem, 3.47vw, 5rem);
-    color: #FBEC19;
+    color: #fbec19;
 
     @include max-screen($breakpoint-sm) {
       margin-bottom: 4px;
@@ -4862,9 +4850,8 @@ $primary-color: #0a366f;
       }
 
       li {
-
         a {
-          display: block; 
+          display: block;
           padding: 20px;
           background-color: #fff;
           font-size: 2.3rem;
@@ -4902,7 +4889,7 @@ $primary-color: #0a366f;
     }
   }
   .c-faq-title {
-    font-size: clamp(2.5rem,2.78vw,4rem);
+    font-size: clamp(2.5rem, 2.78vw, 4rem);
 
     @include max-screen($breakpoint-xs) {
       margin-bottom: 20px;
@@ -4960,7 +4947,7 @@ $primary-color: #0a366f;
   .pagehead-text h1 {
     margin-bottom: 8px;
     font-size: clamp(1.2rem, 3vw, 5rem);
-    color: #FBEC19;
+    color: #fbec19;
 
     @include max-screen($breakpoint-sm) {
       margin-bottom: 4px;

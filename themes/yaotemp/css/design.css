@@ -475,9 +475,10 @@ body {
   margin: 0 auto;
   float: none;
   z-index: 1;
-  padding: 8px 12px;
+  padding: 16px 20px;
   text-align: center;
   border-bottom: 1px solid #c4c4c4;
+  font-size: 1.3rem;
 }
 @media screen and (max-width: 768px) {
   .header .header-menu li .pc-header__childMenu > ul li {
@@ -486,7 +487,6 @@ body {
 }
 .header .header-menu li .pc-header__childMenu > ul a {
   display: block;
-  color: #000;
 }
 @media screen and (max-width: 768px) {
   .header .header-menu li .pc-header__childMenu > ul a:before {
@@ -4312,7 +4312,7 @@ body {
 .page-reason .pagehead-text h1 {
   margin-bottom: 8px;
   font-size: clamp(1.3rem, 3.47vw, 5rem);
-  color: #FBEC19;
+  color: #fbec19;
 }
 @media screen and (max-width: 768px) {
   .page-reason .pagehead-text h1 {
@@ -4390,7 +4390,7 @@ body {
 .page-sunlight .pagehead-text h1 {
   margin-bottom: 8px;
   font-size: clamp(1.3rem, 3.47vw, 5rem);
-  color: #FBEC19;
+  color: #fbec19;
 }
 @media screen and (max-width: 768px) {
   .page-sunlight .pagehead-text h1 {
@@ -4513,7 +4513,7 @@ body {
 .page-battery .pagehead-text h1 {
   margin-bottom: 8px;
   font-size: clamp(1.3rem, 3.47vw, 5rem);
-  color: #FBEC19;
+  color: #fbec19;
 }
 @media screen and (max-width: 768px) {
   .page-battery .pagehead-text h1 {
@@ -4608,7 +4608,7 @@ body {
 .page-repair .pagehead-text h1 {
   margin-bottom: 8px;
   font-size: clamp(1.3rem, 3.47vw, 5rem);
-  color: #FBEC19;
+  color: #fbec19;
 }
 @media screen and (max-width: 768px) {
   .page-repair .pagehead-text h1 {
@@ -4711,7 +4711,7 @@ body {
 .page-faq .pagehead-text h1 {
   margin-bottom: 8px;
   font-size: clamp(1.3rem, 3.47vw, 5rem);
-  color: #FBEC19;
+  color: #fbec19;
 }
 @media screen and (max-width: 768px) {
   .page-faq .pagehead-text h1 {
@@ -4866,7 +4866,7 @@ body {
 .page-support .pagehead-text h1 {
   margin-bottom: 8px;
   font-size: clamp(1.2rem, 3vw, 5rem);
-  color: #FBEC19;
+  color: #fbec19;
 }
 @media screen and (max-width: 768px) {
   .page-support .pagehead-text h1 {
