@@ -4655,4 +4655,159 @@ body {
     margin-top: 40px;
     margin-bottom: 20px;
   }
+}
+
+.page-faq {
+  margin-top: -25px;
+  margin-bottom: 20px;
+}
+@media screen and (max-width: 1080px) {
+  .page-faq {
+    margin-top: -30px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .page-faq {
+    margin-top: -45px;
+  }
+}
+.page-faq .pagehead-set {
+  position: relative;
+  background-image: url(../img/faq-mv-bg.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  aspect-ratio: 14/3;
+  width: 100%;
+  padding: 0;
+  z-index: 0;
+}
+@media screen and (max-width: 480px) {
+  .page-faq .pagehead-set {
+    height: 120px;
+  }
+}
+.page-faq .pagehead-text {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 39.8%;
+  padding: 26px 40px;
+  font-weight: bold;
+  text-align: left;
+  line-height: 1.4;
+  background-color: #fff;
+  background: linear-gradient(274.72deg, #2182d8 -5.7%, #1b65c4 91.29%);
+  box-sizing: border-box;
+  z-index: 2;
+}
+@media screen and (max-width: 768px) {
+  .page-faq .pagehead-text {
+    padding: 7px 10px;
+  }
+}
+.page-faq .pagehead-text h1 {
+  margin-bottom: 8px;
+  font-size: clamp(1.3rem, 3.47vw, 5rem);
+  color: #FBEC19;
+}
+@media screen and (max-width: 768px) {
+  .page-faq .pagehead-text h1 {
+    margin-bottom: 4px;
+  }
+}
+.page-faq .pagehead-set p {
+  margin-top: 0;
+  font-family: "Chakra Petch", sans-serif;
+  font-size: 2rem;
+  font-weight: 400;
+  text-transform: capitalize;
+  line-height: 1;
+  color: #fff;
+}
+@media screen and (max-width: 768px) {
+  .page-faq .pagehead-set p {
+    font-size: 1.2rem;
+  }
+}
+.page-faq .faq-link__contents {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+@media screen and (max-width: 1080px) {
+  .page-faq .faq-link__contents {
+    padding: 0 2%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .page-faq .faq-link__contents {
+    padding: 0 4%;
+  }
+}
+.page-faq .faq-link__contents .faq-link__tabs {
+  display: grid;
+  gap: 15px;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 60px;
+  margin-bottom: 50px;
+}
+@media screen and (max-width: 1080px) {
+  .page-faq .faq-link__contents .faq-link__tabs {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 480px) {
+  .page-faq .faq-link__contents .faq-link__tabs {
+    grid-template-columns: 1fr;
+    margin-top: 30px;
+  }
+}
+.page-faq .faq-link__contents .faq-link__tabs li a {
+  display: block;
+  padding: 20px;
+  background-color: #fff;
+  font-size: 2.3rem;
+  font-weight: bold;
+  text-align: center;
+  border: 2px solid #0a366f;
+  border-radius: 5px;
+}
+@media screen and (max-width: 480px) {
+  .page-faq .faq-link__contents .faq-link__tabs li a {
+    font-size: 2rem;
+  }
+}
+.page-faq .faq-link__contents p {
+  margin-bottom: 136px;
+  font-size: 2rem;
+  text-align: center;
+}
+@media screen and (max-width: 1080px) {
+  .page-faq .faq-link__contents p {
+    margin-bottom: 80px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .page-faq .faq-link__contents p {
+    margin-bottom: 60px;
+    font-size: 1.8rem;
+    text-align: left;
+  }
+}
+.page-faq .c-faq {
+  margin-bottom: 150px;
+}
+@media screen and (max-width: 1080px) {
+  .page-faq .c-faq {
+    margin-bottom: 60px;
+  }
+}
+.page-faq .c-faq-title {
+  font-size: clamp(2.5rem, 2.78vw, 4rem);
+}
+@media screen and (max-width: 480px) {
+  .page-faq .c-faq-title {
+    margin-bottom: 20px;
+  }
 }/*# sourceMappingURL=design.css.map */

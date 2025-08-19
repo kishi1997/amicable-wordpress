@@ -4764,3 +4764,147 @@ $primary-color: #0a366f;
     }
   }
 }
+
+.page-faq {
+  margin-top: -25px;
+  margin-bottom: 20px;
+
+  @include max-screen($breakpoint-md) {
+    margin-top: -30px;
+  }
+
+  @include max-screen($breakpoint-sm) {
+    margin-top: -45px;
+  }
+
+  .pagehead-set {
+    position: relative;
+    background-image: url(../img/faq-mv-bg.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    aspect-ratio: 14 / 3;
+    width: 100%;
+    padding: 0;
+    z-index: 0;
+
+    @include max-screen($breakpoint-xs) {
+      height: 120px;
+    }
+  }
+
+  .pagehead-text {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 39.8%;
+    padding: 26px 40px;
+    font-weight: bold;
+    text-align: left;
+    line-height: 1.4;
+    background-color: #fff;
+    background: linear-gradient(274.72deg, #2182d8 -5.7%, #1b65c4 91.29%);
+    box-sizing: border-box;
+    z-index: 2;
+
+    @include max-screen($breakpoint-sm) {
+      padding: 7px 10px;
+    }
+  }
+  .pagehead-text h1 {
+    margin-bottom: 8px;
+    font-size: clamp(1.3rem, 3.47vw, 5rem);
+    color: #FBEC19;
+
+    @include max-screen($breakpoint-sm) {
+      margin-bottom: 4px;
+    }
+  }
+  .pagehead-set p {
+    margin-top: 0;
+    font-family: $font-eng;
+    font-size: 2rem;
+    font-weight: 400;
+    text-transform: capitalize;
+    line-height: 1;
+    color: #fff;
+
+    @include max-screen($breakpoint-sm) {
+      font-size: 1.2rem;
+    }
+  }
+  .faq-link__contents {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    @include max-screen($breakpoint-md) {
+      padding: 0 2%;
+    }
+    @include max-screen($breakpoint-xs) {
+      padding: 0 4%;
+    }
+
+    .faq-link__tabs {
+      display: grid;
+      gap: 15px;
+      grid-template-columns: repeat(3, 1fr);
+      margin-top: 60px;
+      margin-bottom: 50px;
+
+      @include max-screen($breakpoint-md) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      @include max-screen($breakpoint-xs) {
+        grid-template-columns: 1fr;
+        margin-top: 30px;
+      }
+
+      li {
+
+        a {
+          display: block; 
+          padding: 20px;
+          background-color: #fff;
+          font-size: 2.3rem;
+          font-weight: bold;
+          text-align: center;
+          border: 2px solid #0a366f;
+          border-radius: 5px;
+
+          @include max-screen($breakpoint-xs) {
+            font-size: 2rem;
+          }
+        }
+      }
+    }
+    p {
+      margin-bottom: 136px;
+      font-size: 2rem;
+      text-align: center;
+
+      @include max-screen($breakpoint-md) {
+        margin-bottom: 80px;
+      }
+      @include max-screen($breakpoint-xs) {
+        margin-bottom: 60px;
+        font-size: 1.8rem;
+        text-align: left;
+      }
+    }
+  }
+  .c-faq {
+    margin-bottom: 150px;
+
+    @include max-screen($breakpoint-md) {
+      margin-bottom: 60px;
+    }
+  }
+  .c-faq-title {
+    font-size: clamp(2.5rem,2.78vw,4rem);
+
+    @include max-screen($breakpoint-xs) {
+      margin-bottom: 20px;
+    }
+  }
+}
