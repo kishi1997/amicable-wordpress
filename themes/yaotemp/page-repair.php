@@ -214,7 +214,7 @@
                     <li>
                         <a href="<?php bloginfo('url'); ?>/sunlight/">
                             <div class="top-service-item__icon">
-                                <img src="<?php bloginfo('template_url');?>/img/top-service-icon-solar.svg" alt="太陽光パネルのアイコンめてでも安心。わかりやすい説明と相談体制」イメージ画像">
+                                <img src="<?php bloginfo('template_url');?>/img/top-service-icon-solar.svg" alt="太陽光パネルのアイコン">
                             </div>
                             <p>太陽光発電</p>
                         </a>
@@ -222,7 +222,7 @@
                     <li>
                         <a href="<?php bloginfo('url'); ?>/battery/">
                             <div class="top-service-item__icon">
-                                <img src="<?php bloginfo('template_url');?>/img/top-service-icon-battery.svg" alt="太陽光パネルのアイコンめてでも安心。わかりやすい説明と相談体制」イメージ画像">
+                                <img src="<?php bloginfo('template_url');?>/img/top-service-icon-battery.svg" alt="蓄電池のアイコン">
                             </div>
                             <p>家庭用蓄電池</p>
                         </a>
