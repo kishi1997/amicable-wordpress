@@ -2816,6 +2816,10 @@ body {
     max-width: 1200px;
     margin-inline: auto;
 
+    @include max-screen($breakpoint-md) {
+      flex-wrap: wrap;
+      justify-content: center; 
+    }
     @include max-screen($breakpoint-sm) {
       flex-direction: column;
     }
@@ -2935,7 +2939,7 @@ body {
   padding: 67px 4% 0;
   background: #f4f4f4;
 
-  @include max-screen($breakpoint-xs) {
+  @include max-screen($breakpoint-sm) {
     padding: 73px 4% 0;
   }
 
@@ -2947,7 +2951,8 @@ body {
     margin-inline: auto;
     margin-bottom: 80px;
 
-    @include max-screen($breakpoint-xs) {
+    @include max-screen($breakpoint-sm) {
+      flex-wrap: wrap;
       flex-direction: column;
       gap: 40px;
       margin: 0 20px 23px;
@@ -3144,7 +3149,6 @@ $primary-color: #0a366f;
   }
   @include max-screen($breakpoint-xs) {
     margin-top: 30px;
-    text-align: left;
   }
 
   .c-parts-sec__title {
@@ -3161,7 +3165,9 @@ $primary-color: #0a366f;
     font-size: 2rem;
     font-weight: 350;
     color: $base-text;
+
     @include max-screen($breakpoint-xs) {
+      text-align: left;
       font-size: 1.3rem;
     }
   }
@@ -4547,10 +4553,15 @@ $primary-color: #0a366f;
 
       .page-sunlight-maker__image {
         width: 100%;
-        padding: 10px;
-        aspect-ratio: 2 / 1;
+        padding: 20px;
+        aspect-ratio: 1 / 1;
         align-content: center;
         background: #fff;
+
+        @include max-screen($breakpoint-xs) {
+          padding: 10px;
+          aspect-ratio: 2 / 1;
+        }
       }
 
       .page-sunlight-maker__image img {
@@ -4977,6 +4988,181 @@ $primary-color: #0a366f;
     .c-parts-sec__title {
       font-size: clamp(2.3rem, 2.7vw, 3.2rem);
     }
+  }
+
+  .c-number-feature {
+    margin-top: 120px;
+
+    @include max-screen($breakpoint-sm) {
+      margin-top: 60px;
+    }
+  }
+}
+
+.page-price {
+  margin-top: -25px;
+  margin-bottom: 20px;
+
+  @include max-screen($breakpoint-md) {
+    margin-top: -30px;
+  }
+
+  @include max-screen($breakpoint-sm) {
+    margin-top: -45px;
+  }
+
+  .pagehead-set {
+    position: relative;
+    background-image: url(../img/price-mv-bg.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    aspect-ratio: 14 / 3;
+    width: 100%;
+    padding: 0;
+    z-index: 0;
+
+    @include max-screen($breakpoint-xs) {
+      height: 120px;
+    }
+  }
+
+  .pagehead-text {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 39.8%;
+    padding: 26px 40px;
+    font-weight: bold;
+    text-align: left;
+    line-height: 1.4;
+    background-color: #fff;
+    background: linear-gradient(274.72deg, #2182d8 -5.7%, #1b65c4 91.29%);
+    box-sizing: border-box;
+    z-index: 2;
+
+    @include max-screen($breakpoint-sm) {
+      padding: 7px 10px;
+    }
+  }
+  .pagehead-text h1 {
+    margin-bottom: 8px;
+    font-size: clamp(1.2rem, 3vw, 5rem);
+    color: #FBEC19;
+
+    @include max-screen($breakpoint-sm) {
+      margin-bottom: 4px;
+    }
+  }
+  .pagehead-set p {
+    margin-top: 0;
+    font-family: $font-eng;
+    font-size: 2rem;
+    font-weight: 400;
+    text-transform: capitalize;
+    line-height: 1;
+    color: #fff;
+
+    @include max-screen($breakpoint-sm) {
+      font-size: 1.2rem;
+    }
+  }
+
+  .price-plan {
+    max-width: 1060px;
+    margin-inline: auto;
+    margin-top: 120px;
+
+    @include max-screen($breakpoint-xs) {
+      margin-top: 80px;
+    }
+
+    .price-plan__title {
+      font-size: clamp(3rem, 2.78vw, 4rem);
+      text-align: center;
+    }
+
+    .price-plan__content {
+      display: grid;
+      gap: 60px;
+      margin-top: 30px;
+
+      @include max-screen($breakpoint-xs) {
+        gap: 20px;
+      }
+
+      .price-plan__item {
+        display: grid;
+        align-content: center;
+        grid-template-columns: 1.65fr 1fr;
+        border: 1px solid $blue;
+        border-radius: 4rem;
+        overflow: hidden;
+
+        @include max-screen($breakpoint-sm) {
+          grid-template-columns: 1fr;
+          max-width: 480px;
+          margin-inline: auto;
+        }
+
+        .price-plan-item__header {
+          padding: 30px;
+          font-size: 1.8rem;
+          font-weight: bold;
+          color: #fff;
+          background-color: $blue;
+
+          @include max-screen($breakpoint-xs) {
+            padding: 20px;
+            font-size: 1.3rem;
+          }
+    
+          h4 {
+            margin-bottom: 8px;
+            font-size: clamp(2.3rem, 2.29vw, 3.3rem);
+            font-weight: bold;
+          }
+        }
+        .price-plan-item__body {
+          padding: 0 30px 30px;
+          text-align: right;
+          font-weight: bold;
+
+          @include max-screen($breakpoint-xs) {
+            padding: 0 20px 20px;
+          }
+    
+          p {
+            font-size: 4rem;
+    
+            .yen {
+              font-size: 8rem;
+              font-size: clamp(5rem,5.56vw,8rem);
+            }
+          }
+        }
+    
+        .price-plan-item__body > p:nth-of-type(2) {
+          font-size: 2.6rem;
+        }
+
+        .price-plan-item__image {
+          height: 330px;
+
+          @include max-screen($breakpoint-xs) {
+            height: 230px;
+          }
+
+          img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+      }
+    }  
   }
 
   .c-number-feature {
