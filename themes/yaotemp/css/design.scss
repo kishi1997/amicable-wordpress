@@ -2818,7 +2818,7 @@ body {
 
     @include max-screen($breakpoint-md) {
       flex-wrap: wrap;
-      justify-content: center; 
+      justify-content: center;
     }
     @include max-screen($breakpoint-sm) {
       flex-direction: column;
@@ -3965,9 +3965,11 @@ $primary-color: #0a366f;
 
 .c-faq {
   margin-bottom: 66px;
+  padding: 0 4%;
 
   @include max-screen($breakpoint-sm) {
     margin-bottom: 20px;
+    padding: 0;
   }
 
   .c-faq-title {
@@ -5049,7 +5051,7 @@ $primary-color: #0a366f;
   .pagehead-text h1 {
     margin-bottom: 8px;
     font-size: clamp(1.2rem, 3vw, 5rem);
-    color: #FBEC19;
+    color: #fbec19;
 
     @include max-screen($breakpoint-sm) {
       margin-bottom: 4px;
@@ -5117,7 +5119,7 @@ $primary-color: #0a366f;
             padding: 20px;
             font-size: 1.3rem;
           }
-    
+
           h4 {
             margin-bottom: 8px;
             font-size: clamp(2.3rem, 2.29vw, 3.3rem);
@@ -5132,17 +5134,17 @@ $primary-color: #0a366f;
           @include max-screen($breakpoint-xs) {
             padding: 0 20px 20px;
           }
-    
+
           p {
             font-size: 4rem;
-    
+
             .yen {
               font-size: 8rem;
-              font-size: clamp(5rem,5.56vw,8rem);
+              font-size: clamp(5rem, 5.56vw, 8rem);
             }
           }
         }
-    
+
         .price-plan-item__body > p:nth-of-type(2) {
           font-size: 2.6rem;
         }
@@ -5162,7 +5164,7 @@ $primary-color: #0a366f;
           }
         }
       }
-    }  
+    }
   }
 
   .c-number-feature {

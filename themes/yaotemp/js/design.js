@@ -1,12 +1,3 @@
-//#BTNクリックで#MENUを表示.disp {display: none;}
-$(function () {
-  $(".menuNavi").click(function () {
-    $("#menuNavi__menu").toggleClass("icon-menu");
-    $("#menuNavi__menu").toggleClass("icon-close");
-    $(".mainNavi").toggleClass("menu-open");
-  });
-});
-
 //Scroll Rules
 $(function () {
   if (window.matchMedia("(max-width: 640px)").matches) {
