@@ -5171,8 +5171,10 @@ body {
 .page-company .company-location .company-location__map .company-location__iframe {
   text-align: center;
 }
-.page-company .company-location .company-location__map .company-location__iframe iframe {
-  height: 300px;
+@media screen and (max-width: 768px) {
+  .page-company .company-location .company-location__map .company-location__iframe iframe {
+    height: 300px;
+  }
 }
 .page-company .company-location .company-location__map .company-location__address {
   display: grid;

@@ -5278,7 +5278,9 @@ body {
         text-align: center;
       }
       .company-location__iframe iframe {
-        height: 300px;
+        @include max-screen($breakpoint-sm) {
+          height: 300px;
+        }
       }
 
       .company-location__address {
