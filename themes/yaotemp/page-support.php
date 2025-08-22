@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<div class="page-price">
+<div class="page-support">
     <div class="pagehead-set">
         <div class="pagehead-text">
             <h1><?php the_title(); ?></h1>
